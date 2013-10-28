@@ -213,3 +213,14 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+
+#libcurl stuff and QT stuff
+curl/
+libcurl-7.19.3-win32-ssl-msvc/
+LoLScribe.pro
+LolScribe.pro.user
+curllib_static.lib
+libcurl.lib
+api.cpp
+api.h

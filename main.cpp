@@ -23,6 +23,16 @@ static size_t my_fwrite(void *buffer, size_t size, size_t nmemb, void *stream)
 
 int main(int argc, char *argv[])
 {
+
+ QApplication a(argc, argv);
+ MainWindow w;
+ w.show();
+
+    return a.exec();
+}
+
+void download()
+{
     CURL *curl;
  CURLcode res;
 
@@ -86,13 +96,6 @@ int main(int argc, char *argv[])
  out<<tempOut;
  out.close();
  curl_global_cleanup();
-
-
- QApplication a(argc, argv);
- MainWindow w;
- w.show();
-
-    return a.exec();
 }
 
 

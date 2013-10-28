@@ -13,7 +13,3 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_downloadbutton_clicked()
-{
-    ui->NameTableWidget->setItem(0,0, new QTableWidgetItem("Zilean"));
-}
