@@ -26,6 +26,7 @@ static size_t my_fwrite(void *buffer, size_t size, size_t nmemb, void *stream)
 	return nmemb*size;*/
 	tempOut += (char*)buffer;
 	tempOut.pop_back();
+	tempOut.pop_back();
 	//tempOut.push_back((char*)buffer);
 	//out << (char*)buffer;
 	return size*nmemb;
@@ -47,14 +48,14 @@ void pullAPI()
 
 	std::ofstream out;
 	//out = fopen ("scribeout.txt", "w");
-	out.open("matchesraw.txt");
+	out.open("champsraw.txt");
 
 	slist = curl_slist_append(slist, "X-Mashape-Authorization: jFZRnPb3AD7TXVnfoDlkopqghMrDALtI");
 	curl_global_init(CURL_GLOBAL_DEFAULT);
 
 	curl = curl_easy_init();
 	if(curl) {
-		curl_easy_setopt(curl, CURLOPT_URL, "https://teemojson.p.mashape.com/player/na/Mermigas/recent_games");
+		curl_easy_setopt(curl, CURLOPT_URL, "https://teemojson.p.mashape.com/datadragon/champion");
 	curl_easy_setopt(curl, CURLOPT_VERBOSE, 1);
 	curl_easy_setopt(curl, CURLOPT_HTTPHEADER, slist);
 	curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0);
@@ -188,6 +189,7 @@ void parseChamps()
 	outFile.open("champs.txt");
 
 	int c = inFile.peek();
+	int d = 0;
 	std::string temp = "NULL";
 	std::string seek = "\"id\":";
 
@@ -201,6 +203,7 @@ void parseChamps()
 			{
 				inFile >> temp;
 				std::cout << "Found Champion: ";
+				d++;
 
 				for (int i = 1; i < temp.size() - 2; i++)
 				{
@@ -234,7 +237,7 @@ void parseChamps()
 				seek = "\"name\":";
 			}
 		}
-		else
+		else if (seek == "\"name\":")
 		{
 			inFile >> temp;
 
@@ -257,6 +260,8 @@ void parseChamps()
 
 		c = inFile.peek();
 	}
+
+	std::cout << "Found " << d << " champions out of 116\n";
 }
 
 std::map<int, int> priceList()
@@ -309,11 +314,30 @@ void parseMatches()
 	}
 
 	inFile.close();
+
+	inFile.open("champs.txt");
+	c = inFile.peek();
+
+	std::map<int, std::pair<int, int> > tempChamps;
+	std::pair<int, int> placeholder(0, 0);
+
+	while (c != std::ifstream::traits_type::eof())
+	{
+		std::getline(inFile, temp, ',');
+		std::getline(inFile, temp, ',');
+
+		tempChamps[stringToInt(temp)] = placeholder;
+
+		std::getline(inFile, temp);
+		c = inFile.peek();
+	}
+
+	inFile.close();
 		
 	inFile.open("matchesraw.txt");
 	outFile.open("./Players/Mermigas/matches.txt", std::ios_base::app);
 	
-	player tempPlayer("Mermigas", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+	player tempPlayer("Mermigas", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, tempChamps);
 	std::vector<champion> champData;
 
 	c = inFile.peek();
@@ -321,7 +345,7 @@ void parseMatches()
 	std::string seek = "\"ranked\":";
 
 	int cID = 0, i1 = 0, i2 = 0, i3 = 0, i4 = 0, i5 = 0, i6 = 0, k = 0, d = 0, a = 0, cs = 0, dd = 0, g = 0, ks = 0, mk = 0, mid = 0;
-	int nc = 0, em = 0, newMatches = 0;
+	int nc = 0, em = 0, newMatches = 0, items[6] = {0, 0, 0, 0, 0, 0};
 	bool rank = true, res = true, blue = true;
 	std::string dt = "", t = "";
 	std::map<int, std::string>::iterator cidItr;
@@ -404,27 +428,27 @@ void parseMatches()
 					
 				if (temp == "\"ITEM0\"")
 				{
-					i1 = stringToInt(t2);
+					items[0] = stringToInt(t2);
 				}
 				else if (temp == "\"ITEM1\"")
 				{
-					i2 = stringToInt(t2);
+					items[1] = stringToInt(t2);
 				}
 				else if (temp == "\"ITEM2\"")
 				{
-					i3 = stringToInt(t2);
+					items[2] = stringToInt(t2);
 				}
 				else if (temp == "\"ITEM3\"")
 				{
-					i4 = stringToInt(t2);
+					items[3] = stringToInt(t2);
 				}
 				else if (temp == "\"ITEM4\"")
 				{
-					i5 = stringToInt(t2);
+					items[4] = stringToInt(t2);
 				}
 				else if (temp == "\"ITEM5\"")
 				{
-					i6 = stringToInt(t2);
+					items[5] = stringToInt(t2);
 				}
 				else if (temp == "\"NUM_DEATHS\"")
 				{
@@ -533,8 +557,8 @@ void parseMatches()
 			}
 			else if (seek == "},")
 			{
-				match test(cID, i1, i2, i3, i4, i5, i6, k, d, a, dd, g, mk, ks, mid, rank, res, dt, t, cs, blue);
-				tempPlayer.modifyStats(k, d, a, cs, nc, em, res, rank, blue);
+				match test(cID, items, k, d, a, dd, g, mk, ks, mid, rank, res, dt, t, cs, blue);
+				tempPlayer.modifyStats(k, d, a, cs, nc, em, res, rank, blue, cID, items);
 				outFile << test.write();
 
 				bool active = false;
@@ -544,7 +568,7 @@ void parseMatches()
 					if (cID == champData[i].getID())
 					{
 						active = true;
-						champData[i].modifyStats(k, d, a, cs, nc, em, res, rank, blue);
+						champData[i].modifyStats(k, d, a, cs, nc, em, res, rank, blue, items);
 					}
 				}
 
@@ -590,8 +614,26 @@ void parseMatches()
 						std::getline(if2, t3);
 						int tempEM = stringToInt(t3);
 
-						champion tempChamp(tempN, tempK, tempD, tempA, tempW, tempL, tempRW, tempRL, tempBW, tempBL, tempPW, tempPL, tempCS, tempNC, tempEM, tempID);
-						
+						c = if2.peek();
+
+						std::map<int, std::pair<int, int> > tempItems;
+
+						if (c != std::ifstream::traits_type::eof())
+						{
+							std::getline(if2, t3, ',');
+							int x = stringToInt(t3);
+							std::getline(if2, t3, ',');
+							int y = stringToInt(t3);
+							std::getline(if2, t3);
+							int z = stringToInt(t3);
+
+							std::pair<int, int> p(y, z);
+							tempItems[x] = p;
+						}
+
+						champion tempChamp(tempN, tempK, tempD, tempA, tempW, tempL, tempRW, tempRL, tempBW, tempBL, tempPW, tempPL, tempCS, tempNC, tempEM, tempID, tempItems);
+						tempChamp.modifyStats(k, d, a, cs, nc, em, res, rank, blue, items);
+
 						champData.push_back(tempChamp);
 						
 						if2.close();
@@ -599,7 +641,7 @@ void parseMatches()
 					else
 					{
 						champion tempChamp(cID, cidItr->second);
-						tempChamp.modifyStats(k, d, a, cs, nc, em, res, rank, blue);
+						tempChamp.modifyStats(k, d, a, cs, nc, em, res, rank, blue, items);
 						champData.push_back(tempChamp);
 					}
 				}
@@ -677,6 +719,7 @@ int main()
 	inFile.close();
 
 	//pullAPI();
+	//parseChamps();
 	parseMatches();
 
 	if (mode == 5)

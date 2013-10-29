@@ -34,6 +34,7 @@ Janna,40,Janna
 JarvanIV,59,Jarvan IV
 Jax,24,Jax
 Jayce,126,Jayce
+Jinx,222,Jinx
 Karma,43,Karma
 Karthus,30,Karthus
 Kassadin,38,Kassadin
@@ -74,8 +75,6 @@ Rengar,107,Rengar
 Riven,92,Riven
 Rumble,68,Rumble
 Ryze,13,Ryze
-Rumble,68,Rumble
-Ryze,13,Ryze
 Sejuani,113,Sejuani
 Shaco,35,Shaco
 Shen,98,Shen
@@ -112,9 +111,6 @@ XinZhao,5,Xin Zhao
 Yorick,83,Yorick
 Zac,154,Zac
 Zed,238,Zed
-Ziggs,115,Ziggs
-Zilean,26,Zilean
-Zyra,143,Zyra
 Ziggs,115,Ziggs
 Zilean,26,Zilean
 Zyra,143,Zyra

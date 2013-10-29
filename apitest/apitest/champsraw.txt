@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "3.12.34",
+    "version": "3.12.37",
     "data": {
         "Aatrox": {
             "version": "3.12.34",
@@ -82,8 +82,7 @@
                 "hp": 380,
                 "hpperlevel": 80,
                 "mp": 230,
-             
-   "mpperlevel": 50,
+                "mpperlevel": 50,
                 "movespeed": 330,
                 "armor": 11,
                 "armorperlevel": 3.5,
@@ -161,8 +160,7 @@
             "info": {
                 "attack": 6,
                 "defense": 9,
-               
- "magic": 5,
+                "magic": 5,
                 "difficulty": 8
             },
             "image": {
@@ -207,9 +205,7 @@
             "key": "32",
             "name": "Amumu",
             "title": "the Sad Mummy",
-            "blurb": "Perhaps one of the oddest champions in the League of Legends is the yord
-le know
-n as Amumu. His life before joining the League remains unknown... especially to Amumu. All he remembers is that he woke up alone inside a pyramid within the Shurima Desert. ...",
+            "blurb": "Perhaps one of the oddest champions in the League of Legends is the yordle known as Amumu. His life before joining the League remains unknown... especially to Amumu. All he remembers is that he woke up alone inside a pyramid within the Shurima Desert. ...",
             "info": {
                 "attack": 2,
                 "defense": 6,
@@ -252,8 +248,7 @@ n as Amumu. His life before joining the League remains unknown... especially to 
                 "attackspeedperlevel": 2.18
             }
         },
-    
-    "Anivia": {
+        "Anivia": {
             "version": "3.12.34",
             "id": "Anivia",
             "key": "34",
@@ -376,8 +371,7 @@ n as Amumu. His life before joining the League remains unknown... especially to 
             "tags": [
                 "Marksman"
             ],
-     
-       "partype": "Mana",
+            "partype": "Mana",
             "stats": {
                 "hp": 395,
                 "hpperlevel": 79,
@@ -583,8 +577,7 @@ n as Amumu. His life before joining the League remains unknown... especially to 
                 "armor": 11.5,
                 "armorperlevel": 4,
                 "spellblock": 30,
-                "spellblo
-ckperlevel": 0,
+                "spellblockperlevel": 0,
                 "attackrange": 550,
                 "hpregen": 4.85,
                 "hpregenperlevel": 0.5,
@@ -831,8 +824,7 @@ ckperlevel": 0,
                 "spellblock": 30,
                 "spellblockperlevel": 0,
                 "attackrange": 550,
-                "hprege
-n": 5,
+                "hpregen": 5,
                 "hpregenperlevel": 0.7,
                 "mpregen": 6.95,
                 "mpregenperlevel": 0.65,
@@ -873,8 +865,7 @@ n": 5,
             "stats": {
                 "hp": 433,
                 "hpperlevel": 89,
-                "m
-p": 0,
+                "mp": 0,
                 "mpperlevel": 0,
                 "movespeed": 345,
                 "armor": 17,
@@ -1039,8 +1030,7 @@ p": 0,
                 "attackdamageperlevel": 3,
                 "attackspeedoffset": 0,
                 "attackspeedperlevel": 2.8
-            
-}
+            }
         },
         "FiddleSticks": {
             "version": "3.12.34",
@@ -1123,8 +1113,7 @@ p": 0,
                 "mp": 220,
                 "mpperlevel": 40,
                 "movespeed": 350,
-    
-            "armor": 15,
+                "armor": 15,
                 "armorperlevel": 3.5,
                 "spellblock": 30,
                 "spellblockperlevel": 1.25,
@@ -1163,8 +1152,7 @@ p": 0,
                 "w": 48,
                 "h": 48
             },
-          
-  "tags": [
+            "tags": [
                 "Assassin"
             ],
             "partype": "Mana",
@@ -1203,8 +1191,7 @@ p": 0,
                 "defense": 7,
                 "magic": 6,
                 "difficulty": 4
-       
-     },
+            },
             "image": {
                 "full": "Galio.png",
                 "sprite": "champion0.png",
@@ -1247,8 +1234,7 @@ p": 0,
             "key": "41",
             "name": "Gangplank",
             "title": "the Saltwater Scourge",
-            "blurb": "Gangplank was born the son of the dread pirate captain Vincent the Shadow - one of the most wealthy and feared pi
-rates in all of Blue Flame Island. One might think this would have spoiled the boy with a cushioned life of privilege, but the truth is ...",
+            "blurb": "Gangplank was born the son of the dread pirate captain Vincent the Shadow - one of the most wealthy and feared pirates in all of Blue Flame Island. One might think this would have spoiled the boy with a cushioned life of privilege, but the truth is ...",
             "info": {
                 "attack": 7,
                 "defense": 6,
@@ -1292,9 +1278,7 @@ rates in all of Blue Flame Island. One might think this would have spoiled the b
             }
         },
         "Garen": {
-         
-   "version": 
-"3.12.34",
+            "version": "3.12.34",
             "id": "Garen",
             "key": "86",
             "name": "Garen",
@@ -1455,8 +1439,7 @@ rates in all of Blue Flame Island. One might think this would have spoiled the b
             },
             "image": {
                 "full": "Hecarim.png",
-       
-         "sprite": "champion0.png",
+                "sprite": "champion0.png",
                 "group": "champion",
                 "x": 432,
                 "y": 96,
@@ -1496,8 +1479,7 @@ rates in all of Blue Flame Island. One might think this would have spoiled the b
             "key": "74",
             "name": "Heimerdinger",
             "title": "the Revered Inventor",
-            "blurb": "It is unusual to see yordles outside of Bandle City, but the lure of science was something Heimerdinger could not resist. By the time he'd completed his third doctorate, he had already b
-ecome the greatest of all yordle scientists and there was little ...",
+            "blurb": "It is unusual to see yordles outside of Bandle City, but the lure of science was something Heimerdinger could not resist. By the time he'd completed his third doctorate, he had already become the greatest of all yordle scientists and there was little ...",
             "info": {
                 "attack": 2,
                 "defense": 6,
@@ -1665,8 +1647,7 @@ ecome the greatest of all yordle scientists and there was little ...",
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 42
-0,
+                "hp": 420,
                 "hpperlevel": 90,
                 "mp": 235,
                 "mpperlevel": 40,
@@ -1786,14 +1767,62 @@ ecome the greatest of all yordle scientists and there was little ...",
                 "attackspeedperlevel": 3
             }
         },
+        "Jinx": {
+            "version": "3.12.37",
+            "id": "Jinx",
+            "key": "222",
+            "name": "Jinx",
+            "title": "the Loose Cannon",
+            "blurb": "Jinx lives to wreak havoc without a thought for consequence, leaving a trail of mayhem and panic in her wake. A manic and impulsive criminal, she despises nothing more than boredom, and gleefully unleashes her own volatile brand of pandemonium to the ...",
+            "info": {
+                "attack": 9,
+                "defense": 2,
+                "magic": 4,
+                "difficulty": 9
+            },
+            "image": {
+                "full": "Jinx.png",
+                "sprite": "champion3.png",
+                "group": "champion",
+                "x": 240,
+                "y": 96,
+                "w": 48,
+                "h": 48
+            },
+            "tags": [
+                "Marksman"
+            ],
+            "partype": "Mana",
+            "stats": {
+                "hp": 420,
+                "hpperlevel": 80,
+                "mp": 170,
+                "mpperlevel": 45,
+                "movespeed": 325,
+                "armor": 13,
+                "armorperlevel": 3.5,
+                "spellblock": 30,
+                "spellblockperlevel": 0,
+                "attackrange": 525,
+                "hpregen": 5,
+                "hpregenperlevel": 0.5,
+                "mpregen": 5,
+                "mpregenperlevel": 1,
+                "crit": 0,
+                "critperlevel": 0,
+                "attackdamage": 50,
+                "attackdamageperlevel": 3,
+                "attackspeedoffset": 0,
+                "attackspeedperlevel": 1
+            }
+        },
         "Karma": {
             "version": "3.12.34",
             "id": "Karma",
             "key": "43",
             "name": "Karma",
             "title": "the Enlightened One",
-            "blurb": "Karma is a 
-woman of indomitable will and unbound spiritual power. She is the soul of Ionia made manifest and an inspiring presence on the battlefield, shielding her allies and turning back her foes. A strong leader torn between tradition and ...",
+            "blurb": "Karma is a woman of indomitable will and unbound spiritual power. She is the soul of Ionia made manifest and an inspiring presence on the battlefield, shielding her allies and turning back her foes. A strong leader torn between tradition and ...",
             "info": {
                 "attack": 1,
                 "defense": 7,
@@ -1833,8 +1862,7 @@ woman of indomitable will and unbound spiritual power. She is the soul of Ionia 
                 "attackdamage": 50,
                 "attackdamageperlevel": 3.3,
                 "attackspeedoffset": 0,
-                "attacks
-peedperlevel": 2.3
+                "attackspeedperlevel": 2.3
             }
         },
         "Karthus": {
@@ -1876,8 +1904,7 @@ peedperlevel": 2.3
                 "attackrange": 450,
                 "hpregen": 5.5,
                 "hpregenperlevel": 0.55,
-   
-             "mpregen": 6.5,
+                "mpregen": 6.5,
                 "mpregenperlevel": 0.6,
                 "crit": 0,
                 "critperlevel": 0,
@@ -2124,8 +2151,7 @@ peedperlevel": 2.3
                 "hpregenperlevel": 0.75,
                 "mpregen": 6.75,
                 "mpregenperlevel": 0.5,
-         
-       "crit": 0,
+                "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 50,
                 "attackdamageperlevel": 3.1,
@@ -2166,8 +2192,7 @@ peedperlevel": 2.3
                 "mpperlevel": 40,
                 "movespeed": 330,
                 "armor": 10,
-                "armorperleve
-l": 3.5,
+                "armorperlevel": 3.5,
                 "spellblock": 30,
                 "spellblockperlevel": 0,
                 "attackrange": 500,
@@ -2208,8 +2233,7 @@ l": 3.5,
             "tags": [
                 "Assassin"
             ],
- 
-           "partype": "Mana",
+            "partype": "Mana",
             "stats": {
                 "hp": 390,
                 "hpperlevel": 75,
@@ -2381,7 +2405,7 @@ l": 3.5,
             }
         },
         "Lucian": {
-            "version": "3.12.34",
+            "version": "3.12.37",
             "id": "Lucian",
             "key": "236",
             "name": "Lucian",
@@ -2496,9 +2520,7 @@ l": 3.5,
                 "sprite": "champion1.png",
                 "group": "champion",
                 "x": 0,
-               
- "y": 96
-,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -2538,8 +2560,7 @@ l": 3.5,
             "blurb": "There is a world of perfect harmony, where all are part of the whole. The Monolith is the essence of all creation, and its denizens are but singular pieces of it. It is beautiful in its symmetry, and in its almost complete lack of uncertainty. The ...",
             "info": {
                 "attack": 5,
-                "defense":
- 9,
+                "defense": 9,
                 "magic": 7,
                 "difficulty": 3
             },
@@ -2871,10 +2892,8 @@ l": 3.5,
                 "attackdamageperlevel": 3.5,
                 "attackspeedoffset": -0.1,
                 "attackspeedperlevel": 3
-            
-}
-      
-  },
+            }
+        },
         "Morgana": {
             "version": "3.12.34",
             "id": "Morgana",
@@ -2957,8 +2976,7 @@ l": 3.5,
                 "mpperlevel": 43,
                 "movespeed": 340,
                 "armor": 9,
-           
-     "armorperlevel": 4,
+                "armorperlevel": 4,
                 "spellblock": 30,
                 "spellblockperlevel": 0,
                 "attackrange": 550,
@@ -3163,8 +3181,7 @@ l": 3.5,
                 "mpregen": 6,
                 "mpregenperlevel": 0.45,
                 "crit": 0,
-              
-  "critperlevel": 0,
+                "critperlevel": 0,
                 "attackdamage": 54,
                 "attackdamageperlevel": 3.1,
                 "attackspeedoffset": -0.065,
@@ -3206,8 +3223,7 @@ l": 3.5,
                 "armor": 16.5,
                 "armorperlevel": 3.5,
                 "spellblock": 30,
-                "spel
-lblockperlevel": 1.25,
+                "spellblockperlevel": 1.25,
                 "attackrange": 125,
                 "hpregen": 7.05,
                 "hpregenperlevel": 0.8,
@@ -3285,10 +3301,8 @@ lblockperlevel": 1.25,
             },
             "image": {
                 "full": "Orianna.png",
-                "sprite": "champion2.png"
-,
-     
-           "group": "champion",
+                "sprite": "champion2.png",
+                "group": "champion",
                 "x": 288,
                 "y": 0,
                 "w": 48,
@@ -3375,8 +3389,7 @@ lblockperlevel": 1.25,
             "id": "Poppy",
             "key": "78",
             "name": "Poppy",
-            "title": "the Iron Am
-bassador",
+            "title": "the Iron Ambassador",
             "blurb": "While other young yordle girls played skip-step and braided wreathes out of posies, Poppy spent her youth earning calluses and grease stains in her father's armor shop.  Blomgrun, her father, was Bandle City's finest smith.  The only thing he loved as ...",
             "info": {
                 "attack": 6,
@@ -3415,8 +3428,7 @@ bassador",
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 56.3,
-                "attackdamageperlevel": 3.375,
-
+                "attackdamageperlevel": 3.375,
                 "attackspeedoffset": -0.02,
                 "attackspeedperlevel": 3.35
             }
@@ -3499,8 +3511,7 @@ bassador",
             "stats": {
                 "hp": 420,
                 "hpperlevel": 86,
-               
- "mp": 255,
+                "mp": 255,
                 "mpperlevel": 33,
                 "movespeed": 335,
                 "armor": 21,
@@ -3666,8 +3677,6 @@ bassador",
                 "attackspeedoffset": 0,
                 "attackspeedperlevel": 3.5
             }
-
-b4b
         },
         "Rumble": {
             "version": "3.12.34",
@@ -3751,97 +3760,7 @@ b4b
                 "mpperlevel": 55,
                 "movespeed": 340,
                 "armor": 11,
- 
-5
-     
-        },
-        "Rumble": {
-            "version": "3.12.34",
-            "id": "Rumble",
-            "key": "68",
-            "name": "Rumble",
-            "title": "the Mechanized Menace",
-            "blurb": "Even amongst yordles, Rumble was always the runt of the litter. As such, he was used to being bullied. In order to survive, he had to be scrappier and more resourceful than his peers. He developed a quick temper and a reputation for getting even, no ...",
-            "info": {
-                "attack": 3,
-                "defense": 6,
-                "magic": 8,
-                "difficulty": 8
-            },
-            "image": {
-                "full": "Rumble.png",
-                "sprite": "champion2.png",
-                "group": "champion",
-                "x": 192,
-                "y": 48,
-                "w": 48,
-                "h": 48
-            },
-            "tags": [
-                "Fighter"
-            ],
-            "partype": "Heat",
-            "stats": {
-                "hp": 450,
-                "hpperlevel": 80,
-                "mp": 100,
-                "mpperlevel": 0,
-                "movespeed": 345,
-                "armor": 16,
-                "armorperlevel": 3.5,
-                "spellblock": 30,
-                "spellblockperlevel": 1.25,
-                "attackrange": 125,
-                "hpregen": 7,
-                "hpregenperlevel": 0.6,
-                "mpregen": 0,
-                "mpregenperlevel": 0,
-                "crit": 0,
-                "critperlevel": 0,
-                "attackdamage": 55.66,
-                "attackdamageperlevel": 3.2,
-                "attackspeedoffset": -0.03,
-                "attackspeedperlevel": 1.85
-            }
-        },
-        "Ryze": {
-            "version": "3.12.34",
-            "id": "Ryze",
-            "key": "13",
-            "name": "Ryze",
-            "title": "the Rogue Mage",
-            "blurb": "There are many on Runeterra who are attracted to the study of magic or, in recent times, the emerging field of techmaturgy. For most, pursuit of such knowledge is formalized in a college or university. The halls of traditional study were never for ...",
-            "info": {
-                "attack": 2,
-                "defense": 2,
-                "magic": 10,
-                "difficulty": 3
-            },
-            "image": {
-                "full": "Ryze.png",
-                "sprite": "champion2.png",
-                "group": "champion",
-                "x": 240,
-                "y": 48,
-                "w": 48,
-                "h": 48
-            },
-            "tags": [
-                "Mage"
-            ],
-            "partype": "Mana",
-            "stats": {
-                "hp": 360,
-                "hpperlevel": 86,
-                "mp": 250,
-                "mpperlevel": 55,
-                "movespeed": 340,
-                "armor": 11,
- 
-5
-     
-     
-          "armorperlevel": 3.9,
+                "armorperlevel": 3.9,
                 "spellblock": 30,
                 "spellblockperlevel": 0,
                 "attackrange": 550,
@@ -4294,8 +4213,7 @@ b4b
                 "critperlevel": 0,
                 "attackdamage": 47,
                 "attackdamageperlevel": 3,
-           
-     "attackspeedoffset": -0.03,
+                "attackspeedoffset": -0.03,
                 "attackspeedperlevel": 2.3
             }
         },
@@ -4416,9 +4334,7 @@ b4b
                 "group": "champion",
                 "x": 336,
                 "y": 96,
-     
-       
-    "w": 48,
+                "w": 48,
                 "h": 48
             },
             "tags": [
@@ -4458,8 +4374,7 @@ b4b
             "info": {
                 "attack": 9,
                 "defense": 3,
-                "
-magic": 1,
+                "magic": 1,
                 "difficulty": 6
             },
             "image": {
@@ -4834,8 +4749,7 @@ magic": 1,
                 "mpregen": 6.5,
                 "mpregenperlevel": 0.5,
                 "crit": 0,
-                "cr
-itperlevel": 0,
+                "critperlevel": 0,
                 "attackdamage": 46.41,
                 "attackdamageperlevel": 3.3,
                 "attackspeedoffset": -0.04,
@@ -4917,9 +4831,7 @@ itperlevel": 0,
                 "Fighter"
             ],
             "partype": "Mana",
-         
-   "sta
-ts": {
+            "stats": {
                 "hp": 427,
                 "hpperlevel": 99,
                 "mp": 220,
@@ -4957,9 +4869,7 @@ ts": {
             },
             "image": {
                 "full": "Urgot.png",
-                "
-sprit
-e": "champion3.png",
+                "sprite": "champion3.png",
                 "group": "champion",
                 "x": 384,
                 "y": 0,
@@ -4999,8 +4909,7 @@ e": "champion3.png",
             "key": "110",
             "name": "Varus",
             "title": "the Arrow of Retribution",
-            "blurb": "For his incomparable skill with the bow and his unquestioned sense of honor, Varus was chosen to be the warden of a sacred Ionian temple. The temple was built to contain an ancient pit of corruption so vile that Ionian
- Elders feared it could envelop ...",
+            "blurb": "For his incomparable skill with the bow and his unquestioned sense of honor, Varus was chosen to be the warden of a sacred Ionian temple. The temple was built to contain an ancient pit of corruption so vile that Ionian Elders feared it could envelop ...",
             "info": {
                 "attack": 7,
                 "defense": 3,
@@ -5142,7 +5051,7 @@ e": "champion3.png",
             }
         },
         "Vi": {
-            "version": "3.12.34",
+            "version": "3.12.37",
             "id": "Vi",
             "key": "254",
             "name": "Vi",
@@ -5294,8 +5203,7 @@ e": "champion3.png",
             "key": "106",
             "name": "Volibear",
             "title": "the Thunder's Roar",
-            "blurb": "The unforgiving northern reaches of the Freljord are home to t
-he Ursine, a fierce and warlike race that has endured the barren tundra for thousands of years. Their leader is a furious adversary who commands the force of lightning to strike fear within ...",
+            "blurb": "The unforgiving northern reaches of the Freljord are home to the Ursine, a fierce and warlike race that has endured the barren tundra for thousands of years. Their leader is a furious adversary who commands the force of lightning to strike fear within ...",
             "info": {
                 "attack": 7,
                 "defense": 7,
@@ -5377,8 +5285,7 @@ he Ursine, a fierce and warlike race that has endured the barren tundra for thou
                 "attackrange": 125,
                 "hpregen": 7.05,
                 "hpregenperlevel": 0.8,
-                "mpregen": 7.1,
-
+                "mpregen": 7.1,
                 "mpregenperlevel": 0.6,
                 "crit": 0,
                 "critperlevel": 0,
@@ -5419,8 +5326,7 @@ he Ursine, a fierce and warlike race that has endured the barren tundra for thou
                 "hpperlevel": 80,
                 "mp": 250,
                 "mpperlevel": 45,
-                "movespeed": 340
-,
+                "movespeed": 340,
                 "armor": 12,
                 "armorperlevel": 3.5,
                 "spellblock": 30,
@@ -5459,8 +5365,7 @@ he Ursine, a fierce and warlike race that has endured the barren tundra for thou
                 "y": 48,
                 "w": 48,
                 "h": 48
-   
-         },
+            },
             "tags": [
                 "Fighter"
             ],
@@ -5543,8 +5448,7 @@ he Ursine, a fierce and warlike race that has endured the barren tundra for thou
             "key": "154",
             "name": "Zac",
             "title": "the Secret Weapon",
-            "blurb": "Zac is the product of a Zaun experiment to manufacture a hexchem-engineered supersoldier - the Zaun Amorphous Combatant. Combining brute st
-rength with limitless flexibility, he is a versatile juggernaut: a creative fighter who bounces over obstacles ...",
+            "blurb": "Zac is the product of a Zaun experiment to manufacture a hexchem-engineered supersoldier - the Zaun Amorphous Combatant. Combining brute strength with limitless flexibility, he is a versatile juggernaut: a creative fighter who bounces over obstacles ...",
             "info": {
                 "attack": 3,
                 "defense": 7,
@@ -5590,8 +5494,7 @@ rength with limitless flexibility, he is a versatile juggernaut: a creative figh
         "Zed": {
             "version": "3.12.34",
             "id": "Zed",
-    
-        "key": "238",
+            "key": "238",
             "name": "Zed",
             "title": "the Master of Shadows",
             "blurb": "Zed is the first ninja in 200 years to unlock the ancient, forbidden ways. He defied his clan and master, casting off the balance and discipline that had shackled him all his life. Zed now offers power to those who embrace knowledge of the shadows, ...",
@@ -5631,9 +5534,7 @@ rength with limitless flexibility, he is a versatile juggernaut: a creative figh
                 "mpregenperlevel": 0,
                 "crit": 0,
                 "critperlevel": 0,
-   
-10ff
-             "attackdamage": 49,
+                "attackdamage": 49,
                 "attackdamageperlevel": 3.4,
                 "attackspeedoffset": -0.05,
                 "attackspeedperlevel": 3.1
@@ -5753,168 +5654,7 @@ rength with limitless flexibility, he is a versatile juggernaut: a creative figh
             "image": {
                 "full": "Zyra.png",
                 "sprite": "champion3.png",
-              
-3dc
-  "group": "champion",
-                "x": 192,
-                "y": 96,
-                "w": 48,
-                "h": 48
-            },
-            "tags": [
-                "Mage"
-            ],
-            "partype": "Mana",
-            "stats": {
-                "hp": 355,
-                "hpperlevel": 74,
-                "mp": 250,
-                "mpperlevel": 50,
-                "movespeed": 325,
-                "armor": 11,
-                "armorperlevel": 3,
-                "spellblock": 30,
-                "spellblockperlevel": 0,
-                "attackrange": 575,
-                "hpregen": 4.85,
-                "hpregenperlevel": 0.5,
-                "mpregen": 7.1,
-                "mpregenperlevel": 0.75,
-                "crit": 0,
-                "critperlevel": 0,
-                "attackdamage": 50,
-                "attackdamageperlevel": 3.2,
-                "attackspeedoffset": 0,
-                "attackspeedperlevel": 2.11
-            }
-        }
-    }
-}
-0
-
-             "attackdamage": 49,
-                "attackdamageperlevel": 3.4,
-                "attackspeedoffset": -0.05,
-                "attackspeedperlevel": 3.1
-            }
-        },
-        "Ziggs": {
-            "version": "3.12.34",
-            "id": "Ziggs",
-            "key": "115",
-            "name": "Ziggs",
-            "title": "the Hexplosives Expert",
-            "blurb": "Ziggs was born with a talent for tinkering, but his chaotic, hyperactive nature was unusual among yordle scientists. Aspiring to be a revered inventor like Heimerdinger, he rattled through ambitious projects with manic zeal, emboldened by both his ...",
-            "info": {
-                "attack": 2,
-                "defense": 4,
-                "magic": 9,
-                "difficulty": 6
-            },
-            "image": {
-                "full": "Ziggs.png",
-                "sprite": "champion3.png",
                 "group": "champion",
-                "x": 96,
-                "y": 96,
-                "w": 48,
-                "h": 48
-            },
-            "tags": [
-                "Mage"
-            ],
-            "partype": "Mana",
-            "stats": {
-                "hp": 390,
-                "hpperlevel": 80,
-                "mp": 250,
-                "mpperlevel": 50,
-                "movespeed": 330,
-                "armor": 12,
-                "armorperlevel": 3.3,
-                "spellblock": 30,
-                "spellblockperlevel": 0,
-                "attackrange": 575,
-                "hpregen": 5.25,
-                "hpregenperlevel": 0.6,
-                "mpregen": 6.75,
-                "mpregenperlevel": 0.6,
-                "crit": 0,
-                "critperlevel": 0,
-                "attackdamage": 51,
-                "attackdamageperlevel": 3.1,
-                "attackspeedoffset": -0.04734,
-                "attackspeedperlevel": 2
-            }
-        },
-        "Zilean": {
-            "version": "3.12.34",
-            "id": "Zilean",
-            "key": "26",
-            "name": "Zilean",
-            "title": "the Chronokeeper",
-            "blurb": "In the wastelands of Urtistan, there was once a great city. It perished long ago in a terrible Rune War, like most of the lands below the Great Barrier. Nevertheless, one man survived: a sorcerer named Zilean. Being obsessed with time, it was only ...",
-            "info": {
-                "attack": 2,
-                "defense": 5,
-                "magic": 8,
-                "difficulty": 4
-            },
-            "image": {
-                "full": "Zilean.png",
-                "sprite": "champion3.png",
-                "group": "champion",
-                "x": 144,
-                "y": 96,
-                "w": 48,
-                "h": 48
-            },
-            "tags": [
-                "Support"
-            ],
-            "partype": "Mana",
-            "stats": {
-                "hp": 380,
-                "hpperlevel": 71,
-                "mp": 260,
-                "mpperlevel": 60,
-                "movespeed": 335,
-                "armor": 6.75,
-                "armorperlevel": 3.8,
-                "spellblock": 30,
-                "spellblockperlevel": 0,
-                "attackrange": 600,
-                "hpregen": 4.6,
-                "hpregenperlevel": 0.5,
-                "mpregen": 6.95,
-                "mpregenperlevel": 0.65,
-                "crit": 0,
-                "critperlevel": 0,
-                "attackdamage": 48.6,
-                "attackdamageperlevel": 3,
-                "attackspeedoffset": 0,
-                "attackspeedperlevel": 2.13
-            }
-        },
-        "Zyra": {
-            "version": "3.12.34",
-            "id": "Zyra",
-            "key": "143",
-            "name": "Zyra",
-            "title": "Rise of the Thorns",
-            "blurb": "Longing to take control of her fate, the ancient, dying plant Zyra transferred her consciousness into a human body for a second chance at life. Centuries ago, she and her kind dominated the Kumungu Jungle, using thorns and vines to consume any animal ...",
-            "info": {
-                "attack": 4,
-                "defense": 3,
-                "magic": 8,
-                "difficulty": 7
-            },
-            "image": {
-                "full": "Zyra.png",
-                "sprite": "champion3.png",
-              
-3dc
-  "group": "champion",
                 "x": 192,
                 "y": 96,
                 "w": 48,
@@ -5948,43 +5688,4 @@ rength with limitless flexibility, he is a versatile juggernaut: a creative figh
             }
         }
     }
-}
-0
-
-  "group": "champion",
-                "x": 192,
-                "y": 96,
-                "w": 48,
-                "h": 48
-            },
-            "tags": [
-                "Mage"
-            ],
-            "partype": "Mana",
-            "stats": {
-                "hp": 355,
-                "hpperlevel": 74,
-                "mp": 250,
-                "mpperlevel": 50,
-                "movespeed": 325,
-                "armor": 11,
-                "armorperlevel": 3,
-                "spellblock": 30,
-                "spellblockperlevel": 0,
-                "attackrange": 575,
-                "hpregen": 4.85,
-                "hpregenperlevel": 0.5,
-                "mpregen": 7.1,
-                "mpregenperlevel": 0.75,
-                "crit": 0,
-                "critperlevel": 0,
-                "attackdamage": 50,
-                "attackdamageperlevel": 3.2,
-                "attackspeedoffset": 0,
-                "attackspeedperlevel": 2.11
-            }
-        }
-    }
-}
-0
-
+}

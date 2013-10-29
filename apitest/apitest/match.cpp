@@ -1,14 +1,14 @@
 #include "match.h"
 
-match::match(int cID, int i1, int i2, int i3, int i4, int i5, int i6, int k, int d, int a, int dd, int g, int mk, int ks, int mid, bool rank, bool res, std::string dt, std::string t, int cs, bool blue)
+match::match(int cID, int i[6], int k, int d, int a, int dd, int g, int mk, int ks, int mid, bool rank, bool res, std::string dt, std::string t, int cs, bool blue)
 {
 	champID = cID;
-	items[0] = i1;
-	items[1] = i2;
-	items[2] = i3;
-	items[3] = i4;
-	items[4] = i5;
-	items[5] = i6;
+	items[0] = i[0];
+	items[1] = i[1];
+	items[2] = i[2];
+	items[3] = i[3];
+	items[4] = i[4];
+	items[5] = i[5];
 	kills = k;
 	deaths = d;
 	assists = a;
@@ -30,15 +30,15 @@ match::match(int cID, int i1, int i2, int i3, int i4, int i5, int i6, int k, int
 	blueSide = blue;
 }
 
-match::match(int cID, int i1, int i2, int i3, int i4, int i5, int i6, int k, int d, int a, int dd, int g, int mk, int ks, int mid, bool rank, bool res, std::string dt, std::string t, int bc, int cs, bool blue)
+match::match(int cID, int i[6], int k, int d, int a, int dd, int g, int mk, int ks, int mid, bool rank, bool res, std::string dt, std::string t, int bc, int cs, bool blue)
 {
 	champID = cID;
-	items[0] = i1;
-	items[1] = i2;
-	items[2] = i3;
-	items[3] = i4;
-	items[4] = i5;
-	items[5] = i6;
+	items[0] = i[0];
+	items[1] = i[1];
+	items[2] = i[2];
+	items[3] = i[3];
+	items[4] = i[4];
+	items[5] = i[5];
 	kills = k;
 	deaths = d;
 	assists = a;

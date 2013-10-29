@@ -1,6 +1,6 @@
 #include "player.h"
 
-player::player(std::string n, int k, int d, int a, int w, int l, int rw, int rl, int bw, int bl, int pw, int pl, int cs, int nc, int em)
+player::player(std::string n, int k, int d, int a, int w, int l, int rw, int rl, int bw, int bl, int pw, int pl, int cs, int nc, int em, std::map<int, std::pair<int, int> > cPlays)
 {
 	kills = k;
 	deaths = d;
@@ -17,6 +17,7 @@ player::player(std::string n, int k, int d, int a, int w, int l, int rw, int rl,
 	neutralCreeps = nc;
 	enemyMinions = em;
 	name = n;
+	champPlays = cPlays;
 }
 
 float player::winRate(int mode)
@@ -85,12 +86,32 @@ std::string player::write()
 	temp += intToString(purpleLosses) + ",";
 	temp += intToString(creepScore) + ",";
 	temp += intToString(neutralCreeps) + ",";
-	temp += intToString(enemyMinions);
+	temp += intToString(enemyMinions) + "\n";
 
+	temp += "champions\n";
+
+	std::map<int, std::pair<int, int> >::iterator itr;
+
+	for (itr = champPlays.begin(); itr != champPlays.end(); itr++)
+	{
+		temp += intToString(itr->first) + ",";
+		temp += intToString(itr->second.first) + ",";
+		temp += intToString(itr->second.second) + "\n";
+	}
+
+	temp += "items";
+
+	for (itr = itemsUsed.begin(); itr != itemsUsed.end(); itr++)
+	{
+		temp += "\n";
+		temp += intToString(itr->first) + ",";
+		temp += intToString(itr->second.first) + ",";
+		temp += intToString(itr->second.second);
+	}
 	return temp;
 }
 
-void player::modifyStats(int k, int d, int a, int cs, int nc, int em, bool win, bool ranked, bool blue)
+void player::modifyStats(int k, int d, int a, int cs, int nc, int em, bool win, bool ranked, bool blue, int id, int i[6])
 {
 	kills += k;
 	deaths += d;
@@ -99,9 +120,30 @@ void player::modifyStats(int k, int d, int a, int cs, int nc, int em, bool win, 
 	neutralCreeps += nc;
 	enemyMinions += em;
 
+	std::map<int, std::pair<int, int> >::iterator itr = champPlays.find(id);
+
 	if (win)
 	{
 		wins++;
+		itr->second.first++;
+
+		for (int j = 0; j < 6; j++)
+		{
+			if (i[j] != 0)
+			{
+				itr = itemsUsed.find(i[j]);
+
+				if (itr != itemsUsed.end())
+				{
+					itr->second.first++;
+				}
+				else
+				{
+					std::pair<int, int> temp(1, 0);
+					itemsUsed[i[j]] = temp;
+				}
+			}
+		}
 
 		if (ranked)
 		{
@@ -120,6 +162,25 @@ void player::modifyStats(int k, int d, int a, int cs, int nc, int em, bool win, 
 	else
 	{
 		losses++;
+		itr->second.second++;
+
+		for (int j = 0; j < 6; j++)
+		{
+			if (i[j] != 0)
+			{
+				itr = itemsUsed.find(i[j]);
+
+				if (itr != itemsUsed.end())
+				{
+					itr->second.second++;
+				}
+				else
+				{
+					std::pair<int, int> temp(0, 1);
+					itemsUsed[i[j]] = temp;
+				}
+			}
+		}
 
 		if (ranked)
 		{
@@ -135,4 +196,18 @@ void player::modifyStats(int k, int d, int a, int cs, int nc, int em, bool win, 
 			purpleLosses++;
 		}
 	}
+}
+
+float player::cWinRate(int ID)
+{
+	std::map<int, std::pair<int, int> >::iterator itr = champPlays.find(ID);
+
+	return (float)(itr->second.first) / (itr->second.first + itr->second.second);
+}
+
+float player::iWinRate(int ID)
+{
+	std::map<int, std::pair<int, int> >::iterator itr = itemsUsed.find(ID);
+
+	return (float)(itr->second.first) / (itr->second.first + itr->second.second);
 }
