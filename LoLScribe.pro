@@ -29,11 +29,11 @@ FORMS    += mainwindow.ui \
     dialog.ui
 
 
-DEFINES += CURL_STATICLIB
+#DEFINES += CURL_STATICLIB
 #INCLUDEPATH += "C:\CompSci\curl-7.32.0-devel-mingw32\curl-7.32.0-devel-mingw32\include"
 #win32:LIBS += -L"C:\CompSci\curl-7.32.0-rtmp-ssh2-ssl-sspi-zlib-idn-static-bin-w32" -lcurl
-INCLUDEPATH += "\curl-7.32.0-devel-mingw32\curl-7.32.0-devel-mingw32\include"
-win32:LIBS += -L"\curl-7.32.0-rtmp-ssh2-ssl-sspi-zlib-idn-static-bin-w32" -lcurl
+INCLUDEPATH += ./curl-7.32.0-devel-mingw32/curl-7.32.0-devel-mingw32/include
+win32:LIBS += -L./curl-7.32.0-rtmp-ssh2-ssl-sspi-zlib-idn-static-bin-w32 -lcurl
 
 
 OTHER_FILES += \

@@ -25,36 +25,37 @@ static size_t my_fwrite(void *buffer, size_t size, size_t nmemb, void *stream)
 
 void download()
 {
-   // std::ifstream settingsf("user_settings.TXT");
+    std::ifstream settingsf;
+    settingsf.open("user_settings.TXT");
     std::string mashapeAuthCode;
 
-//    if (!settingsf.is_open())
-//    {
-//        std::getline(settingsf, mashapeAuthCode);
-//        std::cout << "mashape key: " << mashapeAuthCode << std::endl;
-//    }
-//    else
-//    {
-//       std::cout << "\"user_settings.TXT\" file not found" << std::endl;
-//        return;
-//    }
-//    settingsf.close();
-
-
-    QFile file("user_settings.txt");
-    if(!file.open(QIODevice::ReadOnly)) {
-        QMessageBox::information(0, "error", file.errorString());
-        std::cout << "user_settings.txt file not found" << std::endl;
+    if (settingsf.is_open())
+    {
+        std::getline(settingsf, mashapeAuthCode);
+        std::cout << "mashape key: " << mashapeAuthCode << std::endl;
     }
-
-    QTextStream in(&file);
-
-    while(!in.atEnd()) {
-        QString line = in.readLine();
-        mashapeAuthCode = line.toLocal8Bit().constData();
+    else
+    {
+       std::cout << "\"user_settings.TXT\" file not found" << std::endl;
+        return;
     }
+    settingsf.close();
 
-    file.close();
+
+//    QFile file("user_settings.txt");
+//    if(!file.open(QIODevice::ReadOnly)) {
+//        QMessageBox::information(0, "error", file.errorString());
+//        std::cout << "user_settings.txt file not found" << std::endl;
+//    }
+
+//    QTextStream in(&file);
+
+//    while(!in.atEnd()) {
+//        QString line = in.readLine();
+//        mashapeAuthCode = line.toLocal8Bit().constData();
+//    }
+
+//    file.close();
 
 
     CURL *curl;
