@@ -2,6 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "dialog.h"
+#include "apitest/apitest/champion.h"
+#include "apitest/apitest/player.h"
+#include "apitest/apitest/match.h"
+#include <QString>
 
 namespace Ui {
 class MainWindow;
@@ -16,6 +21,15 @@ public:
     ~MainWindow();
 
 private slots:
+
+    void on_pushButton_clicked();
+
+private:
+    Dialog *myNewDialog;
+
+    player *myPlayer;
+    QVector<champion> *myChampionList;
+    QVector<match> *myMatchList;
 
 private:
     Ui::MainWindow *ui;

@@ -226,3 +226,4 @@ api.cpp
 api.h
 user_settings.txt
 user settings.txt
+*.pro
