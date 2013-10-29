@@ -5,6 +5,9 @@
 #include <fstream>
 #include <curl/curl.h>
 #include <string>
+#include <QFile>
+#include <QMessageBox>
+#include <QTextStream>
 
 std::string tempOut;
 static size_t my_fwrite(void *buffer, size_t size, size_t nmemb, void *stream)
@@ -20,19 +23,40 @@ static size_t my_fwrite(void *buffer, size_t size, size_t nmemb, void *stream)
     return size*nmemb;
 }
 
-
-int main(int argc, char *argv[])
-{
-
- QApplication a(argc, argv);
- MainWindow w;
- w.show();
-
-    return a.exec();
-}
-
 void download()
 {
+   // std::ifstream settingsf("user_settings.TXT");
+    std::string mashapeAuthCode;
+
+//    if (!settingsf.is_open())
+//    {
+//        std::getline(settingsf, mashapeAuthCode);
+//        std::cout << "mashape key: " << mashapeAuthCode << std::endl;
+//    }
+//    else
+//    {
+//       std::cout << "\"user_settings.TXT\" file not found" << std::endl;
+//        return;
+//    }
+//    settingsf.close();
+
+
+    QFile file("user_settings.txt");
+    if(!file.open(QIODevice::ReadOnly)) {
+        QMessageBox::information(0, "error", file.errorString());
+        std::cout << "user_settings.txt file not found" << std::endl;
+    }
+
+    QTextStream in(&file);
+
+    while(!in.atEnd()) {
+        QString line = in.readLine();
+        mashapeAuthCode = line.toLocal8Bit().constData();
+    }
+
+    file.close();
+
+
     CURL *curl;
  CURLcode res;
 
@@ -44,8 +68,9 @@ void download()
    //out = fopen ("scribeout.txt", "w");
    out.open("scribeout.txt");
 
- slist = curl_slist_append(slist, "X-Mashape-Authorization: SDmDf8mq9jguHZbyxcCAIBqhvdWbWJ6n");
- curl_global_init(CURL_GLOBAL_DEFAULT);
+ //slist = curl_slist_append(slist, "X-Mashape-Authorization: SDmDf8mq9jguHZbyxcCAIBqhvdWbWJ6n");
+   slist = curl_slist_append(slist, mashapeAuthCode.c_str());
+    curl_global_init(CURL_GLOBAL_DEFAULT);
 
  curl = curl_easy_init();
  if(curl) {
@@ -98,4 +123,13 @@ void download()
  curl_global_cleanup();
 }
 
+int main(int argc, char *argv[])
+{
+    download();
 
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+
+    return a.exec();
+}

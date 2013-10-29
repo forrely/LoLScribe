@@ -224,3 +224,5 @@ curllib_static.lib
 libcurl.lib
 api.cpp
 api.h
+user_settings.txt
+user settings.txt
