@@ -14,7 +14,7 @@ public:
 	std::string write();
 	void modifyStats(int k, int d, int a, int cs, int nc, int em, bool win, bool ranked, bool blue);
 
-private:
+public:
 	int kills, deaths, assists, wins, losses, rankedWins, rankedLosses, blueWins, blueLosses, purpleWins, purpleLosses;
 	int creepScore, neutralCreeps, enemyMinions;
 	std::string name;
