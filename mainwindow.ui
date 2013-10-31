@@ -41,7 +41,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <property name="iconSize">
      <size>
@@ -116,7 +116,7 @@
       <property name="title">
        <string>Favorite Champions</string>
       </property>
-      <widget class="QListWidget" name="listWidget">
+      <widget class="QListWidget" name="listWidget_favoriteChampions">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -208,7 +208,7 @@
      <attribute name="title">
       <string>Champions</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QTableWidget" name="tableWidget_Champions">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -223,41 +223,25 @@
         <height>10</height>
        </size>
       </property>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>Resources/draven icon.png</normaloff>Resources/draven icon.png</iconset>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>New Row</string>
-       </property>
-      </row>
-      <column>
-       <property name="text">
-        <string>New Column</string>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>Resources/draven icon.png</normaloff>Resources/draven icon.png</iconset>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>New Column</string>
-       </property>
-      </column>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_5">
      <attribute name="title">
       <string>Items</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget_2">
+     <widget class="QTableWidget" name="tableWidget_Items">
       <property name="geometry">
        <rect>
         <x>15</x>
@@ -292,7 +276,7 @@
      <attribute name="title">
       <string>Match History</string>
      </attribute>
-     <widget class="QListWidget" name="listWidget_2">
+     <widget class="QListWidget" name="listWidget_Match">
       <property name="geometry">
        <rect>
         <x>10</x>

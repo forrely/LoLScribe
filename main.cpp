@@ -8,6 +8,7 @@
 #include <QFile>
 #include <QMessageBox>
 #include <QTextStream>
+#include <QVector>
 
 std::string tempOut;
 static size_t my_fwrite(void *buffer, size_t size, size_t nmemb, void *stream)
@@ -124,12 +125,29 @@ void download()
  curl_global_cleanup();
 }
 
+
 int main(int argc, char *argv[])
 {
-    download();
+    //download();
 
     QApplication a(argc, argv);
     MainWindow w;
+
+    w.mp = player();
+    w.mcl = QVector<champion>();
+    w.mcl.append(champion(0, "test" ));
+
+    //testing values
+    player *tempPlayer = new player("blah", 0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    QVector<champion*> *tempChampList = new QVector<champion*>();
+    tempChampList->append(new champion("testchamp1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15));
+    tempChampList->append(new champion("testchamp2", 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16));
+    QVector<match*> *tempMatchList = new QVector<match*>();
+
+    //w.setDisplayData();
+    //w.setDisplayData(tempPlayer, tempChampList, tempMatchList);
+
+    w.displayData();
     w.show();
 
     return a.exec();

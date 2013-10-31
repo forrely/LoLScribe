@@ -20,6 +20,9 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    void setDisplayData(player* p, QVector<champion*> *c, QVector<match*> *m);
+    void displayData();
+
 private slots:
 
     void on_pushButton_clicked();
@@ -27,9 +30,12 @@ private slots:
 private:
     Dialog *myNewDialog;
 
+public:
+    player mp;
+    QVector<champion> mcl;
     player *myPlayer;
-    QVector<champion> *myChampionList;
-    QVector<match> *myMatchList;
+    QVector<champion*> *myChampionList;
+    QVector<match*> *myMatchList;
 
 private:
     Ui::MainWindow *ui;
