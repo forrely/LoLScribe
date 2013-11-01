@@ -27,7 +27,7 @@ public:
 	int getBuildCost() {return buildCost;};
 	bool getResult() {return result;};
 	bool isRanked() {return ranked;};
-	bool blueSide() {return blueSide;};
+	bool isBlueSide() {return blueSide;};
 	void write(std::ofstream out);
 	std::string write();
 	void printStats();
