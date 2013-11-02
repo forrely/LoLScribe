@@ -7,6 +7,7 @@
 #include "apitest/apitest/player.h"
 #include "apitest/apitest/match.h"
 #include <QString>
+#include <vector>
 
 namespace Ui {
 class MainWindow;
@@ -23,6 +24,8 @@ public:
     void setDisplayData(player* p, QVector<champion*> *c, QVector<match*> *m);
     void displayData();
 
+    void setChampData(std::vector<champion> c);
+
 private slots:
 
     void on_pushButton_clicked();
@@ -31,6 +34,8 @@ private:
     Dialog *myNewDialog;
 
 public:
+
+    std::vector<champion> mclv;
     player mp;
     QVector<champion> mcl;
     player *myPlayer;

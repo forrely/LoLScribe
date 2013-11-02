@@ -1,16 +1,16 @@
-#include <iostream>
 #include <string>
+#include <iostream>
 #include <map>
 #include <sstream>
 
-class champion
+class player
 {
 public:
-	champion();
-	champion(std::string n, int k, int d, int a, int w, int l, int rw, int rl, int bw, int bl, int pw, int pl, int cs, int nc, int em, int idt, std::map<int, std::pair<int, int> > items);
-	champion(int idt, std::string n);
+	player();
+	player(std::string n, int k, int d, int a, int w, int l, int rw, int rl, int bw, int bl, int pw, int pl, int cs, int nc, int em, std::map<int, std::pair<int, int> > cPlays);
 	float KDA() {return (kills + assists) / (float)deaths;};
 	float winRate(int mode);
+	float cWinRate(int ID);
 	float iWinRate(int ID);
 	float averages(int mode);
 	int getKills() {return kills;};
@@ -29,13 +29,14 @@ public:
 	int getEnemyMinions() {return enemyMinions;};
 	std::string getName() {return name;};
 	std::string write();
-	void modifyStats(int k, int d, int a, int cs, int nc, int em, bool win, bool ranked, bool blue, int i[6]);
-	int getID() {return id;};
+	void modifyStats(int k, int d, int a, int cs, int nc, int em, bool win, bool ranked, bool blue, int id, int i[6]);
+	
 
 public:
 	int kills, deaths, assists, wins, losses, rankedWins, rankedLosses, blueWins, blueLosses, purpleWins, purpleLosses;
-	int creepScore, neutralCreeps, enemyMinions, id;
-	std::map<int, std::pair<int, int> > itemsUsed; //ID, wins, losses
+	int creepScore, neutralCreeps, enemyMinions;
 	std::string name;
+	std::map<int, std::pair<int, int> >champPlays; //ID, wins, losses
+	std::map<int, std::pair<int, int> >itemsUsed;
 	std::string intToString(int x) {return static_cast<std::ostringstream*>( &(std::ostringstream() << x) )->str();};
 };

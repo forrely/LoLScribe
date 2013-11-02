@@ -1,0 +1,3592 @@
+{
+    "_": {
+        "APP_ID": "server_tracked"
+    },
+    "success": true,
+    "requestTime": "2013-10-28T16:10:03-07:00",
+    "shard": "North_America:ZWQ1N2ZiNjc1Y2RjY2NjM2ZjZmJhMDQwNjQ3NzFlOTQxOGRjZmZhNg",
+    "player": {
+        "accountId": 36050526,
+        "summonerId": 22316921,
+        "name": "Mermigas",
+        "icon": 22,
+        "internalName": "mermigas",
+        "level": 30
+    },
+    "data": {
+        "recentGamesJson": null,
+        "playerGameStatsMap": {
+            "1135266385": null,
+            "1135220850": null,
+            "1135767657": null,
+            "1135432585": null,
+            "1135761715": null,
+            "1135802382": null,
+            "1135734718": null,
+            "1135157326": null,
+            "1135342485": null,
+            "1134817367": null
+        },
+        "gameStatistics": {
+            "array": [
+                {
+                    "skinName": "Nasus",
+                    "ranked": true,
+                    "gameType": "MATCHED_GAME",
+                    "fellowPlayers": {
+                        "array": [
+                            {
+                                "dataVersion": 2,
+                                "championId": 42,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 25978489
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 40,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 29546662
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 69,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 25858406
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 134,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 38774930
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 154,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 21473178
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 32,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 19688988
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 81,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 34491206
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 103,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 22403658
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 86,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 23471087
+                            }
+                        ]
+                    },
+                    "skinIndex": 3,
+                    "experienceEarned": 0,
+                    "rawStatsJson": null,
+                    "eligibleFirstWinOfDay": true,
+                    "gameMapId": 1,
+                    "difficulty": null,
+                    "leaver": false,
+                    "spell1": 4,
+                    "gameTypeEnum": "MATCHED_GAME",
+                    "teamId": 100,
+                    "summonerId": 22316921,
+                    "statistics": {
+                        "array": [
+                            {
+                                "statType": "MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 189,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 14473,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_MULTI_KILL",
+                                "dataVersion": 0,
+                                "value": 2,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 19488,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TURRETS_KILLED",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 6697,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WIN",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 6,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                                "dataVersion": 0,
+                                "value": 133,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "GOLD_EARNED",
+                                "dataVersion": 0,
+                                "value": 12084,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM4",
+                                "dataVersion": 0,
+                                "value": 3065,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "SIGHT_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 4,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_HEAL",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_CRITICAL_STRIKE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 6,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "CHAMPIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 6,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ASSISTS",
+                                "dataVersion": 0,
+                                "value": 16,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM0",
+                                "dataVersion": 0,
+                                "value": 1054,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 34659,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LEVEL",
+                                "dataVersion": 0,
+                                "value": 18,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NUM_DEATHS",
+                                "dataVersion": 0,
+                                "value": 5,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM5",
+                                "dataVersion": 0,
+                                "value": 1033,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT",
+                                "dataVersion": 0,
+                                "value": 115572,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 42683,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM1",
+                                "dataVersion": 0,
+                                "value": 3068,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM2",
+                                "dataVersion": 0,
+                                "value": 3025,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "VISION_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM3",
+                                "dataVersion": 0,
+                                "value": 1001,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "BARRACKS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_SPENT_DEAD",
+                                "dataVersion": 0,
+                                "value": 206,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 8703,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 72889,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 697,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 15401,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_KILLING_SPREE",
+                                "dataVersion": 0,
+                                "value": 2,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_PLACED",
+                                "dataVersion": 0,
+                                "value": 3,
+                                "futureData": null
+                            }
+                        ]
+                    },
+                    "spell2": 12,
+                    "afk": false,
+                    "id": 4578242004,
+                    "boostXpEarned": 0,
+                    "level": 30,
+                    "invalid": false,
+                    "dataVersion": 2,
+                    "userId": 36050526,
+                    "createDate": "Monday, October 28, 2013 1:35:57 AM PDT",
+                    "adjustedRating": 0,
+                    "userServerPing": 93,
+                    "boostIpEarned": 0,
+                    "premadeSize": 1,
+                    "gameId": 1135734718,
+                    "ipEarned": 242,
+                    "timeInQueue": 20,
+                    "futureData": null,
+                    "eloChange": 0,
+                    "gameMode": "CLASSIC",
+                    "KCoefficient": 0,
+                    "difficultyString": null,
+                    "teamRating": 0,
+                    "queueType": "RANKED_SOLO_5x5",
+                    "subType": "RANKED_SOLO_5x5",
+                    "premadeTeam": false,
+                    "predictedWinPct": 0,
+                    "rating": 0,
+                    "championId": 75
+                },
+                {
+                    "skinName": "Syndra",
+                    "ranked": true,
+                    "gameType": "MATCHED_GAME",
+                    "fellowPlayers": {
+                        "array": [
+                            {
+                                "dataVersion": 2,
+                                "championId": 59,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 19360121
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 12,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 28501091
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 64,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 20308341
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 58,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 20558804
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 236,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 32561664
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 81,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 42154126
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 143,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 30221694
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 75,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 30972261
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 79,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 21661210
+                            }
+                        ]
+                    },
+                    "skinIndex": 1,
+                    "experienceEarned": 0,
+                    "rawStatsJson": null,
+                    "eligibleFirstWinOfDay": false,
+                    "gameMapId": 1,
+                    "difficulty": null,
+                    "leaver": false,
+                    "spell1": 4,
+                    "gameTypeEnum": "MATCHED_GAME",
+                    "teamId": 100,
+                    "summonerId": 22316921,
+                    "statistics": {
+                        "array": [
+                            {
+                                "statType": "MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 139,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 4739,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_MULTI_KILL",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 9236,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TURRETS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 1256,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 6,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                                "dataVersion": 0,
+                                "value": 319,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 632,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "GOLD_EARNED",
+                                "dataVersion": 0,
+                                "value": 7747,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM4",
+                                "dataVersion": 0,
+                                "value": 3255,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "SIGHT_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 3,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_HEAL",
+                                "dataVersion": 0,
+                                "value": 902,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_CRITICAL_STRIKE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 6,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "CHAMPIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 3,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ASSISTS",
+                                "dataVersion": 0,
+                                "value": 5,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM0",
+                                "dataVersion": 0,
+                                "value": 3028,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 14493,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LEVEL",
+                                "dataVersion": 0,
+                                "value": 14,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NUM_DEATHS",
+                                "dataVersion": 0,
+                                "value": 7,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM5",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT",
+                                "dataVersion": 0,
+                                "value": 81111,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LOSE",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 70108,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM1",
+                                "dataVersion": 0,
+                                "value": 3191,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM2",
+                                "dataVersion": 0,
+                                "value": 3128,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "VISION_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM3",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "BARRACKS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_SPENT_DEAD",
+                                "dataVersion": 0,
+                                "value": 212,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 13856,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 10370,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 518,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 15744,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 632,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_KILLING_SPREE",
+                                "dataVersion": 0,
+                                "value": 2,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_PLACED",
+                                "dataVersion": 0,
+                                "value": 3,
+                                "futureData": null
+                            }
+                        ]
+                    },
+                    "spell2": 14,
+                    "afk": false,
+                    "id": 4575699399,
+                    "boostXpEarned": 0,
+                    "level": 30,
+                    "invalid": false,
+                    "dataVersion": 2,
+                    "userId": 36050526,
+                    "createDate": "Sunday, October 27, 2013 5:13:41 PM PDT",
+                    "adjustedRating": 0,
+                    "userServerPing": 106,
+                    "boostIpEarned": 0,
+                    "premadeSize": 2,
+                    "gameId": 1135266385,
+                    "ipEarned": 52,
+                    "timeInQueue": 32,
+                    "futureData": null,
+                    "eloChange": 0,
+                    "gameMode": "CLASSIC",
+                    "KCoefficient": 0,
+                    "difficultyString": null,
+                    "teamRating": 0,
+                    "queueType": "RANKED_SOLO_5x5",
+                    "subType": "RANKED_SOLO_5x5",
+                    "premadeTeam": false,
+                    "predictedWinPct": 0,
+                    "rating": 0,
+                    "championId": 134
+                },
+                {
+                    "skinName": "Lulu",
+                    "ranked": true,
+                    "gameType": "MATCHED_GAME",
+                    "fellowPlayers": {
+                        "array": [
+                            {
+                                "dataVersion": 2,
+                                "championId": 25,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 19887064
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 51,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 29029132
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 143,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 22832078
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 266,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 30382572
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 238,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 26098766
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 64,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 35742180
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 92,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 25510543
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 222,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 31960605
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 10,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 20390199
+                            }
+                        ]
+                    },
+                    "skinIndex": 3,
+                    "experienceEarned": 0,
+                    "rawStatsJson": null,
+                    "eligibleFirstWinOfDay": false,
+                    "gameMapId": 1,
+                    "difficulty": null,
+                    "leaver": false,
+                    "spell1": 4,
+                    "gameTypeEnum": "MATCHED_GAME",
+                    "teamId": 200,
+                    "summonerId": 22316921,
+                    "statistics": {
+                        "array": [
+                            {
+                                "statType": "MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 32,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 9836,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_MULTI_KILL",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 7938,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TURRETS_KILLED",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 1245,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                                "dataVersion": 0,
+                                "value": 258,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "GOLD_EARNED",
+                                "dataVersion": 0,
+                                "value": 9497,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM4",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "SIGHT_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 5,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_HEAL",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_CRITICAL_STRIKE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "CHAMPIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ASSISTS",
+                                "dataVersion": 0,
+                                "value": 14,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM0",
+                                "dataVersion": 0,
+                                "value": 2043,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 17956,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LEVEL",
+                                "dataVersion": 0,
+                                "value": 16,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NUM_DEATHS",
+                                "dataVersion": 0,
+                                "value": 5,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM5",
+                                "dataVersion": 0,
+                                "value": 3096,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT",
+                                "dataVersion": 0,
+                                "value": 21303,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LOSE",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 16619,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM1",
+                                "dataVersion": 0,
+                                "value": 2045,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM2",
+                                "dataVersion": 0,
+                                "value": 3190,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_KILLED",
+                                "dataVersion": 0,
+                                "value": 8,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "VISION_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 20,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM3",
+                                "dataVersion": 0,
+                                "value": 1001,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "BARRACKS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_SPENT_DEAD",
+                                "dataVersion": 0,
+                                "value": 147,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 4601,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 4684,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 181,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 5846,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_KILLING_SPREE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_PLACED",
+                                "dataVersion": 0,
+                                "value": 47,
+                                "futureData": null
+                            }
+                        ]
+                    },
+                    "spell2": 3,
+                    "afk": false,
+                    "id": 4578495384,
+                    "boostXpEarned": 0,
+                    "level": 30,
+                    "invalid": false,
+                    "dataVersion": 2,
+                    "userId": 36050526,
+                    "createDate": "Monday, October 28, 2013 4:04:19 AM PDT",
+                    "adjustedRating": 0,
+                    "userServerPing": 105,
+                    "boostIpEarned": 0,
+                    "premadeSize": 1,
+                    "gameId": 1135802382,
+                    "ipEarned": 74,
+                    "timeInQueue": 72,
+                    "futureData": null,
+                    "eloChange": 0,
+                    "gameMode": "CLASSIC",
+                    "KCoefficient": 0,
+                    "difficultyString": null,
+                    "teamRating": 0,
+                    "queueType": "RANKED_SOLO_5x5",
+                    "subType": "RANKED_SOLO_5x5",
+                    "premadeTeam": false,
+                    "predictedWinPct": 0,
+                    "rating": 0,
+                    "championId": 117
+                },
+                {
+                    "skinName": "Zyra",
+                    "ranked": true,
+                    "gameType": "MATCHED_GAME",
+                    "fellowPlayers": {
+                        "array": [
+                            {
+                                "dataVersion": 2,
+                                "championId": 75,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 37978008
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 86,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 24339815
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 55,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 24156827
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 37,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 23187855
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 32,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 38902015
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 42,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 24738197
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 30,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 29250370
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 51,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 24903696
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 59,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 25138560
+                            }
+                        ]
+                    },
+                    "skinIndex": 0,
+                    "experienceEarned": 0,
+                    "rawStatsJson": null,
+                    "eligibleFirstWinOfDay": false,
+                    "gameMapId": 1,
+                    "difficulty": null,
+                    "leaver": false,
+                    "spell1": 4,
+                    "gameTypeEnum": "MATCHED_GAME",
+                    "teamId": 200,
+                    "summonerId": 22316921,
+                    "statistics": {
+                        "array": [
+                            {
+                                "statType": "MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 15,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 10191,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_MULTI_KILL",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 8702,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TURRETS_KILLED",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 1353,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                                "dataVersion": 0,
+                                "value": 218,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 3934,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "GOLD_EARNED",
+                                "dataVersion": 0,
+                                "value": 8241,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM4",
+                                "dataVersion": 0,
+                                "value": 1001,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "SIGHT_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 5,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_HEAL",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_CRITICAL_STRIKE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "CHAMPIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ASSISTS",
+                                "dataVersion": 0,
+                                "value": 19,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM0",
+                                "dataVersion": 0,
+                                "value": 2043,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 19114,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LEVEL",
+                                "dataVersion": 0,
+                                "value": 14,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NUM_DEATHS",
+                                "dataVersion": 0,
+                                "value": 10,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM5",
+                                "dataVersion": 0,
+                                "value": 1033,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT",
+                                "dataVersion": 0,
+                                "value": 19969,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LOSE",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 13018,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM1",
+                                "dataVersion": 0,
+                                "value": 2045,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM2",
+                                "dataVersion": 0,
+                                "value": 3069,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_KILLED",
+                                "dataVersion": 0,
+                                "value": 3,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "VISION_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 9,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM3",
+                                "dataVersion": 0,
+                                "value": 3098,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "BARRACKS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_SPENT_DEAD",
+                                "dataVersion": 0,
+                                "value": 329,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 7240,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 3016,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 220,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 11088,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 2494,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_KILLING_SPREE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_PLACED",
+                                "dataVersion": 0,
+                                "value": 40,
+                                "futureData": null
+                            }
+                        ]
+                    },
+                    "spell2": 3,
+                    "afk": false,
+                    "id": 4578422694,
+                    "boostXpEarned": 0,
+                    "level": 30,
+                    "invalid": false,
+                    "dataVersion": 2,
+                    "userId": 36050526,
+                    "createDate": "Monday, October 28, 2013 3:13:43 AM PDT",
+                    "adjustedRating": 0,
+                    "userServerPing": 93,
+                    "boostIpEarned": 0,
+                    "premadeSize": 1,
+                    "gameId": 1135767657,
+                    "ipEarned": 64,
+                    "timeInQueue": 82,
+                    "futureData": null,
+                    "eloChange": 0,
+                    "gameMode": "CLASSIC",
+                    "KCoefficient": 0,
+                    "difficultyString": null,
+                    "teamRating": 0,
+                    "queueType": "RANKED_SOLO_5x5",
+                    "subType": "RANKED_SOLO_5x5",
+                    "premadeTeam": false,
+                    "predictedWinPct": 0,
+                    "rating": 0,
+                    "championId": 143
+                },
+                {
+                    "skinName": "Janna",
+                    "ranked": true,
+                    "gameType": "MATCHED_GAME",
+                    "fellowPlayers": {
+                        "array": [
+                            {
+                                "dataVersion": 2,
+                                "championId": 85,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 19154453
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 103,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 23740670
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 81,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 32561664
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 64,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 28795646
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 42,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 25716012
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 59,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 42639207
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 75,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 39571319
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 68,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 30972261
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 89,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 36901520
+                            }
+                        ]
+                    },
+                    "skinIndex": 4,
+                    "experienceEarned": 0,
+                    "rawStatsJson": null,
+                    "eligibleFirstWinOfDay": false,
+                    "gameMapId": 1,
+                    "difficulty": null,
+                    "leaver": false,
+                    "spell1": 4,
+                    "gameTypeEnum": "MATCHED_GAME",
+                    "teamId": 200,
+                    "summonerId": 22316921,
+                    "statistics": {
+                        "array": [
+                            {
+                                "statType": "MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 20,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 10454,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_MULTI_KILL",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 16075,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TURRETS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 2721,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                                "dataVersion": 0,
+                                "value": 146,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "GOLD_EARNED",
+                                "dataVersion": 0,
+                                "value": 10735,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM4",
+                                "dataVersion": 0,
+                                "value": 3117,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "SIGHT_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 4,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_HEAL",
+                                "dataVersion": 0,
+                                "value": 3349,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_CRITICAL_STRIKE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "CHAMPIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 2,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ASSISTS",
+                                "dataVersion": 0,
+                                "value": 26,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM0",
+                                "dataVersion": 0,
+                                "value": 2043,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 27383,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LEVEL",
+                                "dataVersion": 0,
+                                "value": 17,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NUM_DEATHS",
+                                "dataVersion": 0,
+                                "value": 8,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM5",
+                                "dataVersion": 0,
+                                "value": 3098,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT",
+                                "dataVersion": 0,
+                                "value": 14160,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LOSE",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 9161,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM1",
+                                "dataVersion": 0,
+                                "value": 2045,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM2",
+                                "dataVersion": 0,
+                                "value": 3190,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_KILLED",
+                                "dataVersion": 0,
+                                "value": 3,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "VISION_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 14,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM3",
+                                "dataVersion": 0,
+                                "value": 3069,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "BARRACKS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_SPENT_DEAD",
+                                "dataVersion": 0,
+                                "value": 320,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 3814,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 4999,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 853,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 6536,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_KILLING_SPREE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_PLACED",
+                                "dataVersion": 0,
+                                "value": 49,
+                                "futureData": null
+                            }
+                        ]
+                    },
+                    "spell2": 3,
+                    "afk": false,
+                    "id": 4575486020,
+                    "boostXpEarned": 0,
+                    "level": 30,
+                    "invalid": false,
+                    "dataVersion": 2,
+                    "userId": 36050526,
+                    "createDate": "Sunday, October 27, 2013 4:38:21 PM PDT",
+                    "adjustedRating": 0,
+                    "userServerPing": 108,
+                    "boostIpEarned": 0,
+                    "premadeSize": 2,
+                    "gameId": 1135220850,
+                    "ipEarned": 74,
+                    "timeInQueue": 107,
+                    "futureData": null,
+                    "eloChange": 0,
+                    "gameMode": "CLASSIC",
+                    "KCoefficient": 0,
+                    "difficultyString": null,
+                    "teamRating": 0,
+                    "queueType": "RANKED_SOLO_5x5",
+                    "subType": "RANKED_SOLO_5x5",
+                    "premadeTeam": false,
+                    "predictedWinPct": 0,
+                    "rating": 0,
+                    "championId": 40
+                },
+                {
+                    "skinName": "Janna",
+                    "ranked": true,
+                    "gameType": "MATCHED_GAME",
+                    "fellowPlayers": {
+                        "array": [
+                            {
+                                "dataVersion": 2,
+                                "championId": 61,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 21077364
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 53,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 23577826
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 75,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 34873109
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 51,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 35381795
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 236,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 32561664
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 34,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 23199201
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 56,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 29316711
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 98,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 26831158
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 77,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 23660489
+                            }
+                        ]
+                    },
+                    "skinIndex": 4,
+                    "experienceEarned": 0,
+                    "rawStatsJson": null,
+                    "eligibleFirstWinOfDay": false,
+                    "gameMapId": 1,
+                    "difficulty": null,
+                    "leaver": false,
+                    "spell1": 4,
+                    "gameTypeEnum": "MATCHED_GAME",
+                    "teamId": 100,
+                    "summonerId": 22316921,
+                    "statistics": {
+                        "array": [
+                            {
+                                "statType": "MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 21,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 7301,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_MULTI_KILL",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 10247,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TURRETS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 1492,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WIN",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                                "dataVersion": 0,
+                                "value": 138,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 34,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "GOLD_EARNED",
+                                "dataVersion": 0,
+                                "value": 10671,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM4",
+                                "dataVersion": 0,
+                                "value": 3096,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "SIGHT_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 4,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_HEAL",
+                                "dataVersion": 0,
+                                "value": 737,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_CRITICAL_STRIKE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "CHAMPIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ASSISTS",
+                                "dataVersion": 0,
+                                "value": 15,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM0",
+                                "dataVersion": 0,
+                                "value": 2043,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 17854,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LEVEL",
+                                "dataVersion": 0,
+                                "value": 15,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NUM_DEATHS",
+                                "dataVersion": 0,
+                                "value": 6,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM5",
+                                "dataVersion": 0,
+                                "value": 1001,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT",
+                                "dataVersion": 0,
+                                "value": 15773,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 10898,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM1",
+                                "dataVersion": 0,
+                                "value": 2045,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM2",
+                                "dataVersion": 0,
+                                "value": 3190,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_KILLED",
+                                "dataVersion": 0,
+                                "value": 7,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "VISION_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 13,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM3",
+                                "dataVersion": 0,
+                                "value": 3067,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "BARRACKS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_SPENT_DEAD",
+                                "dataVersion": 0,
+                                "value": 188,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 1968,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 4840,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 306,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 3495,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_KILLING_SPREE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 34,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_PLACED",
+                                "dataVersion": 0,
+                                "value": 37,
+                                "futureData": null
+                            }
+                        ]
+                    },
+                    "spell2": 3,
+                    "afk": false,
+                    "id": 4574091997,
+                    "boostXpEarned": 0,
+                    "level": 30,
+                    "invalid": false,
+                    "dataVersion": 2,
+                    "userId": 36050526,
+                    "createDate": "Sunday, October 27, 2013 12:37:50 PM PDT",
+                    "adjustedRating": 0,
+                    "userServerPing": 98,
+                    "boostIpEarned": 0,
+                    "premadeSize": 1,
+                    "gameId": 1134817367,
+                    "ipEarned": 101,
+                    "timeInQueue": 20,
+                    "futureData": null,
+                    "eloChange": 0,
+                    "gameMode": "CLASSIC",
+                    "KCoefficient": 0,
+                    "difficultyString": null,
+                    "teamRating": 0,
+                    "queueType": "RANKED_SOLO_5x5",
+                    "subType": "RANKED_SOLO_5x5",
+                    "premadeTeam": false,
+                    "predictedWinPct": 0,
+                    "rating": 0,
+                    "championId": 40
+                },
+                {
+                    "skinName": "Janna",
+                    "ranked": true,
+                    "gameType": "MATCHED_GAME",
+                    "fellowPlayers": {
+                        "array": [
+                            {
+                                "dataVersion": 2,
+                                "championId": 121,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 338906
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 51,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 25461056
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 99,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 23853643
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 67,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 25294178
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 23,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 22707493
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 106,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 34692556
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 53,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 25793784
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 92,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 21228747
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 20,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 47077594
+                            }
+                        ]
+                    },
+                    "skinIndex": 4,
+                    "experienceEarned": 0,
+                    "rawStatsJson": null,
+                    "eligibleFirstWinOfDay": false,
+                    "gameMapId": 1,
+                    "difficulty": null,
+                    "leaver": false,
+                    "spell1": 4,
+                    "gameTypeEnum": "MATCHED_GAME",
+                    "teamId": 200,
+                    "summonerId": 22316921,
+                    "statistics": {
+                        "array": [
+                            {
+                                "statType": "MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 9,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 7723,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_MULTI_KILL",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 9400,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TURRETS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 583,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                                "dataVersion": 0,
+                                "value": 77,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "GOLD_EARNED",
+                                "dataVersion": 0,
+                                "value": 6840,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM4",
+                                "dataVersion": 0,
+                                "value": 3105,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "SIGHT_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 5,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_HEAL",
+                                "dataVersion": 0,
+                                "value": 397,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_CRITICAL_STRIKE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "CHAMPIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ASSISTS",
+                                "dataVersion": 0,
+                                "value": 9,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM0",
+                                "dataVersion": 0,
+                                "value": 2043,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 17550,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LEVEL",
+                                "dataVersion": 0,
+                                "value": 13,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NUM_DEATHS",
+                                "dataVersion": 0,
+                                "value": 7,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM5",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT",
+                                "dataVersion": 0,
+                                "value": 9704,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LOSE",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 5190,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM1",
+                                "dataVersion": 0,
+                                "value": 2045,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM2",
+                                "dataVersion": 0,
+                                "value": 3096,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "VISION_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 11,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM3",
+                                "dataVersion": 0,
+                                "value": 1001,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "BARRACKS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_SPENT_DEAD",
+                                "dataVersion": 0,
+                                "value": 153,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 1764,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 4514,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 425,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 2347,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_KILLING_SPREE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_PLACED",
+                                "dataVersion": 0,
+                                "value": 33,
+                                "futureData": null
+                            }
+                        ]
+                    },
+                    "spell2": 3,
+                    "afk": false,
+                    "id": 4576179006,
+                    "boostXpEarned": 0,
+                    "level": 30,
+                    "invalid": false,
+                    "dataVersion": 2,
+                    "userId": 36050526,
+                    "createDate": "Sunday, October 27, 2013 6:28:07 PM PDT",
+                    "adjustedRating": 0,
+                    "userServerPing": 106,
+                    "boostIpEarned": 0,
+                    "premadeSize": 1,
+                    "gameId": 1135342485,
+                    "ipEarned": 58,
+                    "timeInQueue": 10,
+                    "futureData": null,
+                    "eloChange": 0,
+                    "gameMode": "CLASSIC",
+                    "KCoefficient": 0,
+                    "difficultyString": null,
+                    "teamRating": 0,
+                    "queueType": "RANKED_SOLO_5x5",
+                    "subType": "RANKED_SOLO_5x5",
+                    "premadeTeam": false,
+                    "predictedWinPct": 0,
+                    "rating": 0,
+                    "championId": 40
+                },
+                {
+                    "skinName": "Janna",
+                    "ranked": true,
+                    "gameType": "MATCHED_GAME",
+                    "fellowPlayers": {
+                        "array": [
+                            {
+                                "dataVersion": 2,
+                                "championId": 412,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 22809333
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 75,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 40711457
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 81,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 19170918
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 18,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 22365389
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 59,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 25289000
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 103,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 29494029
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 266,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 279655
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 79,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 25660035
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 5,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 25307035
+                            }
+                        ]
+                    },
+                    "skinIndex": 4,
+                    "experienceEarned": 0,
+                    "rawStatsJson": null,
+                    "eligibleFirstWinOfDay": false,
+                    "gameMapId": 1,
+                    "difficulty": null,
+                    "leaver": false,
+                    "spell1": 4,
+                    "gameTypeEnum": "MATCHED_GAME",
+                    "teamId": 200,
+                    "summonerId": 22316921,
+                    "statistics": {
+                        "array": [
+                            {
+                                "statType": "MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 6,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 6704,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_MULTI_KILL",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 4910,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TURRETS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 495,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                                "dataVersion": 0,
+                                "value": 35,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "GOLD_EARNED",
+                                "dataVersion": 0,
+                                "value": 5605,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM4",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "SIGHT_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 4,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_HEAL",
+                                "dataVersion": 0,
+                                "value": 506,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_CRITICAL_STRIKE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "CHAMPIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ASSISTS",
+                                "dataVersion": 0,
+                                "value": 4,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM0",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 13275,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LEVEL",
+                                "dataVersion": 0,
+                                "value": 10,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NUM_DEATHS",
+                                "dataVersion": 0,
+                                "value": 5,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM5",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT",
+                                "dataVersion": 0,
+                                "value": 2506,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LOSE",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 1525,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM1",
+                                "dataVersion": 0,
+                                "value": 2045,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM2",
+                                "dataVersion": 0,
+                                "value": 3096,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_KILLED",
+                                "dataVersion": 0,
+                                "value": 5,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "VISION_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 9,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM3",
+                                "dataVersion": 0,
+                                "value": 3117,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "BARRACKS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_SPENT_DEAD",
+                                "dataVersion": 0,
+                                "value": 128,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 1021,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 981,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 1660,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 1516,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_KILLING_SPREE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_PLACED",
+                                "dataVersion": 0,
+                                "value": 31,
+                                "futureData": null
+                            }
+                        ]
+                    },
+                    "spell2": 3,
+                    "afk": false,
+                    "id": 4576715969,
+                    "boostXpEarned": 0,
+                    "level": 30,
+                    "invalid": false,
+                    "dataVersion": 2,
+                    "userId": 36050526,
+                    "createDate": "Sunday, October 27, 2013 7:54:43 PM PDT",
+                    "adjustedRating": 0,
+                    "userServerPing": 107,
+                    "boostIpEarned": 0,
+                    "premadeSize": 1,
+                    "gameId": 1135432585,
+                    "ipEarned": 57,
+                    "timeInQueue": 24,
+                    "futureData": null,
+                    "eloChange": 0,
+                    "gameMode": "CLASSIC",
+                    "KCoefficient": 0,
+                    "difficultyString": null,
+                    "teamRating": 0,
+                    "queueType": "RANKED_SOLO_5x5",
+                    "subType": "RANKED_SOLO_5x5",
+                    "premadeTeam": false,
+                    "predictedWinPct": 0,
+                    "rating": 0,
+                    "championId": 40
+                },
+                {
+                    "skinName": "Janna",
+                    "ranked": true,
+                    "gameType": "MATCHED_GAME",
+                    "fellowPlayers": {
+                        "array": [
+                            {
+                                "dataVersion": 2,
+                                "championId": 63,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 28350928
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 64,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 26226221
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 104,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 24448271
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 75,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 30237135
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 53,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 23477095
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 222,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 22377726
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 98,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 20461248
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 107,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 22811225
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 79,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 21245358
+                            }
+                        ]
+                    },
+                    "skinIndex": 4,
+                    "experienceEarned": 0,
+                    "rawStatsJson": null,
+                    "eligibleFirstWinOfDay": false,
+                    "gameMapId": 1,
+                    "difficulty": null,
+                    "leaver": false,
+                    "spell1": 4,
+                    "gameTypeEnum": "MATCHED_GAME",
+                    "teamId": 200,
+                    "summonerId": 22316921,
+                    "statistics": {
+                        "array": [
+                            {
+                                "statType": "MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 4,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 2307,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_MULTI_KILL",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 1293,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TURRETS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 957,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WIN",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                                "dataVersion": 0,
+                                "value": 57,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "GOLD_EARNED",
+                                "dataVersion": 0,
+                                "value": 5768,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM4",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "SIGHT_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 4,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_HEAL",
+                                "dataVersion": 0,
+                                "value": 256,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_CRITICAL_STRIKE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "CHAMPIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 3,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ASSISTS",
+                                "dataVersion": 0,
+                                "value": 13,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM0",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 3645,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LEVEL",
+                                "dataVersion": 0,
+                                "value": 10,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NUM_DEATHS",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM5",
+                                "dataVersion": 0,
+                                "value": 3096,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT",
+                                "dataVersion": 0,
+                                "value": 7620,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 2840,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM1",
+                                "dataVersion": 0,
+                                "value": 2045,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM2",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_KILLED",
+                                "dataVersion": 0,
+                                "value": 2,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "VISION_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 4,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM3",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "BARRACKS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_SPENT_DEAD",
+                                "dataVersion": 0,
+                                "value": 12,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 1048,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 4779,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 45,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 2006,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_KILLING_SPREE",
+                                "dataVersion": 0,
+                                "value": 3,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_PLACED",
+                                "dataVersion": 0,
+                                "value": 17,
+                                "futureData": null
+                            }
+                        ]
+                    },
+                    "spell2": 3,
+                    "afk": false,
+                    "id": 4575173863,
+                    "boostXpEarned": 0,
+                    "level": 30,
+                    "invalid": false,
+                    "dataVersion": 2,
+                    "userId": 36050526,
+                    "createDate": "Sunday, October 27, 2013 3:46:17 PM PDT",
+                    "adjustedRating": 0,
+                    "userServerPing": 104,
+                    "boostIpEarned": 0,
+                    "premadeSize": 1,
+                    "gameId": 1135157326,
+                    "ipEarned": 76,
+                    "timeInQueue": 34,
+                    "futureData": null,
+                    "eloChange": 0,
+                    "gameMode": "CLASSIC",
+                    "KCoefficient": 0,
+                    "difficultyString": null,
+                    "teamRating": 0,
+                    "queueType": "RANKED_SOLO_5x5",
+                    "subType": "RANKED_SOLO_5x5",
+                    "premadeTeam": false,
+                    "predictedWinPct": 0,
+                    "rating": 0,
+                    "championId": 40
+                },
+                {
+                    "skinName": "Janna",
+                    "ranked": true,
+                    "gameType": "MATCHED_GAME",
+                    "fellowPlayers": {
+                        "array": [
+                            {
+                                "dataVersion": 2,
+                                "championId": 10,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 21021096
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 105,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 46121230
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 76,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 20539316
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 254,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 117358
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 23,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 30650752
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 42,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 313880
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 61,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 32004570
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 18,
+                                "teamId": 200,
+                                "futureData": null,
+                                "summonerId": 21531212
+                            },
+                            {
+                                "dataVersion": 2,
+                                "championId": 17,
+                                "teamId": 100,
+                                "futureData": null,
+                                "summonerId": 24025532
+                            }
+                        ]
+                    },
+                    "skinIndex": 4,
+                    "experienceEarned": 0,
+                    "rawStatsJson": null,
+                    "eligibleFirstWinOfDay": false,
+                    "gameMapId": 1,
+                    "difficulty": null,
+                    "leaver": false,
+                    "spell1": 4,
+                    "gameTypeEnum": "MATCHED_GAME",
+                    "teamId": 100,
+                    "summonerId": 22316921,
+                    "statistics": {
+                        "array": [
+                            {
+                                "statType": "MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 11,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 5851,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_MULTI_KILL",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 13677,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TURRETS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 1448,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 2,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                                "dataVersion": 0,
+                                "value": 107,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 218,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "GOLD_EARNED",
+                                "dataVersion": 0,
+                                "value": 9271,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM4",
+                                "dataVersion": 0,
+                                "value": 3096,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "SIGHT_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 4,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_HEAL",
+                                "dataVersion": 0,
+                                "value": 2582,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_CRITICAL_STRIKE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 2,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "CHAMPIONS_KILLED",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ASSISTS",
+                                "dataVersion": 0,
+                                "value": 16,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM0",
+                                "dataVersion": 0,
+                                "value": 2043,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 20257,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LEVEL",
+                                "dataVersion": 0,
+                                "value": 15,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "NUM_DEATHS",
+                                "dataVersion": 0,
+                                "value": 5,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM5",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT",
+                                "dataVersion": 0,
+                                "value": 8819,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LOSE",
+                                "dataVersion": 0,
+                                "value": 1,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 5316,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM1",
+                                "dataVersion": 0,
+                                "value": 2045,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM2",
+                                "dataVersion": 0,
+                                "value": 3270,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_KILLED",
+                                "dataVersion": 0,
+                                "value": 3,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "VISION_WARDS_BOUGHT_IN_GAME",
+                                "dataVersion": 0,
+                                "value": 15,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "ITEM3",
+                                "dataVersion": 0,
+                                "value": 3105,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "BARRACKS_KILLED",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_TIME_SPENT_DEAD",
+                                "dataVersion": 0,
+                                "value": 196,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 2046,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                                "dataVersion": 0,
+                                "value": 3284,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_TAKEN",
+                                "dataVersion": 0,
+                                "value": 728,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 3712,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                                "dataVersion": 0,
+                                "value": 218,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "LARGEST_KILLING_SPREE",
+                                "dataVersion": 0,
+                                "value": 0,
+                                "futureData": null
+                            },
+                            {
+                                "statType": "WARD_PLACED",
+                                "dataVersion": 0,
+                                "value": 50,
+                                "futureData": null
+                            }
+                        ]
+                    },
+                    "spell2": 3,
+                    "afk": false,
+                    "id": 4578350434,
+                    "boostXpEarned": 0,
+                    "level": 30,
+                    "invalid": false,
+                    "dataVersion": 2,
+                    "userId": 36050526,
+                    "createDate": "Monday, October 28, 2013 2:30:14 AM PDT",
+                    "adjustedRating": 0,
+                    "userServerPing": 92,
+                    "boostIpEarned": 0,
+                    "premadeSize": 1,
+                    "gameId": 1135761715,
+                    "ipEarned": 69,
+                    "timeInQueue": 280,
+                    "futureData": null,
+                    "eloChange": 0,
+                    "gameMode": "CLASSIC",
+                    "KCoefficient": 0,
+                    "difficultyString": null,
+                    "teamRating": 0,
+                    "queueType": "RANKED_SOLO_5x5",
+                    "subType": "RANKED_SOLO_5x5",
+                    "premadeTeam": false,
+                    "predictedWinPct": 0,
+                    "rating": 0,
+                    "championId": 40
+                }
+            ]
+        },
+        "dataVersion": 0,
+        "userId": 36050526,
+        "libteemo": "1.0",
+        "_success": 1,
+        "futureData": null
+    }
+}
+0
+

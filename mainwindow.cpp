@@ -7,8 +7,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    mp = player();
-    mcl = QVector<champion>();
+    //mp = player();
+    //mcl = QVector<champion>();
 
     //ui->label->setText(QString::fromStdString(myPlayer->name));
 }
@@ -31,10 +31,19 @@ void MainWindow::setDisplayData(player *p, QVector<champion*> *c, QVector<match*
     myMatchList = m;
 }
 
+void MainWindow::setChampData(std::vector<champion> c)
+{
+    if(c.size() == 0)
+        std::cout<<"no champ data given"<<std::endl;
+    else
+        std::cout<<c[0].write()<<std::endl;
+    mcl = QVector<champion>::fromStdVector(c);
+}
+
 void MainWindow::displayData()
 {
-    mcl[0].name = "test";
-    mcl[0].kills = 2;
+    //mcl[0].name = "test";
+    //mcl[0].kills = 2;
 
     //Champion data display
     //horizHeaders indicates display name
@@ -51,7 +60,7 @@ void MainWindow::displayData()
                     "Blue Losses" <<
                     "Purple Wins" <<
                     "Purple Losses" <<
-                    "B vs P Winrate"
+                    "B vs P Winrate" <<
                     "Creep Score" <<
                     "Neutral Creeps" <<
                     "Enemy Minions" <<
