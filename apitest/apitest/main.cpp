@@ -14,8 +14,83 @@
 #include "player.h"
 #include "champion.h"
 
+#define MODE_CHAMPION 0
+#define MODE_ITEM 1
+#define MODE_MATCH 2
+
 std::string tempOut;
 std::map<int, std::string> champIDs;
+
+player activePlayer;
+std::vector<champion> activeChamps;
+std::vector<match> matchHistory;
+std::string activeName;
+
+static size_t my_fwrite(void *buffer, size_t size, size_t nmemb, void *stream);
+int stringToInt(const std::string &str);
+void pullAPI(std::string target, std::string fileName);
+void APICall(std::string playerName, int mode);
+void parseItems();
+void parseChamps();
+std::map<int, int> priceList();
+void parseMatches(std::string playerName);
+int operate();
+void loadPlayer(std::string playerName);
+
+int main()
+{
+	std::ifstream inFile;
+	std::string playerName;
+
+	inFile.open("champs.txt");
+
+	int c = inFile.peek();
+	std::string temp = "", temp2 = "", trash = "";
+
+	while (c != std::ifstream::traits_type::eof())
+	{
+		std::getline(inFile, temp, ',');
+		std::getline(inFile, temp2, ',');
+		std::getline(inFile, trash);
+
+		int i = stringToInt(temp2);
+
+		champIDs[i] = temp;
+
+		c = inFile.peek();
+	}
+
+	inFile.close();
+
+	//std::cin >> playerName;
+
+	/*inFile.open("./Players/" + playerName + "/playerStats.txt");
+
+	if (!inFile.is_open())
+	{
+		std::string path = "./Players/" + playerName;
+		CreateDirectory(path.c_str(), NULL);
+	}
+	else
+	{
+		inFile.close();
+	}*/
+
+	//APICall(playerName, MODE_MATCH);
+	//parseChamps();
+	//parseMatches(playerName);
+
+	while (true)
+	{
+		if (operate() == 0)
+		{
+			break;
+		}
+	}
+
+	return 0;
+}
+
 static size_t my_fwrite(void *buffer, size_t size, size_t nmemb, void *stream)
 {
 
@@ -39,18 +114,18 @@ int stringToInt(const std::string &str)
 	return ss >> result ? result : 0;
 }
 
-void pullAPI(std::string playerName)
+void pullAPI(std::string target, std::string fileName)
 {
 	CURL *curl;
 	CURLcode res;
 	curl_slist *slist=NULL;
 	//std::string tempOut = "blah";
 
-	std::string endpoint = "https://teemojson.p.mashape.com/player/na/" + playerName + "/recent_games";
+	std::string endpoint = target;
 
 	std::ofstream out;
 	//out = fopen ("scribeout.txt", "w");
-	out.open("matchesraw.txt");
+	out.open(fileName);
 
 	slist = curl_slist_append(slist, "X-Mashape-Authorization: jFZRnPb3AD7TXVnfoDlkopqghMrDALtI");
 	curl_global_init(CURL_GLOBAL_DEFAULT);
@@ -106,6 +181,35 @@ void pullAPI(std::string playerName)
 	curl_global_cleanup();
 }
 
+void APICall(std::string playerName, int mode)
+{
+	std::string target = "https://teemojson.p.mashape.com/";
+
+	if (mode == MODE_CHAMPION)
+	{
+		target += "datadragon/champion";
+		pullAPI(target, "champsraw.txt");
+		parseChamps();
+	}
+	else if (mode == MODE_ITEM)
+	{
+		target += "datadragon/item";
+		pullAPI(target, "itemsraw.txt");
+		parseItems();
+	}
+	else if (mode == MODE_MATCH)
+	{
+		target += "player/na/";
+		target += playerName;
+		target += "/recent_games";
+		pullAPI(target, "matchesraw.txt");
+	}
+	else
+	{
+		std::cout << "Invalid API request\n";
+	}
+}
+
 void parseItems()
 {
 	std::ifstream inFile;
@@ -149,7 +253,7 @@ void parseItems()
 			{
 				std::getline(inFile, temp, ',');
 
-				for (int i = 2; i < temp.size() - 1; i++)
+				for (size_t i = 2; i < temp.size() - 1; i++)
 				{
 					std::cout << temp[i];
 					outFile << temp[i];
@@ -207,7 +311,7 @@ void parseChamps()
 				std::cout << "Found Champion: ";
 				d++;
 
-				for (int i = 1; i < temp.size() - 2; i++)
+				for (size_t i = 1; i < temp.size() - 2; i++)
 				{
 					std::cout << temp[i];
 					outFile << temp[i];
@@ -227,7 +331,7 @@ void parseChamps()
 			{
 				inFile >> temp;
 
-				for (int i = 1; i < temp.size() - 2; i++)
+				for (size_t i = 1; i < temp.size() - 2; i++)
 				{
 					std::cout << temp[i];
 					outFile << temp[i];
@@ -247,7 +351,7 @@ void parseChamps()
 			{
 				std::getline(inFile, temp, ',');
 					
-				for (int i = 2; i < temp.size() - 1; i++)
+				for (size_t i = 2; i < temp.size() - 1; i++)
 				{
 					std::cout << temp[i];
 					outFile << temp[i];
@@ -327,6 +431,7 @@ void parseMatches(std::string playerName)
 
 	std::map<int, std::pair<int, int> > tempChamps;
 	std::pair<int, int> placeholder(0, 0);
+	std::map<int, std::pair<int, int> > tempItems;
 
 	while (c != std::ifstream::traits_type::eof())
 	{
@@ -341,7 +446,7 @@ void parseMatches(std::string playerName)
 
 	inFile.close();
 
-	player tempPlayer(playerName, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, tempChamps);
+	player tempPlayer(playerName, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, tempChamps, tempItems);
 
 	path = "./Players/" + playerName + "/playerStats.txt";
 	inFile.open(path);
@@ -401,21 +506,6 @@ void parseMatches(std::string playerName)
 			tempCData[t1] = tPair;
 		}
 
-		/*while (temp != "items")
-		{
-			std::cout << temp << "\n";
-			int t1 = stringToInt(temp);
-			std::getline(inFile, temp, ',');
-			int t2 = stringToInt(temp);
-			std::getline(inFile, temp);
-			int t3 = stringToInt(temp);
-
-			std::pair<int, int> tPair(t2, t3);
-			tempCData[t1] = tPair;
-
-			std::getline(inFile, temp, ',');
-		}*/
-
 		std::map<int, std::pair<int, int> > tempIData;
 		c = inFile.peek();
 
@@ -435,7 +525,7 @@ void parseMatches(std::string playerName)
 			c = inFile.peek();
 		}
 
-		player tPlayer(tempName, tempK, tempD, tempA, tempW, tempL, tempRW, tempRL, tempBW, tempBL, tempPW, tempPL, tempCS, tempNC, tempEM, tempCData);
+		player tPlayer(tempName, tempK, tempD, tempA, tempW, tempL, tempRW, tempRL, tempBW, tempBL, tempPW, tempPL, tempCS, tempNC, tempEM, tempCData, tempIData);
 		tempPlayer = tPlayer;
 
 		inFile.close();
@@ -804,56 +894,298 @@ void parseMatches(std::string playerName)
 	inFile.close();
 }
 
-int main()
+int operate()
 {
-	int mode = 0;
-	std::ifstream inFile;
-	std::string playerName;
+	std::cout << "What would you like to do?\n";
+	std::cout << "0: Update champion list, 1: Update item list, 2: Pull match history data\n";
+	std::cout << "3: Load player stats, 4: Exit\n";
 
-	inFile.open("champs.txt");
-
-	int c = inFile.peek();
-	std::string temp = "", temp2 = "", trash = "";
-
-	while (c != std::ifstream::traits_type::eof())
+	if (activePlayer.getName() != "NULL")
 	{
-		std::getline(inFile, temp, ',');
-		std::getline(inFile, temp2, ',');
-		std::getline(inFile, trash);
-
-		int i = stringToInt(temp2);
-
-		champIDs[i] = temp;
-
-		c = inFile.peek();
+		std::cout << "Currently loaded player: " << activePlayer.getName() << "\n";
 	}
 
-	inFile.close();
+	int i;
 
-	std::cin >> playerName;
+	std::cin >> i;
 
-	inFile.open("./Players/" + playerName + "/playerStats.txt");
-
-	if (!inFile.is_open())
+	if (i == 0)
 	{
-		std::string path = "./Players/" + playerName;
-		CreateDirectory(path.c_str(), NULL);
+		APICall("NULL", MODE_CHAMPION);
 	}
-	else
+	else if (i == 1)
 	{
-		inFile.close();
+		APICall("NULL", MODE_ITEM);
 	}
-
-	pullAPI(playerName);
-	//parseChamps();
-	parseMatches(playerName);
-
-	if (mode == 5)
+	else if (i == 2)
 	{
-		//CreateDirectory("./Players", NULL);
-		//CreateDirectory("./Players/Mermigas", NULL);
+		std::cout << "Enter the player name you would like to search: ";
+		std::string tempName;
+		std::cin >> tempName;
+
+		std::ifstream inFile("./Players/" + tempName + "/playerStats.txt");
+		if (!inFile.is_open())
+		{
+			std::string path = "./Players/" + tempName;
+			CreateDirectory(path.c_str(), NULL);
+		}
+		else
+		{
+			inFile.close();
+		}
+
+		APICall(tempName, MODE_MATCH);
+		parseMatches(tempName);
+	}
+	else if (i == 3)
+	{
+		std::cout << "Enter the player name you would like to load: ";
+		std::string tempName;
+		std::cin >> tempName;
+		loadPlayer(tempName);
+	}
+	else if (i == 4)
+	{
 		return 0;
 	}
 
-	return 0;
+	std::cout << "\n";
+
+	return 1;
+}
+
+void loadPlayer(std::string playerName)
+{
+	if (activeChamps.size() > 0)
+	{
+		activeChamps.clear();
+		matchHistory.clear();
+	}
+
+	activeName = playerName;
+	
+	std::string path = "./Players/" + playerName + "/playerStats.txt";
+
+	std::ifstream inFile(path);
+
+	int c;
+	std::string temp = "";
+
+	if (!inFile.is_open())
+	{
+		std::cout << "Player \"" + playerName + "\" not found.\n";
+		return;
+	}
+	else
+	{
+		std::cout << playerName << " found.\n";
+		std::getline(inFile, temp, ',');
+		std::string tempName = temp;
+		std::getline(inFile, temp, ',');
+		int tempK = stringToInt(temp);
+		std::getline(inFile, temp, ',');
+		int tempD = stringToInt(temp);
+		std::getline(inFile, temp, ',');
+		int tempA = stringToInt(temp);
+		std::getline(inFile, temp, ',');
+		int tempW = stringToInt(temp);
+		std::getline(inFile, temp, ',');
+		int tempL = stringToInt(temp);
+		std::getline(inFile, temp, ',');
+		int tempRW = stringToInt(temp);
+		std::getline(inFile, temp, ',');
+		int tempRL = stringToInt(temp);
+		std::getline(inFile, temp, ',');
+		int tempBW = stringToInt(temp);
+		std::getline(inFile, temp, ',');
+		int tempBL = stringToInt(temp);
+		std::getline(inFile, temp, ',');
+		int tempPW = stringToInt(temp);
+		std::getline(inFile, temp, ',');
+		int tempPL = stringToInt(temp);
+		std::getline(inFile, temp, ',');
+		int tempCS = stringToInt(temp);
+		std::getline(inFile, temp, ',');
+		int tempNC = stringToInt(temp);
+		std::getline(inFile, temp);
+		int tempEM = stringToInt(temp);
+		
+		inFile >> temp;
+		//std::getline(inFile, temp, ',');
+
+		std::map<int, std::pair<int, int> > tempCData;
+
+		for (int i = 0; i < 116;  i++)
+		{
+			std::getline(inFile, temp, ',');
+			int t1 = stringToInt(temp);
+			std::getline(inFile, temp, ',');
+			int t2 = stringToInt(temp);
+			std::getline(inFile, temp);
+			int t3 = stringToInt(temp);
+
+			std::pair<int, int> tPair(t2, t3);
+			tempCData[t1] = tPair;
+		}
+
+		std::map<int, std::pair<int, int> > tempIData;
+		c = inFile.peek();
+
+		inFile >> temp;
+
+		while (c != std::ifstream::traits_type::eof())
+		{
+			int t1 = stringToInt(temp);
+			std::getline(inFile, temp, ',');
+			int t2 = stringToInt(temp);
+			std::getline(inFile, temp);
+			int t3 = stringToInt(temp);
+
+			std::pair<int, int> tPair(t2, t3);
+			tempIData[t1] = tPair;
+
+			c = inFile.peek();
+		}
+
+		activePlayer.setValues(tempName, tempK, tempD, tempA, tempW, tempL, tempRW, tempRL, tempBW, tempBL, tempPW, tempPL, tempCS, tempNC, tempEM, tempCData, tempIData);
+
+		inFile.close();
+	}
+
+	std::map<int, std::string>::iterator cIDItr;
+
+	for (cIDItr = champIDs.begin(); cIDItr != champIDs.end(); cIDItr++)
+	{
+		path = "./Players/" + playerName + "/" + cIDItr->second + ".txt";
+
+		inFile.open(path);
+
+		if (inFile.is_open())
+		{
+			std::cout << "Loading stats for " << cIDItr->second << ".\n";
+			std::string t3 = "";
+			std::getline(inFile, t3, ',');
+			std::string tempN = t3;
+			std::getline(inFile, t3, ',');
+			int tempID = stringToInt(t3);
+			std::getline(inFile, t3, ',');
+			int tempK = stringToInt(t3);
+			std::getline(inFile, t3, ',');
+			int tempD = stringToInt(t3);
+			std::getline(inFile, t3, ',');
+			int tempA = stringToInt(t3);
+			std::getline(inFile, t3, ',');
+			int tempW = stringToInt(t3);
+			std::getline(inFile, t3, ',');
+			int tempL = stringToInt(t3);
+			std::getline(inFile, t3, ',');
+			int tempRW = stringToInt(t3);
+			std::getline(inFile, t3, ',');
+			int tempRL = stringToInt(t3);
+			std::getline(inFile, t3, ',');
+			int tempBW = stringToInt(t3);
+			std::getline(inFile, t3, ',');
+			int tempBL = stringToInt(t3);
+			std::getline(inFile, t3, ',');
+			int tempPW = stringToInt(t3);
+			std::getline(inFile, t3, ',');
+			int tempPL = stringToInt(t3);
+			std::getline(inFile, t3, ',');
+			int tempCS = stringToInt(t3);
+			std::getline(inFile, t3, ',');
+			int tempNC = stringToInt(t3);
+			std::getline(inFile, t3);
+			int tempEM = stringToInt(t3);
+
+			c = inFile.peek();
+
+			std::map<int, std::pair<int, int> > tempItems;
+
+			if (c != std::ifstream::traits_type::eof())
+			{
+				std::getline(inFile, t3, ',');
+				int x = stringToInt(t3);
+				std::getline(inFile, t3, ',');
+				int y = stringToInt(t3);
+				std::getline(inFile, t3);
+				int z = stringToInt(t3);
+
+				std::pair<int, int> p(y, z);
+				tempItems[x] = p;
+			}
+
+			champion tempChamp(tempN, tempK, tempD, tempA, tempW, tempL, tempRW, tempRL, tempBW, tempBL, tempPW, tempPL, tempCS, tempNC, tempEM, tempID, tempItems);
+
+			activeChamps.push_back(tempChamp);
+						
+			inFile.close();
+		}
+	}
+
+	path = "./players/" + playerName + "/matches.txt";
+
+	inFile.open(path);
+
+	if (inFile.is_open())
+	{
+		c = inFile.peek();
+
+		int matchesFound = 0;
+		
+		while (c != std::ifstream::traits_type::eof())
+		{
+			 inFile >> temp;
+			 int gID = stringToInt(temp);
+			 inFile >> temp;
+			 int tcID = stringToInt(temp);
+			 inFile >> temp;
+			 int tCS = stringToInt(temp);
+			 inFile >> temp;
+			 int tK = stringToInt(temp);
+			 inFile >> temp;
+			 int tD = stringToInt(temp);
+			 inFile >> temp;
+			 int tA = stringToInt(temp);
+			 inFile >> temp;
+			 int tDD = stringToInt(temp);
+			 inFile >> temp;
+			 int tG = stringToInt(temp);
+			 inFile >> temp;
+			 int tMK = stringToInt(temp);
+			 inFile >> temp;
+			 int tKS = stringToInt(temp);
+			 inFile >> temp;
+			 int tBC = stringToInt(temp);
+			 inFile >> temp;
+			 bool tR = stringToInt(temp);
+			 inFile >> temp;
+			 bool tW = stringToInt(temp);
+			 inFile >> temp;
+			 bool tB = stringToInt(temp);
+			 int tI[6];
+			 inFile >> temp;
+			 tI[0] = stringToInt(temp);
+			 inFile >> temp;
+			 tI[1] = stringToInt(temp);
+			 inFile >> temp;
+			 tI[2] = stringToInt(temp);
+			 inFile >> temp;
+			 tI[3] = stringToInt(temp);
+			 inFile >> temp;
+			 tI[4] = stringToInt(temp);
+			 inFile >> temp;
+			 tI[5] = stringToInt(temp);
+			 std::getline(inFile, temp);
+			 std::string tDate = temp;
+
+			 match tMatch(tcID, tI, tK, tD, tA, tDD, tG, tMK, tKS, gID, tR, tW, tDate, "", tBC, tCS, tB);
+
+			 matchHistory.push_back(tMatch);
+			 matchesFound++;
+
+			 c = inFile.peek();
+		}
+
+		std::cout << "Found " << matchesFound << " matches in match history.\n";
+	}
 }
