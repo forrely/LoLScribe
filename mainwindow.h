@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "dialog.h"
+#include "QCustomPlot/qcustomplot.h"
 #include "apitest/apitest/champion.h"
 #include "apitest/apitest/player.h"
 #include "apitest/apitest/match.h"

@@ -13,6 +13,8 @@ TEMPLATE = app
 
 QMAKE_CXXFLAGS += -std=c++11
 
+QT += printsupport
+
 #QMAKE_CXXFLAGS += -std=c++0x
 #QMAKE_CXXFLAGS += -std=gnu++0x
 
@@ -22,13 +24,15 @@ SOURCES += main.cpp\
     dialog.cpp \
     apitest/apitest/player.cpp \
     apitest/apitest/match.cpp \
-    apitest/apitest/champion.cpp
+    apitest/apitest/champion.cpp \
+    QCustomPlot/qcustomplot.cpp
 
 HEADERS  += mainwindow.h \
     dialog.h \
     apitest/apitest/player.h \
     apitest/apitest/match.h \
-    apitest/apitest/champion.h
+    apitest/apitest/champion.h \
+    QCustomPlot/qcustomplot.h
 
 FORMS    += mainwindow.ui \
     dialog.ui
