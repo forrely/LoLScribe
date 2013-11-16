@@ -346,7 +346,7 @@ void parseMatches()
 
     outFile.open("./Players/Mermigas/matches.txt", std::ios_base::app);
 
-    player tempPlayer("Mermigas", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, tempChamps);
+    player tempPlayer("Mermigas", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, tempChamps, tempChamps);
     std::vector<champion> champData;
 
     c = inFile.peek();
@@ -767,7 +767,7 @@ int main(int argc, char *argv[])
     MainWindow w;
     std::map<int, std::pair<int, int> > tempChamps;
 
-    w.mp = player("test", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,tempChamps);
+    w.mp = player("test", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,tempChamps,tempChamps);
     w.mcl = QVector<champion>();
     w.mcl.append(champion("testChamp1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,tempChamps));
     w.mcl.append(champion("testChamp2", 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,tempChamps));
