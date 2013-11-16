@@ -7,7 +7,7 @@ class player
 {
 public:
 	player();
-	player(std::string n, int k, int d, int a, int w, int l, int rw, int rl, int bw, int bl, int pw, int pl, int cs, int nc, int em, std::map<int, std::pair<int, int> > cPlays);
+	player(std::string n, int k, int d, int a, int w, int l, int rw, int rl, int bw, int bl, int pw, int pl, int cs, int nc, int em, std::map<int, std::pair<int, int> > cPlays, std::map<int, std::pair<int, int> > itemUsage);
 	float KDA() {return (kills + assists) / (float)deaths;};
 	float winRate(int mode);
 	float cWinRate(int ID);
@@ -29,7 +29,9 @@ public:
 	int getEnemyMinions() {return enemyMinions;};
 	std::string getName() {return name;};
 	std::string write();
+	void setValues(std::string n, int k, int d, int a, int w, int l, int rw, int rl, int bw, int bl, int pw, int pl, int cs, int nc, int em, std::map<int, std::pair<int, int> > cPlays, std::map<int, std::pair<int, int> > itemUsage);
 	void modifyStats(int k, int d, int a, int cs, int nc, int em, bool win, bool ranked, bool blue, int id, int i[6]);
+	player & operator=(player other) {return *this;};
 	
 
 private:

@@ -2,26 +2,24 @@
 
 player::player()
 {
-    kills = 0;
-    deaths = 0;
-    assists = 0;
-    wins = 0;
-    losses = 0;
-    rankedWins = 0;
-    rankedLosses = 0;
-    blueWins = 0;
-    blueLosses = 0;
-    purpleWins = 0;
-    purpleLosses = 0;
-    creepScore = 0;
-    neutralCreeps = 0;
-    enemyMinions = 0;
-    name = "none";
-    std::map<int, std::pair<int, int> > tempChamps;
-    champPlays = tempChamps;
+	name = "NULL";
+	kills = 0;
+	deaths = 0;
+	assists = 0;
+	wins = 0;
+	losses = 0;
+	rankedWins = 0;
+	rankedLosses = 0;
+	blueWins = 0;
+	blueLosses = 0;
+	purpleWins = 0;
+	purpleLosses = 0;
+	creepScore = 0;
+	neutralCreeps = 0;
+	enemyMinions = 0;
 }
 
-player::player(std::string n, int k, int d, int a, int w, int l, int rw, int rl, int bw, int bl, int pw, int pl, int cs, int nc, int em, std::map<int, std::pair<int, int> > cPlays)
+player::player(std::string n, int k, int d, int a, int w, int l, int rw, int rl, int bw, int bl, int pw, int pl, int cs, int nc, int em, std::map<int, std::pair<int, int> > cPlays, std::map<int, std::pair<int, int> > itemUsage)
 {
 	kills = k;
 	deaths = d;
@@ -39,6 +37,7 @@ player::player(std::string n, int k, int d, int a, int w, int l, int rw, int rl,
 	enemyMinions = em;
 	name = n;
 	champPlays = cPlays;
+	itemsUsed = itemUsage;
 }
 
 float player::winRate(int mode)
@@ -231,4 +230,25 @@ float player::iWinRate(int ID)
 	std::map<int, std::pair<int, int> >::iterator itr = itemsUsed.find(ID);
 
 	return (float)(itr->second.first) / (itr->second.first + itr->second.second);
+}
+
+void player::setValues(std::string n, int k, int d, int a, int w, int l, int rw, int rl, int bw, int bl, int pw, int pl, int cs, int nc, int em, std::map<int, std::pair<int, int> > cPlays, std::map<int, std::pair<int, int> > itemUsage)
+{
+	kills = k;
+	deaths = d;
+	assists = a;
+	wins = w;
+	losses = l;
+	rankedWins = rw;
+	rankedLosses = rl;
+	blueWins = bw;
+	blueLosses = bl;
+	purpleWins = pw;
+	purpleLosses = pl;
+	creepScore = cs;
+	neutralCreeps = nc;
+	enemyMinions = em;
+	name = n;
+	champPlays = cPlays;
+	itemsUsed = itemUsage;
 }

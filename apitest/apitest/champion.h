@@ -32,7 +32,7 @@ public:
 	void modifyStats(int k, int d, int a, int cs, int nc, int em, bool win, bool ranked, bool blue, int i[6]);
 	int getID() {return id;};
 
-public:
+private:
 	int kills, deaths, assists, wins, losses, rankedWins, rankedLosses, blueWins, blueLosses, purpleWins, purpleLosses;
 	int creepScore, neutralCreeps, enemyMinions, id;
 	std::map<int, std::pair<int, int> > itemsUsed; //ID, wins, losses
