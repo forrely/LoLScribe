@@ -731,10 +731,6 @@ int main(int argc, char *argv[])
     int mode = 0;
     std::ifstream inFile;
 
-    std::string s = "blah";
-    s.pop_back();
-    std::cout<< s <<std::endl;
-
     inFile.open("champs.txt");
 
     int c = inFile.peek();
@@ -776,6 +772,11 @@ int main(int argc, char *argv[])
     w.mcl.append(champion("testChamp1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,tempChamps));
     w.mcl.append(champion("testChamp2", 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,tempChamps));
     w.mcl.append(champion("testChamp3", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+
+    w.mml = QVector<match>();
+    int testintarray[4] = {0,1,2,3};
+    w.mml.append(match(1001,testintarray, 1,2,3,4,5,6,7,8,true,true,"what", "who", 9,10,true));
+    w.mml.append(match(1002,testintarray, 2,3,4,5,6,7,8,9,false,false,"what2", "who2", 10,11,false));
 
     //testing values
     //player *tempPlayer = new player("blah", 0,0,0,0,0,0,0,0,0,0,0,0,0,0);

@@ -41,7 +41,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <property name="iconSize">
      <size>
@@ -175,40 +175,66 @@
        <string>text stats</string>
       </property>
      </widget>
-    </widget>
-    <widget class="QWidget" name="tab_4">
-     <attribute name="title">
-      <string>Player</string>
-     </attribute>
-     <widget class="QPlainTextEdit" name="plainTextEdit">
+     <widget class="QWidget" name="gridLayoutWidget">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>20</y>
-        <width>111</width>
-        <height>31</height>
+        <x>240</x>
+        <y>110</y>
+        <width>200</width>
+        <height>91</height>
        </rect>
       </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>PushButton</string>
-      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>long text label</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_12">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_13">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
       <string>Champions</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget_Champions">
+     <widget class="QTableWidget" name="championsTableWidget">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -276,7 +302,7 @@
      <attribute name="title">
       <string>Match History</string>
      </attribute>
-     <widget class="QListWidget" name="listWidget_Match">
+     <widget class="QListWidget" name="matchListWidget">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -334,17 +360,29 @@
         <string>Items</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_5">
+      <widget class="QLabel" name="matchStatsLabel">
        <property name="geometry">
         <rect>
          <x>30</x>
          <y>100</y>
-         <width>46</width>
-         <height>13</height>
+         <width>131</width>
+         <height>51</height>
         </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
        <property name="text">
         <string>stats</string>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </widget>
@@ -357,28 +395,51 @@
      <attribute name="title">
       <string>Settings</string>
      </attribute>
-     <widget class="QLabel" name="label_4">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>60</y>
-        <width>158</width>
-        <height>16</height>
+        <x>20</x>
+        <y>30</y>
+        <width>401</width>
+        <height>73</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Summoner Name</string>
-      </property>
-     </widget>
-     <widget class="QPlainTextEdit" name="plainTextEdit_2">
-      <property name="geometry">
-       <rect>
-        <x>190</x>
-        <y>50</y>
-        <width>121</width>
-        <height>41</height>
-       </rect>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0,0">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetFixedSize</enum>
+       </property>
+       <item>
+        <widget class="QLabel" name="settingsNameLabel">
+         <property name="text">
+          <string>Summoner Name</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="nameEdit">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="nameSetButton">
+         <property name="text">
+          <string>Set</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="nameCancleButton">
+         <property name="text">
+          <string>Cancel</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
    </widget>

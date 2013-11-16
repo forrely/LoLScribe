@@ -8,6 +8,7 @@
 #include "apitest/apitest/match.h"
 #include <QString>
 #include <vector>
+#include <QDebug>
 
 namespace Ui {
 class MainWindow;
@@ -28,7 +29,13 @@ public:
 
 private slots:
 
-    void on_pushButton_clicked();
+    void on_nameSetButton_clicked();
+
+    void on_nameCancleButton_clicked();
+
+    void on_nameEdit_textChanged();
+
+    void on_matchListWidget_currentRowChanged(int currentRow);
 
 private:
     Dialog *myNewDialog;
@@ -38,11 +45,14 @@ public:
     std::vector<champion> mclv;
     player mp;
     QVector<champion> mcl;
+    QVector<match> mml;
     player *myPlayer;
     QVector<champion*> *myChampionList;
     QVector<match*> *myMatchList;
 
 private:
+    QString workingName;
+
     Ui::MainWindow *ui;
 };
 
