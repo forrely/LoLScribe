@@ -6,7 +6,7 @@
 class champion
 {
 public:
-	champion();
+    champion();
 	champion(std::string n, int k, int d, int a, int w, int l, int rw, int rl, int bw, int bl, int pw, int pl, int cs, int nc, int em, int idt, std::map<int, std::pair<int, int> > items);
 	champion(int idt, std::string n);
 	float KDA() {return (kills + assists) / (float)deaths;};
