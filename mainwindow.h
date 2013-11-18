@@ -10,6 +10,7 @@
 #include <QString>
 #include <vector>
 #include <QDebug>
+#include <QPair>
 
 namespace Ui {
 class MainWindow;
@@ -39,7 +40,7 @@ private slots:
     void on_matchListWidget_currentRowChanged(int currentRow);
 
 private:
-    Dialog *myNewDialog;
+    void displayMatchDetails(int index);
 
 public:
 
@@ -54,6 +55,7 @@ public:
 private:
     QString workingName;
 
+    Dialog *myNewDialog;
     Ui::MainWindow *ui;
 };
 

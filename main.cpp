@@ -11,6 +11,9 @@
 #include <QTextStream>
 #include <QVector>
 
+#include <stdlib.h>
+#include <fstream>
+
 #include <Windows.h>
 #include <map>
 #include <vector>
@@ -23,6 +26,20 @@ std::vector<champion> curChampList;
 
 std::string tempOut;
 std::map<int, std::string> champIDs;
+
+std::string exec(char* cmd) {
+    FILE* pipe = popen(cmd, "r");
+    if (!pipe) return "ERROR";
+    char buffer[128];
+    std::string result = "";
+    while(!feof(pipe)) {
+        if(fgets(buffer, 128, pipe) != NULL)
+            result += buffer;
+    }
+    pclose(pipe);
+    return result;
+}
+
 static size_t my_fwrite(void *buffer, size_t size, size_t nmemb, void *stream)
 {
 
@@ -726,6 +743,9 @@ void parseMatches()
     curChampList = champData;
 }
 
+
+
+
 int main(int argc, char *argv[])
 {
     int mode = 0;
@@ -789,6 +809,11 @@ int main(int argc, char *argv[])
     //w.setDisplayData(tempPlayer, tempChampList, tempMatchList);
 
     //w.setChampData(curChampList);
+
+    //std::cout << "attempting system command" << std::endl;
+    //char* jar = "java -jar test.jar 3.13.13_11_13_11_26 forrely sk2p0peru forrely";
+    //std::cout << exec(jar) << std::endl;
+
     w.displayData();
     w.show();
 

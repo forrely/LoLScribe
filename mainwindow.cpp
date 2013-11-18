@@ -155,7 +155,64 @@ void MainWindow::displayData()
         ui->matchListWidget->addItem(new QListWidgetItem( "match " + QString::number(mml[i].getID()) ));
     }
     ui->matchListWidget->setCurrentRow(0);
+
+    //display match details
+    displayMatchDetails(ui->matchListWidget->currentRow());
 }
+
+
+void MainWindow::displayMatchDetails(int index)
+{
+    QVector<QPair<QString, QString>> matchStats;
+    matchStats.push_back(QPair<QString, QString>( "Match ID", QString::number(mml[index].getID()) ));
+    matchStats.push_back(QPair<QString, QString>( "Champ ID", QString::number(mml[index].getChampID()) ));
+    matchStats.push_back(QPair<QString, QString>( "Kills", QString::number(mml[index].getKills()) ));
+    matchStats.push_back(QPair<QString, QString>( "Deaths", QString::number(mml[index].getDeaths()) ));
+    matchStats.push_back(QPair<QString, QString>( "Assists", QString::number(mml[index].getAssists()) ));
+    matchStats.push_back(QPair<QString, QString>( "Damage Dealt", QString::number(mml[index].getDamage()) ));
+    matchStats.push_back(QPair<QString, QString>( "Gold", QString::number(mml[index].getGold()) ));
+
+
+    int numRows = 5;
+
+    //if there aren't the correct number of widgets in grid yet
+    if(ui->gridLayout_2->count() != matchStats.count())
+    {
+        //clear the grid
+        QLayoutItem *item;
+           while((item = ui->gridLayout_2->takeAt(0))) {
+               if (item->widget()) {
+                   delete item->widget();
+               }
+               delete item;
+           }
+
+       //populate grid with labels
+       QLabel * l;
+       for(int i=0, j=0; i<matchStats.size(); i++)
+       {
+           if(i%5 == 0)
+               j++;
+           l = new QLabel(matchStats[i].first + ": " + matchStats[i].second);
+           l->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+           l->setTextInteractionFlags(Qt::TextSelectableByMouse);
+           ui->gridLayout_2->addWidget(l, i%5, j);
+       }
+       ui->gridLayout_2->setRowStretch(numRows, 1);
+    }
+    else
+        for(int i=0, j=0; i<matchStats.size(); i++)
+        {
+            QLabel* l = qobject_cast<QLabel *> (ui->gridLayout_2->itemAt(i)->widget());
+            l->setText(matchStats[i].first + ": " + matchStats[i].second);
+        }
+
+}
+
+
+//**************
+//Slots
+//**************
 
 //confirm a name change in the settings tab
 void MainWindow::on_nameSetButton_clicked()
@@ -187,8 +244,9 @@ void MainWindow::on_nameEdit_textChanged()
 //display the match stats for the currently selected row in matchListWidget
 void MainWindow::on_matchListWidget_currentRowChanged(int currentRow)
 {
-    QString s = "match id: "+ QString::number(mml[currentRow].getID()) +"\n" +
-    "champ id: " + QString::number(mml[currentRow].getChampID());
+    displayMatchDetails(currentRow);
+    //QString s = "match id: "+ QString::number(mml[currentRow].getID()) +"\n" +
+    //"champ id: " + QString::number(mml[currentRow].getChampID());
 
-    ui->matchStatsLabel->setText(s);
+    //ui->matchStatsLabel->setText(s);
 }
