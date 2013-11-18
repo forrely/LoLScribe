@@ -7,12 +7,31 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
+    //setup tray icon
+    QSystemTrayIcon* trayIcon = new QSystemTrayIcon();
+    trayIcon->setIcon(QIcon("Resources/draven icon.png"));
+    trayIcon->show();
+
+    QAction* closeAction = new QAction("Close", this);
+    QMenu* trayIconMenu = new QMenu(this);
+    trayIconMenu->addAction(closeAction);
+    trayIcon->setContextMenu(trayIconMenu);
+
+    QObject::connect(closeAction, SIGNAL(triggered()), this, SLOT(trayIconCloseAction_triggered()));
+
+
+
     //ui->label->setText(QString::fromStdString(myPlayer->name));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::trayIconCloseAction_triggered() {
+    std::cout<<"tray icon stuff"<<std::endl;
 }
 
 //void MainWindow::on_pushButton_clicked()

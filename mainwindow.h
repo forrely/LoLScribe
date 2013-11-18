@@ -11,6 +11,7 @@
 #include <vector>
 #include <QDebug>
 #include <QPair>
+#include <QSystemTrayIcon>
 
 namespace Ui {
 class MainWindow;
@@ -38,6 +39,8 @@ private slots:
     void on_nameEdit_textChanged();
 
     void on_matchListWidget_currentRowChanged(int currentRow);
+
+    void trayIconCloseAction_triggered();
 
 private:
     void displayMatchDetails(int index);
