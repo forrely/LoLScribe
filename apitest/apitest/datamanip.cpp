@@ -1,110 +1,47 @@
-//Kai VanDrunen and Themos Panotopoulos
-
-
-#include <iostream>
-#include <curl/curl.h>
-#include <fstream>
-#include <string>
-#include <sstream>
-#include <Windows.h>
-#include <map>
-#include <vector>
-
-//#include "match.h"
-//#include "player.h"
-//#include "champion.h"
 #include "datamanip.h"
 
-#define MODE_CHAMPION 0
-#define MODE_ITEM 1
-#define MODE_MATCH 2
-
-std::string tempOut;
-std::map<int, std::string> champIDs;
-
-player activePlayer;
-std::vector<champion> activeChamps;
-std::vector<match> matchHistory;
-std::string activeName;
-
-static size_t my_fwrite(void *buffer, size_t size, size_t nmemb, void *stream);
-int stringToInt(const std::string &str);
-void pullAPI(std::string target, std::string fileName);
-void APICall(std::string playerName, int mode);
-void parseItems();
-void parseChamps();
-std::map<int, int> priceList();
-void parseMatches(std::string playerName);
-int operate();
-void loadPlayer(std::string playerName);
-
-int main()
+size_t datamanip::my_fwrite(void *buffer, size_t size, size_t nmemb, std::string *s)
 {
-	/*std::ifstream inFile;
-	std::string playerName;
-
-	inFile.open("champs.txt");
-
-	int c = inFile.peek();
-	std::string temp = "", temp2 = "", trash = "";
-
-	while (c != std::ifstream::traits_type::eof())
+	/*static int first_time = 1;
+	static FILE *outFile;
+	if (first_time)
 	{
-		std::getline(inFile, temp, ',');
-		std::getline(inFile, temp2, ',');
-		std::getline(inFile, trash);
-
-		int i = stringToInt(temp2);
-
-		champIDs[i] = temp;
-
-		c = inFile.peek();
-	}
-
-	inFile.close();
-
-	while (true)
-	{
-		if (operate() == 0)
+		first_time = 0;
+		outFile = fopen("temp.txt", "w");
+		if (outFile == NULL)
 		{
-			break;
+			return -1;
 		}
+	}
+	if (nmemb > 2)
+	{
+		fwrite(buffer, size, nmemb - 2, outFile);
 	}*/
+	
 
-	datamanip mainProgram;
-	mainProgram.driver();
+	//tempOut += (char*)buffer;
+	//tempOut.pop_back();
+	//tempOut.pop_back();
 
-	return 0;
-}
-
-static size_t my_fwrite(void *buffer, size_t size, size_t nmemb, void *stream)
-{
-
-	/*std::ofstream *out = (std::ofstream*)stream;
-	out->open("scribeout1.txt");
-
-	out->write((char*)buffer, size);
-	return nmemb*size;*/
-	tempOut += (char*)buffer;
-	tempOut.pop_back();
-	tempOut.pop_back();
-	//tempOut.push_back((char*)buffer);
-	//out << (char*)buffer;
+	s->append((char*)buffer, size*nmemb);
+	s->pop_back();
+	//s->pop_back();
 	return size*nmemb;
 }
 
-int stringToInt(const std::string &str)
+int datamanip::stringToInt(const std::string &str)
 {
 	std::stringstream ss(str);
 	int result;
 	return ss >> result ? result : 0;
 }
 
-void pullAPI(std::string target, std::string fileName)
+void datamanip::pullAPI(std::string target, std::string fileName)
 {
 	CURL *curl;
 	CURLcode res;
 	curl_slist *slist=NULL;
+	firstRun = true;
 	//std::string tempOut = "blah";
 
 	std::string endpoint = target;
@@ -118,12 +55,14 @@ void pullAPI(std::string target, std::string fileName)
 
 	curl = curl_easy_init();
 	if(curl) {
+
+		
 		curl_easy_setopt(curl, CURLOPT_URL, endpoint.c_str());
 	curl_easy_setopt(curl, CURLOPT_VERBOSE, 1);
 	curl_easy_setopt(curl, CURLOPT_HTTPHEADER, slist);
 	curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0);
-	curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, my_fwrite);
-	//curl_easy_setopt(curl, CURLOPT_WRITEDATA, out);
+	curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, &datamanip::my_fwrite);
+	curl_easy_setopt(curl, CURLOPT_WRITEDATA, &tempOut);
 
 	#ifdef SKIP_PEER_VERIFICATION
 		/*
@@ -160,14 +99,20 @@ void pullAPI(std::string target, std::string fileName)
 		curl_easy_cleanup(curl);
 	}
 
-
-	//std::cout<<tempOut<<std::endl;
+	/*std::ifstream in("temp.txt");
+	while (!in.eof())
+	{
+		std::string t;
+		in >> t;
+		tempOut += t;
+	}*/
+	//std::cout<<tempOut<<std::endl
 	out<<tempOut;
 	out.close();
 	curl_global_cleanup();
 }
 
-void APICall(std::string playerName, int mode)
+void datamanip::APICall(std::string playerName, int mode)
 {
 	std::string target = "https://teemojson.p.mashape.com/";
 
@@ -196,7 +141,7 @@ void APICall(std::string playerName, int mode)
 	}
 }
 
-void parseItems()
+void datamanip::parseItems()
 {
 	std::ifstream inFile;
 	std::ofstream outFile;
@@ -272,7 +217,7 @@ void parseItems()
 	}
 }
 
-void parseChamps()
+void datamanip::parseChamps()
 {
 	std::ifstream inFile;
 	std::ofstream outFile;
@@ -356,12 +301,10 @@ void parseChamps()
 	std::cout << "Found " << d << " champions out of 116\n";
 }
 
-std::map<int, int> priceList()
+void datamanip::priceList()
 {
 	std::ifstream inFile;
 	std::ofstream outFile, of2, of3;
-
-	std::map<int, int> prices;
 
 	inFile.open("items.txt");
 
@@ -382,10 +325,29 @@ std::map<int, int> priceList()
 	}
 
 	inFile.close();
-	return prices;
 }
 
-void parseMatches(std::string playerName)
+int datamanip::priceBuild(int items[6])
+{
+	int total = 0;
+	std::map<int, int>::iterator itr;
+	for (int i = 0; i < 6; i++)
+	{
+		if (items[i] == 2003 || items[i] == 2004 || items[i] == 2009 || items[i] == 2037 || items[i] == 2039 || items[i] == 2042 || items[i] == 2043 || items[i] == 2044 || items[i] == 2050 || items[i] == 0)
+		{
+			continue;
+		}
+		else
+		{
+			itr = prices.find(items[i]);
+			total += itr->second;
+		}
+	}
+
+	return total;
+}
+
+void datamanip::parseMatches(std::string playerName)
 {
 	std::ifstream inFile, if2;
 	std::ofstream outFile, of2, of3, of4;
@@ -529,7 +491,7 @@ void parseMatches(std::string playerName)
 	std::string seek = "\"ranked\":";
 
 	int cID = 0, k = 0, d = 0, a = 0, cs = 0, dd = 0, g = 0, ks = 0, mk = 0, mid = 0;
-	int nc = 0, em = 0, newMatches = 0, items[6] = {0, 0, 0, 0, 0, 0};
+	int nc = 0, em = 0, newMatches = 0, items[6] = {0, 0, 0, 0, 0, 0}, bc = 0;
 	bool rank = true, res = true, blue = true;
 	std::string dt = "", t = "";
 	std::map<int, std::string>::iterator cidItr;
@@ -742,7 +704,8 @@ void parseMatches(std::string playerName)
 			}
 			else if (seek == "},")
 			{
-				match test(cID, items, k, d, a, dd, g, mk, ks, mid, rank, res, dt, t, cs, blue);
+				bc = priceBuild(items);
+				match test(cID, items, k, d, a, dd, g, mk, ks, mid, rank, res, dt, t, bc, cs, blue);
 				tempPlayer.modifyStats(k, d, a, cs, nc, em, res, rank, blue, cID, items);
 				outFile << test.write();
 
@@ -880,7 +843,7 @@ void parseMatches(std::string playerName)
 	inFile.close();
 }
 
-int operate()
+int datamanip::operate()
 {
 	std::cout << "What would you like to do?\n";
 	std::cout << "0: Update champion list, 1: Update item list, 2: Pull match history data\n";
@@ -940,7 +903,7 @@ int operate()
 	return 1;
 }
 
-void loadPlayer(std::string playerName)
+void datamanip::loadPlayer(std::string playerName)
 {
 	if (activeChamps.size() > 0)
 	{
@@ -1173,5 +1136,40 @@ void loadPlayer(std::string playerName)
 		}
 
 		std::cout << "Found " << matchesFound << " matches in match history.\n";
+	}
+}
+
+void datamanip::driver()
+{
+	std::ifstream inFile;
+
+	inFile.open("champs.txt");
+
+	int c = inFile.peek();
+	std::string temp = "", temp2 = "", trash = "";
+
+	while (c != std::ifstream::traits_type::eof())
+	{
+		std::getline(inFile, temp, ',');
+		std::getline(inFile, temp2, ',');
+		std::getline(inFile, trash);
+
+		int i = stringToInt(temp2);
+
+		champIDs[i] = temp;
+
+		c = inFile.peek();
+	}
+
+	inFile.close();
+
+	priceList();
+
+	while (true)
+	{
+		if (operate() == 0)
+		{
+			break;
+		}
 	}
 }

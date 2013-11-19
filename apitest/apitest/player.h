@@ -6,7 +6,7 @@
 class player
 {
 public:
-    player();
+	player();
 	player(std::string n, int k, int d, int a, int w, int l, int rw, int rl, int bw, int bl, int pw, int pl, int cs, int nc, int em, std::map<int, std::pair<int, int> > cPlays, std::map<int, std::pair<int, int> > itemUsage);
 	float KDA() {return (kills + assists) / (float)deaths;};
 	float winRate(int mode);

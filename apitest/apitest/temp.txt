@@ -52,7 +52,7 @@
             "rFlatArmorPenetrationModPerLevel": 0,
             "rPercentArmorPenetrationMod": 0,
             "rPercentArmorPenetrationModPerLevel": 0,
-            "FlatPhysicalDamageMod": 0,
+          "FlatPhysicalDamageMod": 0,
             "rFlatPhysicalDamageModPerLevel": 0,
             "PercentPhysicalDamageMod": 0,
             "FlatMagicDamageMod": 0,
@@ -137,7 +137,7 @@
             "tags": [
                 "Movement",
                 "Boots"
-           ],
+          ],
             "stats": {
                 "FlatMovementSpeedMod": 25
             }
@@ -244,7 +244,7 @@
             },
             "tags": [
                 "Health"
-            ,
+         ,
             "stats": {
                 "FlatHPPoolMod": 380
             }
@@ -296,7 +296,7 @@
                 "3124",
                 "3188",
                 "3090",
-                "3003",
+              "3003",
                 "3007",
                 "3056"
             ],
@@ -351,8 +351,8 @@
             },
             "tags": [
                 "Mana"
-            ],
-           "stats": {
+           ,
+          "stats": {
                 "FlatMPPoolMod": 200
             }
         },
@@ -406,7 +406,7 @@
             "description": "<stats>+15 Armor<\/stats>",
             "colloq": ";",
             "plaintext": "Slightly increases Armor",
-            "into":[
+            "to"[
                 "3047",
                 "3106",
                 "3082",
@@ -462,7 +462,7 @@
                 "base": 720,
                 "purchasable": true,
                 "total": 720,
-               "sell": 504
+              "sell": 504
             },
             "tags": [
                 "Armor"
@@ -515,7 +515,7 @@
             "into": [
                 "1053",
                 "3044",
-                "3144",
+                "3144
                 "3134",
                 "3209",
                 "3035",
@@ -570,7 +570,7 @@
                 "group": "item",
                 "x": 96,
                 "y": 48,
-                "w": 48,
+              "w": 48,
                 "h": 48
             },
             "gold": {
@@ -621,7 +621,7 @@
         },
         "1039": {
             "name": "Hunter's Machete",
-            "description": "<unique>UNIQUE Passive - Maim:<\/unique> Basic attacks deal 10 bonus magic damage to monsters on hit.br><unique>UNIQUE Passive - Butcher:<\/unique> Damage dealt to monsters increased by 10%.<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
+            "description": "<unique>UNIQUE Passive - Maim:<\/unique> Basic attacks deal 10 bonus magic damage to monsters on hit.<br><unique>UNIQUE Passive - Butcher:<\/unique> Damage dealt to monsters increased by 10%.<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "colloq": ";",
             "plaintext": "Slightly increases damage dealt to neutral monsters",
             "into": [
@@ -670,7 +670,7 @@
                 "3153"
             ],
             "image": {
-                "full": "1042.png",
+                "full": "1042ng",
               "sprite": "item0.png",
                 "group": "item",
                 "x": 240,
@@ -725,7 +725,7 @@
             }
         },
         "1051": {
-            "name": "Brawer's Gloves",
+            "name": "Braer's Gloves",
             "description": "<stats>+8% Critical Strike Chance<\/stats>",
             "colloq": ";",
             "plaintext": "Slightly increases Critical Strike Chance",
@@ -775,7 +775,7 @@
             ],
             "image": {
                 "full": "1052.png",
-                "sprite": "item0.png",
+                "sprite": "item0.png
                 "group": "item",
                 "x": 384,
                 "y": 48,
@@ -830,7 +830,7 @@
             "tags": [
                 "Damage",
                 "LifeSteal"
-           ],
+          ],
             "stats": {
                 "FlatPhysicalDamageMod": 10
             },
@@ -875,7 +875,7 @@
             "plaintext": "Good starting item for attackers",
             "into": [
 
-           ],
+            ],
             "image": {
                 "full": "1055.png",
                 "sprite": "item0.png",
@@ -925,7 +925,7 @@
             "gold": {
                 "base": 400,
                 "purchasable": true,
-               "total": 400,
+              "total": 400,
                 "sell": 160
             },
             "tags": [
@@ -979,8 +979,8 @@
             }
         },
         "1058": {
-            "name": "Needlessly Large Ro",
-           "description": "<stats>+80 Ability Power<\/stats>",
+            "name": "Needlessly Large R",
+          "description": "<stats>+80 Ability Power<\/stats>",
             "colloq": ";nlr",
             "plaintext": "Greatly increases Ability Power",
             "into": [
@@ -1025,7 +1025,7 @@
             "image": {
                 "full": "1062.png",
                 "sprite": "item0.png",
-                "group": "item"
+                "group": tem
                 "x": 240,
                 "y": 96,
                 "w": 48,
@@ -1075,7 +1075,7 @@
                 "sell": 380
             },
             "tags": [
-               "Health",
+              "Health",
                 "SpellDamage",
                 "ManaRegen"
             ],
@@ -1116,7 +1116,7 @@
             "gold": {
                 "base": 40,
                 "purchasable": true,
-               "total": 700,
+            "total": 700,
                 "sell": 490
             },
             "tags": [
@@ -1169,7 +1169,7 @@
         "2004": {
             "name": "Mana Potion",
             "group": "ManaPotion",
-           "description": "<groupLimit>Limited to 5 at one time.<\/groupLimit><br><br><consumable>Click to Consume:<\/consumable> Restores 100 Mana over 15 seconds.",
+            "description": "<groupLimit>Limited to 5 at one time.<\/groupLimit><br><br><consumable>Click to Consume:<\/consumable> Restores 100 Mana over 15 seconds.",
             "colloq": ";",
             "plaintext": "Consume to restore Mana over time",
             "consumed": true,
@@ -1313,7 +1313,7 @@
             "name": "Ichor of Rage",
             "description": "<consumable>Click to Consume:<\/consumable> Grants +20-40 Attack Damage based on level, +20-40% Attack Speed based on level, and 15% increased damage to turrets for 4 minutes.",
             "colloq": ";",
-            "plaintext": "Temporarily increases Attack Damae, Attak Speed, and increases damage to turrets",
+            "plaintext": "Temporarily increases Attack Damage, Attack Speed, and increases damage to turrets",
             "consumed": true,
             "stacks": 3,
             "consumeOnFull": true,
@@ -1361,7 +1361,7 @@
                 "full": "2041.png",
                 "sprite": "item0.png",
                 "group": "item",
-                "x" 192,
+                "x 192,
                 "y": 144,
                 "w": 48,
                 "h": 48
@@ -1410,7 +1410,7 @@
                 "total": 400,
                 "sell": 160
             },
-            "ags": [
+            ags": [
                 "Consumable",
                 "Stealth"
             ],
@@ -1457,7 +1457,7 @@
                 "10": false,
                 "12": false
             },
-           "stats": [
+            "stats": [
 
             ]
         },
@@ -1500,7 +1500,7 @@
         },
         "2045": {
             "name": "Ruby Sightstone",
-            "description": "<stats>+360 Health<\/stats><br><br><unique>UNIQUE Passive - Ward Refresh:<\/unique> Holds 5 charges and refills upon visiting the shop.<br><active>UNIQUE Active - Ghost Ward:<\/active> Consumes a charge to place an invisible ward that reveals the surrounding area for 3 minutes (maximum 3 wards laced from this item at once).<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
+            "description": "<stats>+360 Health<\/stats><br><br><unique>UNIQUE Passive - Ward Refresh:<\/unique> Holds 5 charges and refills upon visiting the shop.<br><active>UNIQUE Active - Ghost Ward:<\/active> Consumes a charge to place an invisible ward that reveals the surrounding area for 3 minutes (maximum 3 wards placed from this item at once).<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "colloq": ";",
             "plaintext": "Greatly increases Health and provides Sight Wards over time",
             "from": [
@@ -1596,7 +1596,7 @@
                 "w": 48,
                 "h": 48
             },
-            "gold": {
+          "gold": {
                 "base": 500,
                 "purchasable": true,
                 "total": 500,
@@ -1637,7 +1637,7 @@
                 "w": 48,
                 "h": 48
             },
-            "gold": {
+          "gold": {
                 "base": 475,
                 "purchasable": true,
                 "total": 950,
@@ -1691,7 +1691,7 @@
         },
         "2051": {
             "name": "Guardian's Horn",
-            "descrition": "<stats>+180 Health<br>+12 Health Regen per 5 seconds<\/stats><br><br><unique>UNIQUE Passive:<\/unique> Enemy spellcasts reduce the cooldown of Battle Cry by 1 second.<br><active>UNIQUE Active - Battle Cry:<\/active> Gain 30% movement speed, 20 Armor, and 20 Magic Resistance for 3 seconds. 25 second cooldown.",
+            "description": "<stats>+180 Health<br>+12 Health Regen per 5 seconds<\/stats><br><br><unique>UNIQUE Passive:<\/unique> Enemy spellcasts reduce the cooldown of Battle Cry by 1 second.<br><active>UNIQUE Active - Battle Cry:<\/active> Gain 30% movement speed, 20 Armor, and 20 Magic Resistance for 3 seconds. 25 second cooldown.",
             "colloq": ";",
             "plaintext": "Activate for Movement Speed and a defensive boost",
             "from": [
@@ -1734,7 +1734,7 @@
         },
         "2052": {
             "name": "Poro-Snax",
-            "description": "This savory blend of fre-range, grass-fed Avarosan game hens and organic, non-ZMO Freljordian herbs contains the essential nutrients necessary to keep your Poro purring with pleasure.<br><br><i>All proceeds will be donated towards fighting Noxian animal cruelty.<\/i>",
+            "description": "This savory blenof fr-range, grass-fed Avarosan game hens and organic, non-ZMO Freljordian herbs contains the essential nutrients necessary to keep your Poro purring with pleasure.<br><br><i>All proceeds will be donated towards fighting Noxian animal cruelty.<\/i>",
             "colloq": ";",
             "plaintext": "game_item_plaintext_2052",
             "consumed": true,
@@ -1778,7 +1778,7 @@
             ],
             "image": {
                 "full": "3001.png",
-                "sprite": "item0.ng",
+                "sprite": "item0ng",
                 "group": "item",
                 "x": 240,
                 "y": 192,
@@ -1901,7 +1901,7 @@
             ],
             "image": {
                 "full": "3005.png",
-                "sprte": "item0.png",
+                "sprite": "item0.png",
                 "group": "item",
                 "x": 384,
                 "y": 192,
@@ -1949,8 +1949,7 @@
                 "y": 192,
                 "w": 48,
                 "h": 48
-            },
-           "gold": {
+          },           "gold": {
                 "base": 175,
                 "purchasable": true,
                 "total": 900,
@@ -2021,7 +2020,7 @@
                 "1036"
             ],
             "into": [
-                "303"
+              "3043"
             ],
             "image": {
                 "full": "3008.png",
@@ -2066,7 +2065,7 @@
             ],
             "into": [
                 "3284",
-                "3283"
+              "3283
                 "3282",
                 "3281",
                 "3280"
@@ -2201,7 +2200,7 @@
                 "purchasable": true,
                 "total": 3300,
                 "sell": 2310
-           },
+            },
             "tags": [
                 "Health",
                 "Damage",
@@ -2243,7 +2242,7 @@
             },
             "tags": [
                 "SpellBlock",
-               "SpellDamage",
+                "SpellDamage",
                 "Movement",
                 "NonbootsMovement",
                 "Slow",
@@ -2293,7 +2292,7 @@
                 "Mana",
                 "CooldownReduction"
             ],
-            "stats": {
+            "sts":
                 "FlatMPPoolMod": 300,
                 "FlatArmorMod": 45
             },
@@ -2329,7 +2328,7 @@
             "tags": [
                 "Armor",
                 "SpellDamage",
-               "Mana",
+              "Mana",
                 "CooldownReduction",
                 "Slow"
             ],
@@ -2417,7 +2416,7 @@
                 "8": false
             },
             "stats": {
-               "FlatHPPoolMod": 450,
+                "FlatHPPoolMod": 450,
                 "FlatMPPoolMod": 450,
                 "FlatMagicDamageMod": 60
             },
@@ -2463,7 +2462,7 @@
             "depth": 2
         },
         "3029": {
-            "name": "Rod of Ages (Crystal Scar)",
+           name""Rod of Ages (Crystal Scar)",
             "description": "<stats>+450 Health<br>+450 Mana<br>+60 Ability Power<\/stats><br><br><passive>Passive:<\/passive> Grants +20 Health, +20 Mana, and +2 Ability Power per stack (max +200 Health, +200 Mana, and +20 Ability Power). Grants 1 stack per 40 seconds (max 10 stacks).<br><unique>UNIQUE Passive - Valor's Reward:<\/unique> Upon leveling up, restores 150 Health and 200 Mana over 8 seconds.<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "colloq": ";roa",
             "plaintext": "Greatly increases Health, Mana, and Ability Power",
@@ -2501,7 +2500,7 @@
             },
             "stats": {
                 "FlatHPPoolMod": 450,
-                "FlatMPPoolMod": 450,
+              "FlatMPPoolMod": 450,
                 "FlatMagicDamageMod": 60
             },
             "depth": 3
@@ -2546,7 +2545,7 @@
         },
         "3035": {
             "name": "Last Whisper",
-            "description": "<stats>+40 Attack Damage<\/stats><br><br><unique>UNIQUE Passive:<\/unique> Physical damage ignors 35% of the target's Armor (applies before Armor Penetration).",
+            "description": "<stats>+40 Attack Damage<\/stats><br><br><unique>UNIQUE Passive:<\/unique> Physical damage ignores 35% of the target's Armor (applies before Armor Penetration).",
             "colloq": ";lw",
             "plaintext": "Increases physical damage",
             "from": [
@@ -2634,7 +2633,7 @@
                 "group": "item",
                 "x": 288,
                 "y": 288,
-                "w": 48,
+              "w": 48,
                 "h": 48
             },
             "gold": {
@@ -2678,8 +2677,8 @@
                 "purchasable": true,
                 "total": 1235,
                 "sell": 865
-           },
-            "tags": [
+            },
+        "tags": [
                 "SpellDamage"
             ],
             "maps": {
@@ -2719,7 +2718,7 @@
                 "purchasable": false,
                 "total": 2100,
                 "sell": 2940
-            },
+          },
             "tags": [
                 "OnHit"
             ],
@@ -2758,8 +2757,8 @@
                 "total": 2100,
                 "sell": 2940
             },
-           "tags": [
-               "OnHit"
+            "ta": [
+              "OnHit"
             ],
             "maps": {
                 "10": false,
@@ -2849,7 +2848,7 @@
             "stats": {
                 "PercentMovementSpeedMod": 0.05,
                 "PercentAttackSpeedMod": 0.5,
-                FlatCritChanceMod": 0.3
+               FlatCritChanceMod": 0.3
             },
             "depth": 3
         },
@@ -2895,7 +2894,7 @@
             },
             "depth": 2
         },
-       "3048": {
+    "3048": {
             "name": "Seraph's Embrace",
             "description": "<stats>+1000 Mana<br>+60 Ability Power<br>+10 Mana Regen per 5 seconds<\/stats><br><br><unique>UNIQUE Passive - Insight:<\/unique> Grants Ability Power equal to 3% of maximum Mana.<br><active>UNIQUE Active - Mana Shield:<\/active> Consumes 20% of current Mana to grant a shield for 3 seconds that absorbs damage equal to 150 plus the amount of Mana consumed (120 second cooldown).<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "colloq": ";",
@@ -2933,7 +2932,7 @@
             },
             "stats": {
                 "FlatMPPoolMod": 1000,
-                "FlatMPRegenMod": 2,
+                "FtMPRegenMod": 2,
                 "FlatMagicDamageMod": 60
             },
             "depth": 4
@@ -2979,7 +2978,7 @@
         },
         "3056": {
             "name": "Ohmwrecker",
-            "description": "<stats>+350 Health<br>+50 Ability Power<br>+15 Health Regen per 5 seconds<br>+15 Mana egen pr 5 seconds<\/stats><br><br><active>UNIQUE Active:<\/active> Prevents nearby enemy turrets from attacking for 2.5 seconds (120 second cooldown). This effect cannot be used against the same turret more than once every 7.5 seconds.",
+            "description": "<stats>+350 Health<br>+50 Ability Power<br>+15 Health Regen per 5 seconds<br>+15 Mana Regen per 5 seconds<\/stats><br><br><active>UNIQUE Active:<\/active> Prevents nearby enemy turrets from attacking for 2.5 seconds (120 second cooldown). This effect cannot be used against the same turret more than once every 7.5 seconds.",
             "colloq": ";",
             "plaintext": "Temporarily disables enemy turrets",
             "from": [
@@ -3026,7 +3025,7 @@
         },
         "3057": {
             "name": "Sheen",
-            "description" "<stats>+200 Mana<br>+25 Ability Power<\/stats><br><br><unique>UNIQUE Passive - Spellblade:<\/unique> After using an ability, the next basic attack deals bonus physical damage equal to base Attack Damage on hit (2 second cooldown).<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
+            "description": "<stats>+200 Mana<br>+25 Ability Power<\/stats><br><br><unique>UNIQUE Passive - Spellblade:<\/unique> After using an ability, the next basic attack deals bonus physical damage equal to base Attack Damage on hit (2 second cooldown).<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "colloq": ";",
             "plaintext": "Grants a bonus to next attack after spell cast",
             "from": [
@@ -3065,7 +3064,7 @@
         },
         "3060": {
             "name": "Banner of Command",
-            "description": "<stats>+40 Ability Power<br>+30 Armor<br>+10% Cooldown Reduction<\/stats><br><br><aura>UNIQUE Aura - Valor:</aura> Grants nearby allies +10 Health Regen per 5 seconds. Nearby allied minions deal 15% increased damage.<br><active>UNIQUE Active - Promote:<\/active> Transforms a nearby siege minion into a more powerful unit and grants all gold that the unit earns (180 second cooldown).<br><br><i>(Unique Auras with the same name do not stack.)<\/i>",
+            "description": "<stats>+40 Ability Power<br>+30 Armor<br>+10% Cooldown Reduction<\/stats><br><br><aura>UNIQUE Aura -alor:<\/auraGrants nearby allies +10 Health Regen per 5 seconds. Nearby allied minions deal 15% increased damage.<br><active>UNIQUE Active - Promote:<\/active> Transforms a nearby siege minion into a more powerful unit and grants all gold that the unit earns (180 second cooldown).<br><br><i>(Unique Auras with the same name do not stack.)<\/i>",
             "colloq": ";flag",
             "plaintext": "Promotes a siege minion to a more powerful unit",
             "from": [
@@ -3106,7 +3105,7 @@
         },
         "3065": {
             "name": "Spirit Visage",
-            "description": "<stats>+400 Health<br>+55 Magic Resist<br>+20 Health Regen per 5 seconds<br>+20% Cooldown Reduction<\/stats><br><br><unique>UNIQUE Passive:<\/unique> Increases self-healing, Health Regen, Lifesteal, and Spell Vamp effects by 20%.",
+            "description": "<stats>+400 Health<br>+55 MagiResist<br>+20 Health Regen per 5 seconds<br>+20% Cooldown Reduction<\/stats><br><br><unique>UNIQUE Passive:<\/unique> Increases self-healing, Health Regen, Lifesteal, and Spell Vamp effects by 20%.",
             "colloq": ";sv",
             "plaintext": "Increases Health and healing effects",
             "from": [
@@ -3148,8 +3147,8 @@
             "name": "Kindlegem",
             "description": "<stats>+200 Health  <\/stats><br><br><unique>UNIQUE Passive:<\/unique> +10% Cooldown Reduction",
             "colloq": ";",
-            "plaintext": "Increases Health and Cooldown Reduction",
-           "from": [
+            "plaintext": "Increases Health and Cooldown Reducti",
+          "from": [
                 "1028"
             ],
             "into": [
@@ -3246,7 +3245,7 @@
                 "purchasable": true,
                 "total": 2200,
                 "sell": 1540
-           }
+            
             "tags": [
                 "Health",
                 "HealthRegen",
@@ -3327,8 +3326,7 @@
             },
             "gold": {
                 "base": 1188,
-                "purchasable": true,
-               "total": 3000,
+                "purchasable": true              "total": 3000,
                 "sell": 2100
             },
             "tags": [
@@ -3372,7 +3370,7 @@
                 "sell": 2240
             },
             "tags": [
-                "Damae",
+                "Damage",
                 "LifeSteal"
             ],
             "maps": {
@@ -3416,8 +3414,7 @@
             "tags": [
                 "Mana",
                 "ManaRegen"
-            ],
-            "maps": {
+            ]            "maps": {
                 "10": false,
                 "12": false,
                 "1": false
@@ -3446,7 +3443,7 @@
                 "group": "item",
                 "x": 288,
                 "y": 384,
-              "w": 48,
+                "w": 48,
                 "h": 48
             },
             "gold": {
@@ -3493,7 +3490,7 @@
                 "base": 1180,
                 "purchasable": true,
                 "total": 2200,
-                "sell": 1540
+              "sell": 1540
             },
             "tags": [
                 "Armor"
@@ -3530,7 +3527,7 @@
                 "h": 48
             },
             "gold": {
-               "base": 265,
+              "base": 265,
                 "purchasable": true,
                 "total": 1900,
                 "sell": 1330
@@ -3562,7 +3559,7 @@
             ],
             "image": {
                 "full": "3078.png",
-                "sprite": "item0.png",
+                "sprite":item0.png",
                 "group": "item",
                 "x": 432,
                 "y": 384,
@@ -3602,7 +3599,7 @@
             "name": "Warden's Mail",
             "description": "<stats>+50 Armor<\/stats><br><br><unique>UNIQUE Passive - Cold Steel:<\/unique> When hit by basic attacks, reduces the attacker's Attack Speed by 15% for 1 seconds.<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "colloq": ";",
-            "plaintext": "Slows Attack Speed of enemy champions when receiving basic attack",
+            "plaintext": "Slows Attack Speed of enemy champions when receiving basiattac",
             "from": [
                 "1029",
                 "1029"
@@ -3708,7 +3705,7 @@
             "tags": [
                 "Health"
             ],
-           "mas": {
+            "maps": {
                 "8": false,
                 "12": false,
                 "1": false
@@ -3799,7 +3796,7 @@
         },
         "3087": {
             "name": "Statikk Shiv",
-            "description": "<stats>+40% Attack Speed<br>+20% Critical Strike Chance<br>+6% Movement Speed<\/stats><br><br><unique>UNIQUE Passive:<\/unique> Grants Static Charges upon moving or attacking. At 100 Charges, basic attacking expends all Charges to deal 100 bonus magic damage to up to 4 targets on hit (this damage can critically strike).",
+            "description": "<stats>+40% Attack Speed<br>+20% Critical Strike Chance<br>+6% Movement Speed<\/stats><br><br><unique>UNIQUE Passive:<\nique> Grants Static Charges upon moving or attacking. At 100 Charges, basic attacking expends all Charges to deal 100 bonus magic damage to up to 4 targets on hit (this damage can critically strike).",
             "colloq": ";",
             "plaintext": "Movement builds charges that release chain lightning on basic attack",
             "from": [
@@ -3840,7 +3837,7 @@
         },
         "3089": {
             "name": "Rabadon's Deathcap",
-            "description": "<stats>+120 Ability Power  <\/stats><br><br><unique>UNIQUE Passive:<\/unique> Increases Ability Power y 30%.",
+            "description": "<stats>+120 Ability Power  <\/stats><br><br><unique>UNIQUE Passive:<\/unique> Increases Ability Power by 30%.",
             "colloq": ";dc;banksys",
             "plaintext": "Massively increases Ability Power",
             "from": [
@@ -3881,7 +3878,7 @@
             "name": "Wooglet's Witchcap",
             "description": "<stats>+100 Ability Power<br>+45 Armor  <\/stats><br><br><unique>UNIQUE Passive:<\/unique> Increases Ability Power by 25%<br><active>UNIQUE Active:<\/active> Champion becomes invulnerable and untargetable for 2.5 seconds, but is unable to move, attack, cast spells, or use items during this time (90 second cooldown).",
             "colloq": ";",
-            "plaintext": "Massively increases Ability Power and can be activated to enter stasis",            "from": [
+            "plaintext": "Massively increases Ability Power and can be activated to enter stasis"            "from": [
                 "3191",
                 "1026",
                 "1052"
@@ -3927,7 +3924,7 @@
             "from": [
                 "1043",
                 "1033",
-               "142"
+              "1042"
             ],
             "into": [
 
@@ -3965,7 +3962,7 @@
             "plaintext": "Surrounds an ally in a blizzard, slowing enemy Movement Speed",
             "from": [
                 "3098",
-               "3037"
+                "3037"
             ],
             "into": [
 
@@ -4012,8 +4009,7 @@
                 "3087",
                 "3123"
             ],
-            "image": {
-                "full": "3093.png",
+          "image": {               "full": "3093.png",
                 "sprite": "item0.png",
                 "group": "item",
                 "x": 0,
@@ -4058,7 +4054,7 @@
                 "x": 48,
                 "y": 480,
                 "w": 48,
-                "h": 48
+               h": 48
             },
             "gold": {
                 "base": 340,
@@ -4106,7 +4102,7 @@
                 "sell": 455
             },
             "tags": [
-               "HelthRegen",
+              "HlthRegen",
                 "Armor",
                 "Aura"
             ],
@@ -4156,7 +4152,7 @@
         },
         "3100": {
             "name": "Lich Bane",
-            "dscription": "<stats>+80 Ability Power<br>+250 Mana<br>+5% Movement Speed<\/stats><br><br><unique>UNIQUE Passive - Spellblade:<\/unique> After using an ability, the next basic attack deals 50 (+75% of Ability Power) bonus magic damage on hit (2 second cooldown).<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
+            "scription": "<stats>+80 Ability Power<br>+250 Mana<br>+5% Movement Speed<\/stats><br><br><unique>UNIQUE Passive - Spellblade:<\/unique> After using an ability, the next basic attack deals 50 (+75% of Ability Power) bonus magic damage on hit (2 second cooldown).<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "colloq": ";",
             "plaintext": "Grants a bonus to next attack after spell cast",
             "from": [
@@ -4196,7 +4192,7 @@
         },
         "3101": {
             "name": "Stinger",
-            "description": "<stats>+40% Attack Speed<\/stats><br><br><unique>UNIQUE Passive:<\/unique> +10% Cooldown Reduction",
+            "description": "<stats>+40% Attack Speed<\/stats><br><br><unie>UNUE Passive:<\/unique> +10% Cooldown Reduction",
             "colloq": ";",
             "plaintext": "Increased Attack Speed and Cooldown Reduction",
             "from": [
@@ -4234,7 +4230,7 @@
         "3102": {
             "name": "Banshee's Veil",
             "description": "<stats>+450 Health<br>+55 Magic Resist<\/stats><br><br><unique>UNIQUE Passive:<\/unique> Grants a spell shield that blocks the next enemy ability. This shield refreshes after no damage is taken from enemy champions for 25 seconds.<br><unique>UNIQUE Passive:<\/unique> Grants 45 Health Regen per 5 for up to 10 seconds after taking damage from an enemy champion or when the spell shield breaks.",
-            "colloq" ";bv",
+            "colloq ";bv",
             "plaintext": "Periodically blocks enemy abilities",
             "from": [
                 "3211",
@@ -4328,7 +4324,7 @@
             "image": {
                 "full": "3106.png",
                 "sprite": "item0.png",
-                "group": "item",
+                "oup":item",
                 "x": 384,
                 "y": 480,
                 "w": 48,
@@ -4382,7 +4378,7 @@
                 "h": 48
             },
             "gold": {
-               "base": 385,
+                "base": 385,
                 "purchasable": true,
                 "total": 820,
                 "sell": 574
@@ -4431,7 +4427,7 @@
             ],
             "stats": {
                 "FlatMPPoolMod": 400,
-               "FlatArmorMod": 95
+              "FlatArmorMod": 95
             },
             "depth": 3
         },
@@ -4473,7 +4469,7 @@
                 "Tenacity"
             ],
             "stats": {
-                "FlatMovementSpeedMod": 45,
+                "FlatMomentSpeedMod": 45,
                 "FlatSpellBlockMod": 25
             },
             "depth": 2
@@ -4520,7 +4516,7 @@
                 "FlatHPRegenMod": 4,
                 "FlatSpellBlockMod": 70
             },
-          "depth": 2
+            "depth": 2
         },
         "3115": {
             "name": "Nashor's Tooth",
@@ -4563,7 +4559,7 @@
         },
         "3116": {
             "name": "Rylai's Crystal Scepter",
-            "description": "<stats>+500 Health<br>+80 Ability Power<\/stats><br><br><unique>UNIQUE Passive:<\/unique> Dealing spell damage slows the target's Movement Speed by 35% for 1.5 seconds (15% for multi-target and damage-over-time spells).",
+            "description": "<stats>+500 Health<br>+80 Ability Per<\/ats><br><br><unique>UNIQUE Passive:<\/unique> Dealing spell damage slows the target's Movement Speed by 35% for 1.5 seconds (15% for multi-target and damage-over-time spells).",
             "colloq": ";",
             "plaintext": "Abilities slow enemies",
             "from": [
@@ -4604,7 +4600,7 @@
             "name": "Boots of Mobility",
             "description": "<unique>UNIQUE Passive - Enhanced Movement:<\/unique> +45 Movement Speed. Increases to +105 Movement Speed when out of combat for 5 seconds.<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "colloq": ";",
-            "plaintext": "Greatly enhances Movement Speed when out of combat",
+            "plaintext": "Greatly enhances Mement Speed when out of combat",
             "from": [
                 "1001"
             ],
@@ -4691,7 +4687,7 @@
             ],
             "image": {
                 "full": "3124.png",
-                "sprite": "item0.png",
+            "sprite": "item0.png",
                 "group": "item",
                 "x": 336,
                 "y": 528,
@@ -4734,7 +4730,7 @@
                 "full": "3128.png",
                 "sprite": "item0.png",
                 "group": "item",
-                "x": 384,
+              "x": 384,
                 "y": 528,
                 "w": 48,
                 "h": 48
@@ -4776,7 +4772,7 @@
                 "sprite": "item0.png",
                 "group": "item",
                 "x": 432,
-               "y": 528,
+            "y": 528,
                 "w": 48,
                 "h": 48
             },
@@ -4821,7 +4817,7 @@
             },
             "gold": {
                 "base": 537,
-                "purchasable": tre,
+                "purchasable": te,
                 "total": 1337,
                 "sell": 936
             },
@@ -4872,7 +4868,7 @@
             "depth": 2
         },
         "3136": {
-            "name": "Hauntin Guise",
+            "name": aunting Guise",
             "description": "<stats>+25 Ability Power<br>+200 Health<\/stats><br><br><unique>UNIQUE Passive - Eyes of Pain:<\/unique> +15 Magic Penetration<br><br><i>(Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.)<\/i><br><br><i>(Unique Passives with the same name do not stack.)<\/i>",
             "colloq": ";mask",
             "plaintext": "Increases magic damage",
@@ -4912,7 +4908,7 @@
         },
         "3139": {
             "name": "Mercurial Scimitar",
-            "description": "<stats>+60 Attack Damage<br>+45 Magic Resist<\/stats><br><br><active>UNIQUE Active - Quicksilver:<\/active> Removes all debuffs, and if champion is melee, also grants +50% bonus Movement Speed for 1 second (90 second cooldown).",
+            "description": "<stats>+60 Attack Damage<br>+45 Magic Rest<stats><br><br><active>UNIQUE Active - Quicksilver:<\/active> Removes all debuffs, and if champion is melee, also grants +50% bonus Movement Speed for 1 second (90 second cooldown).",
             "colloq": ";",
             "plaintext": "Activate to remove all debuffs and grant massive Movement Speed",
             "from": [
@@ -4954,7 +4950,7 @@
             "name": "Quicksilver Sash",
             "description": "<stats>+45 Magic Resist<\/stats><br><br><active>UNIQUE Active - Quicksilver:<\/active> Removes all debuffs (90 second cooldown).",
             "colloq": ";qss",
-            "plaintet": "Ativate to remove all debuffs",
+            "plaintext": "tivate to remove all debuffs",
             "from": [
                 "1057"
             ],
@@ -4999,7 +4995,7 @@
             "image": {
                 "full": "3141.png",
                 "sprite": "item0.png",
-                "group: "item",
+                "group": "item",
                 "x": 240,
                 "y": 576,
                 "w": 48,
@@ -5037,7 +5033,7 @@
 
             ],
             "image": {
-                "fll": "142.png",
+                "full": "3142.png",
                 "sprite": "item0.png",
                 "group": "item",
                 "x": 288,
@@ -5071,7 +5067,7 @@
             "name": "Randuin's Omen",
             "description": "<stats>+500 Health<br>+70 Armor<\/stats><br><br><unique>UNIQUE Passive - Cold Steel:<\/unique> When hit by basic attacks, reduces the attacker's Attack Speed by 15% and Movement Speed by 10% for 1 seconds.<br><active>UNIQUE Active:<\/active> Slows the Movement Speed of nearby enemy units by 35% for 2 seconds (+1 second per 200 Armor and +1 second per 200 Magic Resist) (60 second cooldown).<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "colloq": ";",
-            "plaintext": "Greatly increases defenses, activate to low nearby enemies",
+            "plaintext": "Greatly increases defenses, activate to slow nearby enemies",
             "from": [
                 "1011",
                 "3082"
@@ -5120,7 +5116,7 @@
                 "3153"
             ],
             "image": {
-                "full": "3144.png",
+              "full": "3144.png",
                 "sprite": "item0.png",
                 "group": "item",
                 "x": 384,
@@ -5197,7 +5193,7 @@
             ],
             "image": {
                 "full": "3146.png",
-               "sprite": "item0.png",
+                "sprite": "item0.png",
                 "group": "item",
                 "x": 0,
                 "y": 624,
@@ -5226,7 +5222,7 @@
         },
         "3151": {
             "name": "Liandry's Torment",
-            "description": "<stats>+50 Ability Power<br>+300 Health<\/stats><br><br><unique>UNIQUE Passive - Eyes of Pain:<\/unique> +15 Magic Penetration<br><unique>UNIQUE Passive:<\/unique> Dealing spell damage applies a damage-over-time effect for 3 seconds that deals bonus magic damage equal to 2% of the target's current Health per second. This bonus damage is doubled against movement-impaired units and capped at 100 damage per second vs. monsters.<br><br><i>(A unit is movement-impaired if it is slowed, stunned, taunted, feared, or immobilized.)<\/i><br><br><i>(Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.)<\/i><br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
+            "description": "<stats>+50 Ability Power<br>+300 Health<\/stats><br><br><unique>UNIQUE Passive - Eyes of Pain:<\/unique> +15 Magic Penetration<br><unique>UNIQUE Passive:<\/unique> Dealing spell damage applies a damage-over-time effect for 3 seconds that deals bonus magic damage equal to 2% of the target's current Health per second. This bonus damage is doubled against movement-impaired units and capped at 100 damage per second vs. monsters.<br><br><i>(A unit is movement-impaired if it is slowed, stunned, taunted, feared, or immobilized.)<\/i><br><br><i>(Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.\/i><br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "colloq": ";mask",
             "plaintext": "Spell damage burns enemies for a portion of their Health",
             "stacks": 0,
@@ -5266,8 +5262,8 @@
         "3152": {
             "name": "Will of the Ancients",
             "description": "<stats>+50 Ability Power<\/stats><br><br><aura>UNIQUE Aura:<\/aura> Grants nearby allied champions +30 Ability Power and +20% Spell Vamp.<br><br><i>(Spell Vamp: Abilities heal for a percentage of the damage they deal. Area of Effect spells only grant one-third of the healing from Spell Vamp.)<\/i>",
-            "colloq": ";wta",
-           "plaintext": "Grants Spell Vamp and Ability Power to nearby allies",
+            "colloq": ";wota",
+          "plaintext": "Grants Spell Vamp and Ability Power to nearby allies",
             "from": [
                 "3098",
                 "3145"
@@ -5304,7 +5300,7 @@
             "name": "Blade of the Ruined King",
             "description": "<stats>+25 Attack Damage<br>+40% Attack Speed<br>+15% Life Steal<\/stats><br><br><unique>UNIQUE Passive:<\/unique> Basic attacks deal 5% of the target's current Health in bonus physical damage (max 60 vs. monsters and minions) on hit.<br><active>UNIQUE Active:<\/active> Deals 15% of target champion's maximum Health (min. 100) as physical damage, heals for the same amount, and steals 30% of the target's Movement Speed for 3 seconds (90 second cooldown).",
             "colloq": ";brk;bork;botrk",
-           "plaintext": "Deals damage based on target's Health, can steal Health and Movement Speed",
+        "plaintext": "Deals damage based on target's Health, can steal Health and Movement Speed",
             "from": [
                 "1042",
                 "3144",
@@ -5343,7 +5339,7 @@
         },
         "3154": {
             "name": "Wriggle's Lantern",
-            "description": "<stats>+25 Attack Damage<br>+25 Armor<br>+15% Life Steal<\/stats><br><br><unique>UNIQUE Passive - Maim:<\/unique> Basic attacks deal 100 bonus magic damage to monsters on hit.<br><active>UNIQUE Active:<\/active> Places an invisible Sight Ward that reveals the surrounding area for 90 seconds (90 second cooldown).<br><br><i>(Unique Passives with the same name don't stak.)<\/>",
+            "description": "<stats>+25 Attack Damage<br>+25 Armor<br>+15% Life Steal<\/stats><br><br><unique>UNIQUE Passive - Maim:<\/unique> Basic attacks deal 100 bonus magic damage to monsters on hit.<br><active>UNIQUE Active:<\/active> Places an invisible Sight Ward that reveals the surrounding area for 90 seconds (90 second cooldown).<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "colloq": ";",
             "plaintext": "Kills monsters quickly, activate to place a ward",
             "from": [
@@ -5388,7 +5384,7 @@
         },
         "3155": {
             "name": "Hexdrinker",
-            "description": "<stats>+25 Attack Damage<br>+25 Magic Resist<\/stats><br><br><unique>UNIQUE Passive - Lifeline:<\/unique> Upon taking magic damage that would reduce Health below 30%, grants a shield that absorbs 250 magic damage for 5 seconds (90 second cooldown).<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
+            "description": "<stats>+25 Attack Damage<br>+25 Magic Resist<\/stats><br><br><unique>UNIQUE Passive - Lifeline:<\/unique> Upon taking magic damage that would reduce Health below 30%, grants a shield that absorbs 250 magic damage for 5 seconds (90 second cooldown).<br><br><i>(Unique Passives wi the me name don't stack.)<\/i>",
             "colloq": ";",
             "plaintext": "Increases Attack Damage and Magic Resist",
             "stacks": 0,
@@ -5426,7 +5422,7 @@
         },
         "3156": {
             "name": "Maw of Malmortius",
-            "description": "<stats>+60 Attack Damage<br>+40 Magic Resist<\/stats><br><br><unique>UNIQUE Passive:<\/unique> Grants +1 Attack Damage for every 2% of missing Health, up to a maximum of 35 Attack Damage.<br><unique>UNIQUE Passive - Lifeline:<\/unique> Upon taking magic damage that would reduce Health below 30%, grants a shield that absorbs 400 magic damage for 5 seconds (90 second cooldown).<br><br><i>(Unique Passives wih the same name don't stack.)<\/i>",
+            "description": "<stats>+60 Attack Damage<br>+40 Magic Resist<\/stats><br><br><unique>UNIQUE Passive:<\/unique> Grants +1 Attack Damage for every 2% of missing Health, up to a maximum of 35 Attack Damage.<br><unique>UNIQUE Passive - Lifeline:<\/unique> Upon taking magic damage that would reduce Health below 30%, grants a shield that absorbs 400 magic damage for 5 seconds (90 second cooldown).<br><br><i>(Unique Passives wh the same name don't stack.)<\/i>",
             "colloq": ";",
             "plaintext": "Grants bonus Attack Damage when Health is low",
             "stacks": 0,
@@ -5468,7 +5464,7 @@
             "colloq": ";zhg;zonyas",
             "plaintext": "Activate to become invincible but unable to take actions",
             "from": [
-                "3191",
+              "3191",
                 "1058"
             ],
             "into": [
@@ -5549,7 +5545,7 @@
             "description": "<stats>+15 Attack Damage<br>+20 Armor<br>+12% Life Steal<\/stats><br><br><unique>UNIQUE Passive:<\/unique> Basic attacks against minions and monsters have a 20% chance to deal 200 bonus magic damage on hit.<br><active>UNIQUE Active:<\/active> A stealth-detecting mist grants vision in the target area for 5 seconds, revealing enemy champions that enter for 3 seconds (60 second cooldown).",
             "colloq": ";",
             "plaintext": "Activate to reveal a nearby area of the map",
-           "from": [
+            "from": [
                 "1029",
                 "1053"
             ],
@@ -5592,7 +5588,7 @@
             "name": "Morellonomicon",
             "description": "<stats>+75 Ability Power<br>+12 Mana Regen per 5 seconds<br>+20% Cooldown Reduction<\/stats><br><br><unique>UNIQUE Passive:<\/unique> Dealing magic damage to enemy champions below 40% Health inflicts Grievous Wounds for 4 seconds.<br><br><i>(Grievous Wounds reduces incoming healing and regeneration effects by 50%.)<\/i>",
             "colloq": ";nmst",
-            "plaintext": "Greatly increases Abiliy Powe and Cooldown Reduction",
+            "plaintext": "Greatly increases Ability Power and Cooldown Reduction",
             "from": [
                 "3098",
                 "1004",
@@ -5661,7 +5657,7 @@
         },
         "3167": {
             "name": "Bonetooth Necklace",
-            "description": "<stats>+5 Attack Damage<\/stats><br><br><unique>UNIQUE Passive:<\/unique> +2 Attack Damage per level<br><unique>UNIQUE Passive:<\/unique> Rengar collects trophies when killing champions and gains bonus effects based on how many trophies he collects. Grants 1 trophy for kills and assists. One trophy is lost upon death.<br><passive>3 Trophies:<\/passive> +10 Armor Penetration, +5% Cooldown Reduction<br><passive>6 Trophies:<\/passive> +25 Movement Speed<br><passive>9 Trophies:<\/passive> Increases the range of Rengar's leap by 150.<br><passive>14 Trophies:<\/passive> Increases the duration of Thrill of the Hunt by 3 seconds. Additionally, Rengar's next ability used after activating Thrill of the Hunt generates 1 bonus Ferocity.",
+            "description": "<stats>+5 Attack Damage<\/stats><br><br><unique>UNIQUE Passive:<\/unique> +2 Attack Damage per level<br><unique>UNIQUE Passive:<\/unique> Rengar collects trophies when killing champions and gains bonus effects based on how many trophies he collects. Grants 1 trophy for kills and assists. One trophy is lost upon death.<br><passive>3rophies:<\/passive> +10 Armor Penetration, +5% Cooldown Reduction<br><passive>6 Trophies:<\/passive> +25 Movement Speed<br><passive>9 Trophies:<\/passive> Increases the range of Rengar's leap by 150.<br><passive>14 Trophies:<\/passive> Increases the duration of Thrill of the Hunt by 3 seconds. Additionally, Rengar's next ability used after activating Thrill of the Hunt generates 1 bonus Ferocity.",
             "colloq": ";",
             "plaintext": "game_item_plaintext_3167",
             "inStore": false,
@@ -5694,7 +5690,7 @@
         },
         "3168": {
             "name": "Bonetooth Necklace",
-            "description": "<stats>+5 Attack Damage<\/stats><br><br><unique>UNIQUE Passive:<\/unique> +2 Attack Damage per level<br><unique>UNIQUE Passive:<\/unique> Rengar collects trophies when killing champions and ains bnus effects based on how many trophies he collects. Grants 1 trophy for kills and assists. One trophy is lost upon death.<br><passive>3 Trophies:<\/passive> +10 Armor Penetration, +5% Cooldown Reduction<br><passive>6 Trophies:<\/passive> +25 Movement Speed<br><passive>9 Trophies:<\/passive> Increases the range of Rengar's leap by 150.<br><passive>14 Trophies:<\/passive> Increases the duration of Thrill of the Hunt by 3 seconds. Additionally, Rengar's next ability used after activating Thrill of the Hunt generates 1 bonus Ferocity.",
+            "description": "<stats>+5 Attack Damage<\/stats><br><br><unique>UNIQUE Passive:<\/unique> +2 Attack Damage per level<br><unique>UNIQUE Passive:<\/unique> Rengar collects trophies when killing champions and gains nus effects based on how many trophies he collects. Grants 1 trophy for kills and assists. One trophy is lost upon death.<br><passive>3 Trophies:<\/passive> +10 Armor Penetration, +5% Cooldown Reduction<br><passive>6 Trophies:<\/passive> +25 Movement Speed<br><passive>9 Trophies:<\/passive> Increases the range of Rengar's leap by 150.<br><passive>14 Trophies:<\/passive> Increases the duration of Thrill of the Hunt by 3 seconds. Additionally, Rengar's next ability used after activating Thrill of the Hunt generates 1 bonus Ferocity.",
             "colloq": ";",
             "plaintext": "game_item_plaintext_3168",
             "inStore": false,
@@ -5727,7 +5723,7 @@
         },
         "3169": {
             "name": "Bonetooth Necklace",
-            "description": "<stats>+5 Attack Damage<\/stats><br><br><unique>UNIQUE Passive:<\/unique> +2 Attack Damage per level<br><unique>UNIQUE Passive:<\/unique> Rengar collects trophies when killing champions and gains bonus effects based on how many trophies he collects. Grants 1 trophy for kills and assists. One trophy is lost upon death.<br><passive>3 Trophies:<\/passive> +10 Armor Penetration, +5% Cooldown Reduction<br><passive>6 Trophies:<\/passive> +25 Movement Speed<br><passive>9 Trophies:<\/passive> Increases the range of Rengar's leap by 150.<br><passive>14 Trophies:<\/passive> Increases the duration of Thrill of the Hunt by 3 seconds. Additionally, Rengar's next ability used after activating Thrill of the Hunt generates 1 bonus Ferocity.",
+            "description": "<stats>+5 Attack Damage<\/stats><br><br><unique>UNIQUE Pasve:<\/unique> +2 Attack Damage per level<br><unique>UNIQUE Passive:<\/unique> Rengar collects trophies when killing champions and gains bonus effects based on how many trophies he collects. Grants 1 trophy for kills and assists. One trophy is lost upon death.<br><passive>3 Trophies:<\/passive> +10 Armor Penetration, +5% Cooldown Reduction<br><passive>6 Trophies:<\/passive> +25 Movement Speed<br><passive>9 Trophies:<\/passive> Increases the range of Rengar's leap by 150.<br><passive>14 Trophies:<\/passive> Increases the duration of Thrill of the Hunt by 3 seconds. Additionally, Rengar's next ability used after activating Thrill of the Hunt generates 1 bonus Ferocity.",
             "colloq": ";",
             "plaintext": "game_item_plaintext_3169",
             "inStore": false,
@@ -5758,7 +5754,7 @@
                 "FlatPhysicalDamageMod": 5
             }
         },
-        "3170": {
+        170": {
             "name": "Moonflair Spellblade",
             "description": "<stats>+50 Ability Power<br>+50 Armor<br>+50 Magic Resistance<\/stats><br><br><unique>UNIQUE Passive - Tenacity:<\/unique> Reduces the duration of stuns, slows, taunts, fears, silences, blinds, and immobilizes by 35%.<br><br><i>(Unique Passives with the same name do not stack.)<\/i>",
             "colloq": ";",
@@ -5802,7 +5798,7 @@
             },
             "depth": 3
         },
-       "3171": {
+      "3171": {
             "name": "Bonetooth Necklace",
             "description": "<stats>+5 Attack Damage<\/stats><br><br><unique>UNIQUE Passive:<\/unique> +2 Attack Damage per level<br><unique>UNIQUE Passive:<\/unique> Rengar collects trophies when killing champions and gains bonus effects based on how many trophies he collects. Grants 1 trophy for kills and assists. One trophy is lost upon death.<br><passive>3 Trophies:<\/passive> +10 Armor Penetration, +5% Cooldown Reduction<br><passive>6 Trophies:<\/passive> +25 Movement Speed<br><passive>9 Trophies:<\/passive> Increases the range of Rengar's leap by 150.<br><passive>14 Trophies:<\/passive> Increases the duration of Thrill of the Hunt by 3 seconds. Additionally, Rengar's next ability used after activating Thrill of the Hunt generates 1 bonus Ferocity.",
             "colloq": ";",
@@ -5827,7 +5823,7 @@
                 "purchasable": false,
                 "total": 800,
                 "sell": 560
-           },
+        },
             "tags": [
 
             ],
@@ -5871,7 +5867,7 @@
                 "Tenacity"
             ],
             "stats": {
-                "FatPhyscalDamageMod": 25,
+                "FlatPhycalDamageMod": 25,
                 "PercentMovementSpeedMod": 0.1,
                 "PercentAttackSpeedMod": 0.5
             },
@@ -5908,7 +5904,7 @@
                 "ManaRegen"
             ],
             "stats": {
-                "FlatHPRegenMod": 2,
+                "FlatHPRenMod 2,
                 "FlatMPRegenMod": 3
             },
             "depth": 3
@@ -5948,8 +5944,7 @@
             ],
             "stats": {
                 "FlatMPRegenMod": 3,
-                "FlatMagicDamageMod": 60,
-                "FlatSpellBlockMod": 40
+                "FlatMagicDamageMod": 60                "FlatSpellBlockMod": 40
             },
             "depth": 3
         },
@@ -5981,7 +5976,7 @@
             },
             "tags": [
 
-            ,
+          
             "stats": {
                 "FlatPhysicalDamageMod": 5
             }
@@ -6026,7 +6021,7 @@
             },
             "stats": {
                 "FlatHPPoolMod": 350,
-                "FlatMPPoolMod": 350,
+                "FlatMPPoolMo: 350,
                 "FlatSpellBlockMod": 50
             },
             "depth": 3
@@ -6072,7 +6067,7 @@
         },
         "3184": {
             "name": "Entropy",
-            "description": "<stats>+275 Health<br>+70 Attack Damage<\/stats><br><br><unique>UNIQUE Pasive - age:<\/unique> Basic attacks grant 20 Movement Speed for 2 seconds on hit.  Kills grant 60 Movement Speed for 2 seconds.<br><active>UNIQUE Active:<\/active> For the next 5 seconds, basic attacks reduce the target's Movement Speed by 30% and deal 80 true damage over 2.5 seconds on hit (60 second cooldown).<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
+            "description": "<stats>+275 Health<br>+70 Attack Damage<\/stats><br><br><unique>UNIQUE Passive - Rage:<\/unique> Basic attacks grant 20 Movement Speed for 2 seconds on hit.  Kills grant 60 Movement Speed for 2 seconds.<br><active>UNIQUE Active:<\/active> For the next 5 seconds, basic attacks reduce the target's Movement Speed by 30% and deal 80 true damage over 2.5 seconds on hit (60 second cooldown).<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "colloq": ";",
             "plaintext": "Attacks and kills give a small burst of speed, activate to slow enemies",
             "from": [
@@ -6146,7 +6141,7 @@
                 "LifeSteal",
                 "OnHit",
                 "Stealth",
-               "Active"
+                "Active"
             ],
             "maps": {
                 "1": false
@@ -6194,7 +6189,7 @@
                 "8": false,
                 "10": false,
                 "12": false,
-                "1" false
+                "1": false
             },
             "stats": {
                 "FlatPhysicalDamageMod": 30,
@@ -6235,8 +6230,8 @@
                 "CooldownReduction",
                 "Active",
                 "Stealth"
-            ],
-            "maps": {
+          ],
+          "maps": {
                 "1": false
             },
             "stats": {
@@ -6279,7 +6274,7 @@
                 "Active"
             ],
             "maps": {
-               "2": false,
+                "": false,
                 "1": false
             },
             "stats": {
@@ -6318,8 +6313,8 @@
                 "Health",
                 "SpellBlock",
                 "HealthRegen",
-                "Armor",
-               "CooldownReduction",
+                "Arm",
+              "CooldownReduction",
                 "Active",
                 "Aura"
             ],
@@ -6367,7 +6362,7 @@
                 "FlatArmorMod": 30,
                 "FlatMagicDamageMod": 20
             },
-           depth": 2
+            "depth": 2
         },
         "3196": {
             "name": "Augment: Power",
@@ -6408,7 +6403,7 @@
         },
         "3197": {
             "name": "Augment: Gravity",
-            "description": "<stats>+3 Ability Power per level<br>+200 Mana<br>+10% Cooldown Reduction<br>+5 Mana Regen per 5 seconds<\/stats><br><br><unique>Ability Augmnt:</unique> Gravity Field has an additional 30% cast range.",
+            "description": "<stats>+3 Ability Power per level<br>+200 Mana<br>+10% Cooldown Reduction<br>+5 Mana Regen per 5 seconds<\/stats><br><br><unique>Ability Auent:<unique> Gravity Field has an additional 30% cast range.",
             "colloq": ";viktor",
             "plaintext": "Improves Viktor's Gravity Field and increases Cooldown Reduction",
             "from": [
@@ -6451,7 +6446,7 @@
             "plaintext": "Improves Viktor's Death Ray and increases Ability Power",
             "from": [
                 "3200"
-           ],
+          ],
             "requiredChampion": "Viktor",
             "into": [
 
@@ -6495,8 +6490,7 @@
             "image": {
                 "full": "3200.png",
                 "sprite": "item0.png",
-                "group": "item",
-                "x": 144,
+                "group": tem",               "x": 144,
                 "y": 768,
                 "w": 48,
                 "h": 48
@@ -6532,8 +6526,8 @@
                 "group": "item",
                 "x": 192,
                 "y": 768,
-                "w": 4,
-               "h": 48
+                "w": 48,
+              "h": 48
             },
             "gold": {
                 "base": 100,
@@ -6571,7 +6565,7 @@
             ],
             "image": {
                 "full": "3207.png",
-               "sprite": "item0.png",
+              "sprite": "item0.png",
                 "group": "item",
                 "x": 240,
                 "y": 768,
@@ -6606,7 +6600,7 @@
             "name": "Spirit of the Elder Lizard",
             "description": "<stats>+35 Attack Damage<br>+10% Cooldown Reduction<br>+14 Health Regen per 5 seconds<br>+7 Mana Regen per 5 seconds<\/stats><br><br><unique>UNIQUE Passive - Butcher:<\/unique> Damage dealt to monsters increased by 30%.<br><unique>UNIQUE Passive:<\/unique> Basic attacks and spells that do not inflict damage-over-time deal 6-40 (based on level) bonus true damage over 3 seconds on hit.<br><br><i>(Unique Passives with the same name do not stack.)<\/i>",
             "colloq": ";",
-            "plaintext": "Greatly increases damage dealt to monsters and deals true damage on basic attacks",
+            "plaintext": "Greatly increases damage det to nsters and deals true damage on basic attacks",
             "from": [
                 "1080",
                 "1036",
@@ -6651,8 +6645,8 @@
             "name": "Spectre's Cowl",
             "description": "<stats>+200 Health<br>+45 Magic Resist<\/stats><br><br><unique>UNIQUE Passive:<\/unique> Grants 15 Health Regen per 5 seconds for up to 10 seconds after taking damage from an enemy champion.<br><br>",
             "colloq": ";",
-            "plaintext": "Improves defense and grants regeneration upon being damge",
-            "from": [
+            "plaintext": "Improves defense and grants regeneration upon being damage",
+          "from": [
                 "1028",
                 "1057"
             ],
@@ -6690,7 +6684,7 @@
             "name": "Mikael's Crucible",
             "description": "<stats>+40 Magic Resist<br>+7 Health Regen per 5 seconds<br>+18 Mana Regen per 5 seconds<\/stats><br><br><unique>UNIQUE Passive - Mana Font:<\/unique> Increases Mana Regen by 1% for every 1% of missing Mana.<br><active>UNIQUE Active:<\/active> Removes all stuns, roots, taunts, fears, silences, and slows on an allied champion and heals that champion for 150 (+10% of maximum Health) (180 second cooldown).<br><br><i>(Unique Passives with the same name do not stack.)<\/i>",
             "colloq": ";",
-            "plaintext": "Activate to heal and remove all disabling effects from an allied champion",
+          "plaintext": "Activate to heal and remove all disabling effects from an allied champion",
             "from": [
                 "3096",
                 "3028"
@@ -6729,7 +6723,7 @@
         "3250": {
             "name": "Enchantment: Homeguard",
             "group": "BootsHomeguard",
-            "description": "<groupLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Homeguard bonus.<br><br><unique>UNIQUE Passive - Homeguard:<\/unique> After being out of combat for 8 seconds, visiting the shop grants full Health, Mana, and +200% Movement Speed that decays over 8 seconds (bonus Movement Speed ends upon entering combat).<br>br><i>(Unique Passives with the same name don't stack.)<\/i>",
+            "description": "<groupLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Homeguard bonus.<br><br><unique>UNIQUE Passive - Homeguard:<\/unique> After being out of combat for 8 seconds, visiting the shop grants full Health, Mana, and +200% Movement Speed that decays over 8 seconds (bonus Movement Speed ends upon entering combat).<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "from": [
                 "3006"
             ],
@@ -6818,7 +6812,7 @@
             ],
             "image": {
                 "full": "3252.png",
-               "sprite": "item0.png",
+              "sprite": "item0.png",
                 "group": "item",
                 "x": 48,
                 "y": 816,
@@ -6863,7 +6857,7 @@
                 "h": 48
             },
             "gold": {
-                "base": 475,
+            "base": 475,
                 "purchasable": true,
                 "total": 1375,
                 "sell": 962
@@ -6953,7 +6947,7 @@
             "stats": {
                 "FlatMovementSpeedMod": 45
             },
-          "depth": 3,
+        "depth": 3,
             "colloq": ";",
             "plaintext": null
         },
@@ -6996,7 +6990,7 @@
         "3257": {
             "name": "Enchantment: Furor",
             "group": "BootsFuror",
-            "description": "<groupLimit>Limited to 1 of ech enchantment type.<\/groupLimit><br>Enchants boots to have Furor bonus.<br><br><unique>UNIQUE Passive - Furor:<\/unique> Upon dealing damage with a single target spell or attack (on hit), grants +12% Movement Speed that decays over 2 seconds.<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
+            "description": "<groupLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Furor bonus.<br><br><unique>UNIQUE Passive - Furor:<\/unique> Upon dealing damage with a single target spell or attack (on hit), grants +12% Movement Speed that decays over 2 seconds.<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "from": [
                 "3020"
             ],
@@ -7032,7 +7026,7 @@
         "3258": {
             "name": "Enchantment: Distortion",
             "group": "BootsDistortion",
-            "description": "<groupLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Distortion bonus.<br><br><unique>UNIQUE Passive - Distortion:<\/unique> Teleport, Flash, and Ghost summoner spell cooldowns are reduced by 25%.<br><br><>(Uniqe Passives with the same name don't stack.)<\/i>",
+            "description": "<groupLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Distortion bonus.<br><br><unique>UNIQUE Passive - Distortion:<\/unique> Teleport, Flash, and Ghost summoner spell cooldowns are reduced by 25%.<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "from": [
                 "3020"
             ],
@@ -7080,7 +7074,7 @@
                 "full": "3259.png",
                 "sprite": "item0.png",
                 "group": "item",
-                "x": 384,
+              "x": 384,
                 "y": 816,
                 "w": 48,
                 "h": 48
@@ -7122,7 +7116,7 @@
                 "h": 48
             },
             "gold": {
-                "base": 475,
+                "ba": 475,
                 "purchasable": true,
                 "total": 1475,
                 "sell": 1033
@@ -7167,7 +7161,7 @@
                 "base": 750,
                 "purchasable": true,
                 "total": 1750,
-                "sell": 1225
+              "sell": 1225
             },
             "tags": [
 
@@ -7212,7 +7206,8 @@
             "stats": {
                 "FlatArmorMod": 25,
                 "FlatMovementSpeedMod": 45
-           },            "depth": 3,
+            },
+            "depth": 3,
             "colloq": ";",
             "plaintext": null
         },
@@ -7256,7 +7251,7 @@
         "3264": {
             "name": "Enchantment: Alacrity",
             "group": "BootsAlacrity",
-            "description": "<gropLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Alacrity bonus. <br><br><unique>UNIQUE Passive - Alacrity:<\/unique> +15 Movement Speed<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
+            "description": "<groLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Alacrity bonus. <br><br><unique>UNIQUE Passive - Alacrity:<\/unique> +15 Movement Speed<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "from": [
                 "3047"
             ],
@@ -7293,7 +7288,7 @@
         "3265": {
             "name": "Enchantment: Homeguard",
             "group": "BootsHomeguard",
-            "description": "<groupLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Homeguard bonus.<br><br><unique>UNIQUE Passive - Homeguard:<\/unique> After being out of combat for 8 seconds, visiting the shop grants full Health, Mana, and +200% Movement Speed that decays over 8 seconds (bonus Movement Speed ends upon entering combat).<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
+            "description": "<groupLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Homeguard bonus.<br><br><unique>UNIQUE Passive - Homeguard:<\/unique> After being out of combat for 8 seconds, visiting the shop grants full Health, Mana, and +200% Movement Speed that decays over seconds (bonus Movement Speed ends upon entering combat).<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "from": [
                 "3111"
             ],
@@ -7335,7 +7330,7 @@
         "3266": {
             "name": "Enchantment: Captain",
             "group": "BootsCaptain",
-            "description": "<groupLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Captain bonus.<br><br><unique>UNIQUE Passive - Captain:<\/unique> Grants +8% Movement Speed to nearby approaching allied champions. Grants nearby minions +20% Movement Speed.<br><b><i>(Uique Passives with the same name don't stack.)<\/i>",
+            "description": "<groupLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Captain bonus.<br><br><unique>UNIQUE Passive - Captain:<\/unique> Grants +8% Movement Speed to nearby approaching allied champions. Grants nearby minions +20% Movement Speed.<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "from": [
                 "3111"
             ],
@@ -7380,7 +7375,7 @@
             "into": [
 
             ],
-           "image": {
+            "image": {
                 "full": "3267.png",
                 "sprite": "item0.png",
                 "group": "item",
@@ -7424,7 +7419,7 @@
                 "x": 336,
                 "y": 864,
                 "w": 48,
-               h": 48
+                "h": 48
             },
             "gold": {
                 "base": 475,
@@ -7473,7 +7468,7 @@
 
             ],
             "stats": {
-                "FlatMovementSpeedMod": 60,
+                "FlatMovementSpeeod": 60,
                 "FlatSpellBlockMod": 25
             },
             "depth": 3,
@@ -7515,7 +7510,7 @@
                 "12": false
             },
             "stats": {
-                "FlaMovementSpeedMod": 105
+                "FlatMovementSpeedMod": 105
             },
             "depth": 3,
             "colloq": ";",
@@ -7560,7 +7555,7 @@
         "3272": {
             "name": "Enchantment: Furor",
             "group": "BootsFuror",
-           "description": "<groupLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Furor bonus.<br><br><unique>UNIQUE Passive - Furor:<\/unique> Upon dealing damage with a single target spell or attack (on hit), grants +12% Movement Speed that decays over 2 seconds.<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
+         description": "<groupLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Furor bonus.<br><br><unique>UNIQUE Passive - Furor:<\/unique> Upon dealing damage with a single target spell or attack (on hit), grants +12% Movement Speed that decays over 2 seconds.<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "from": [
                 "3117"
             ],
@@ -7596,7 +7591,7 @@
         "3273": {
             "name": "Enchantment: Distortion",
             "group": "BootsDistortion",
-            "description": "<groupLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Distortion bonus.<br><br><unique>UNIQUE Passive - Distortion:<\/unique> Teleport, Flash, and Ghost summone spellcooldowns are reduced by 25%.<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
+            "description": "<groupLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Distortion bonus.<br><br><unique>UNIQUE Passive - Distortion:<\/unique> Teleport, Flash, and Ghost summoner spellooldowns are reduced by 25%.<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
             "from": [
                 "3117"
             ],
@@ -7642,7 +7637,7 @@
             ],
             "image": {
                 "full": "3274.png",
-                "sprite": "iem0.png",
+                "sprite": tem0.g",
                 "group": "item",
                 "x": 144,
                 "y": 912,
@@ -7683,8 +7678,8 @@
                 "x": 192,
                 "y": 912,
                 "w": 48,
-                "h": 8
-           },
+                "h": 48
+          },
             "gold": {
                 "base": 475,
                 "purchasable": true,
@@ -7729,7 +7724,7 @@
             "gold": {
                 "base": 750,
                 "purchasable": true,
-               "total": 1750,
+                "tot": 1750,
                 "sell": 1225
             },
             "tags": [
@@ -7775,8 +7770,7 @@
                 "FlatMovementSpeedMod": 45
             },
             "depth": 3,
-            "colloq":";",
-           "plaintext": null
+            "colloq": ";",           "plaintext": null
         },
         "3278": {
             "name": "Enchantment: Distortion",
@@ -7853,8 +7847,8 @@
         "3280": {
             "name": "Enchantment: Homeguard",
             "group": "BootsHomeguard",
-            "description": "<groupLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Homeguard bonus.<br><br><unique>UNIQUE Passive - Homeguard:<\/unique> After being out of combat for 8 seconds, visiting the shop grants full Health, Mana, and +200% Movement Speed that decays over 8 seconds (bonus Movement Speed ends upon entering combat).<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
-           "from": [
+            "description": "<groupLimit>Limited to 1 of each enchantment type.<\/groupLimit><br>Enchants boots to have Homeguard bonus.<br><br><unique>UNIQUE Passive - Homeguard:<\/unique> After being out of combat for 8 seconds, visiting the shop grants full Health, Mana, and +200% Movement Speed that decays over 8 seconds (bonus Movement Speed ends upon entering combat).<br><br><i>(Unique Passives with the same name don't stk.)<\/i>",
+            "from": [
                 "3009"
             ],
             "hideFromAll": true,
@@ -7900,8 +7894,7 @@
             ],
             "hideFromAll": true,
             "into": [
-
-            ],
+           ],
             "image": {
                 "full": "3281.png",
                 "sprite": "item0.png",
@@ -7945,7 +7938,7 @@
                 "x": 48,
                 "y": 960,
                 "w": 48,
-              "h": 48
+                "h": 48
             },
             "gold": {
                 "base": 650,
@@ -7993,7 +7986,7 @@
 
             ],
             "stats": {
-               "FlatMovementSpeedMod": 60
+              "FlatMovementSpeedMod": 60
             },
             "depth": 3,
             "colloq": ";",
@@ -8150,7 +8143,7 @@
                 "ARMOR",
                 "SPELLBLOCK",
                 "HEALTHREGEN",
-              "TENACITY"
+                "TENACITY"
             ]
         },
         {
@@ -8166,7 +8159,8 @@
             "header": "MAGIC",
             "tags": [
                 "SPELLDAMAGE",
-                "COOLDOWNREDUCTION",                "SPELLVAMP",
+                "COOLDOWNREDUCTION",
+                "SPELLVAMP",
                 "MANA",
                 "MANAREGEN"
             ]

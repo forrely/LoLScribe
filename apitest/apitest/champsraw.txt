@@ -1,10 +1,10 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "3.12.37",
+    "version": "3.13.6",
     "data": {
         "Aatrox": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Aatrox",
             "key": "266",
             "name": "Aatrox",
@@ -40,7 +40,7 @@
                 "spellblock": 30,
                 "spellblockperlevel": 1.25,
                 "attackrange": 150,
-                "hpregen": 5.75,
+                "hpregen": 5.7,
                 "hpregenperlevel": 0.5,
                 "mpregen": 0,
                 "mpregenperlevel": 0,
@@ -53,7 +53,7 @@
             }
         },
         "Ahri": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Ahri",
             "key": "103",
             "name": "Ahri",
@@ -82,7 +82,7 @@
                 "hp": 380,
                 "hpperlevel": 80,
                 "mp": 230,
-                "mpperlevel": 50,
+               "mpperlevel": 50,
                 "movespeed": 330,
                 "armor": 11,
                 "armorperlevel": 3.5,
@@ -120,7 +120,7 @@
                 "group": "champion",
                 "x": 96,
                 "y": 0,
-                "w": 48,
+                "w": 8,
                 "h": 48
             },
             "tags": [
@@ -151,7 +151,7 @@
             }
         },
         "Alistar": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Alistar",
             "key": "12",
             "name": "Alistar",
@@ -205,7 +205,7 @@
             "key": "32",
             "name": "Amumu",
             "title": "the Sad Mummy",
-            "blurb": "Perhaps one of the oddest champions in the League of Legends is the yordle known as Amumu. His life before joining the League remains unknown... especially to Amumu. All he remembers is that he woke up alone inside a pyramid within the Shurima Desert. ...",
+            "blurb": "Perhaps one of the oddest champions in the League of Legends is the yordle known a Amumu. His life before joining the League remains unknown... especially to Amumu. All he remembers is that he woke up alone inside a pyramid within the Shurima Desert. ...",
             "info": {
                 "attack": 2,
                 "defense": 6,
@@ -248,7 +248,7 @@
                 "attackspeedperlevel": 2.18
             }
         },
-        "Anivia": {
+       "Anivia": {
             "version": "3.12.34",
             "id": "Anivia",
             "key": "34",
@@ -288,7 +288,7 @@
                 "hpregen": 4.65,
                 "hpregenperlevel": 0.55,
                 "mpregen": 7,
-                "mpregenperlevel": 0.6,
+                "mpregenperleve": 0.6
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 48,
@@ -347,7 +347,7 @@
             }
         },
         "Ashe": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Ashe",
             "key": "22",
             "name": "Ashe",
@@ -370,8 +370,8 @@
             },
             "tags": [
                 "Marksman"
-            ],
-            "partype": "Mana",
+            ,
+           "partype": "Mana",
             "stats": {
                 "hp": 395,
                 "hpperlevel": 79,
@@ -409,7 +409,7 @@
                 "difficulty": 6
             },
             "image": {
-                "full": "Blitzcrank.png",
+               "full": "Blitzcrank.png",
                 "sprite": "champion0.png",
                 "group": "champion",
                 "x": 384,
@@ -450,7 +450,7 @@
             "key": "63",
             "name": "Brand",
             "title": "the Burning Vengeance",
-            "blurb": "In a faraway place known as Lokfar there was a seafaring marauder called Kegan Rodhe. As was his people's way, Kegan sailed far and wide with his fellows, stealing treasures from those unlucky enough to catch their attention. To some, he was a ...",
+            "blurb": "In a faraway place known as Lokfar there was a seafaring marauder called Kegan Rodhe. As was his people's way, Kegan sailed far and wide with his fellows, stealin treasures from those unlucky enough to catch their attention. To some, he was a ...",
             "info": {
                 "attack": 2,
                 "defense": 2,
@@ -543,7 +543,7 @@
             }
         },
         "Cassiopeia": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Cassiopeia",
             "key": "69",
             "name": "Cassiopeia",
@@ -577,7 +577,7 @@
                 "armor": 11.5,
                 "armorperlevel": 4,
                 "spellblock": 30,
-                "spellblockperlevel": 0,
+                "spellblockperevel": 0,
                 "attackrange": 550,
                 "hpregen": 4.85,
                 "hpregenperlevel": 0.5,
@@ -641,7 +641,7 @@
             }
         },
         "Corki": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Corki",
             "key": "42",
             "name": "Corki",
@@ -685,7 +685,7 @@
                 "critperlevel": 0,
                 "attackdamage": 48.2,
                 "attackdamageperlevel": 3,
-                "attackspeedoffset": -0.05,
+                "attackspeedoffset": 0,
                 "attackspeedperlevel": 2.3
             }
         },
@@ -695,7 +695,7 @@
             "key": "122",
             "name": "Darius",
             "title": "the Hand of Noxus",
-            "blurb": "There is no greater symbol of Noxian might than Darius, the nation's most feared and battle-hardened warrior. Orphaned at a young age, Darius had to fight to keep himself and his younger brother alive. By the time he joined the military, he had ...",
+            "blurb": "There is no greater symbol of Noxian might than Darius, the nation's most feared and battle-hardened warrior. Orphaned at a young age, Darius had to fight to keep himself and his younger brother alive. By the time he joined the military, he had ..",
             "info": {
                 "attack": 9,
                 "defense": 5,
@@ -825,7 +825,7 @@
                 "spellblockperlevel": 0,
                 "attackrange": 550,
                 "hpregen": 5,
-                "hpregenperlevel": 0.7,
+               "hpregenperlevel": 0.7,
                 "mpregen": 6.95,
                 "mpregenperlevel": 0.65,
                 "crit": 0,
@@ -866,7 +866,7 @@
                 "hp": 433,
                 "hpperlevel": 89,
                 "mp": 0,
-                "mpperlevel": 0,
+               "mpperlevel": 0,
                 "movespeed": 345,
                 "armor": 17,
                 "armorperlevel": 3.5,
@@ -886,7 +886,7 @@
             }
         },
         "Elise": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Elise",
             "key": "60",
             "name": "Elise",
@@ -904,7 +904,7 @@
                 "group": "champion",
                 "x": 384,
                 "y": 48,
-                "w": 48,
+               "w": 48,
                 "h": 48
             },
             "tags": [
@@ -1032,7 +1032,7 @@
                 "attackspeedperlevel": 2.8
             }
         },
-        "FiddleSticks": {
+       "FiddleSticks": {
             "version": "3.12.34",
             "id": "FiddleSticks",
             "key": "9",
@@ -1071,7 +1071,7 @@
                 "attackrange": 480,
                 "hpregen": 4.6,
                 "hpregenperlevel": 0.6,
-                "mpregen": 6.9,
+                "mpregen": 6.9
                 "mpregenperlevel": 0.65,
                 "crit": 0,
                 "critperlevel": 0,
@@ -1113,7 +1113,7 @@
                 "mp": 220,
                 "mpperlevel": 40,
                 "movespeed": 350,
-                "armor": 15,
+              "armor": 15,
                 "armorperlevel": 3.5,
                 "spellblock": 30,
                 "spellblockperlevel": 1.25,
@@ -1131,7 +1131,7 @@
             }
         },
         "Fizz": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Fizz",
             "key": "105",
             "name": "Fizz",
@@ -1153,7 +1153,7 @@
                 "h": 48
             },
             "tags": [
-                "Assassin"
+               "Assassin"
             ],
             "partype": "Mana",
             "stats": {
@@ -1180,7 +1180,7 @@
             }
         },
         "Galio": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Galio",
             "key": "3",
             "name": "Galio",
@@ -1229,7 +1229,7 @@
             }
         },
         "Gangplank": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Gangplank",
             "key": "41",
             "name": "Gangplank",
@@ -1279,7 +1279,7 @@
         },
         "Garen": {
             "version": "3.12.34",
-            "id": "Garen",
+           "id": "Garen",
             "key": "86",
             "name": "Garen",
             "title": "The Might of Demacia",
@@ -1327,7 +1327,7 @@
             }
         },
         "Gragas": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Gragas",
             "key": "79",
             "name": "Gragas",
@@ -1439,7 +1439,7 @@
             },
             "image": {
                 "full": "Hecarim.png",
-                "sprite": "champion0.png",
+                "sprit": "champion0.png",
                 "group": "champion",
                 "x": 432,
                 "y": 96,
@@ -1474,7 +1474,7 @@
             }
         },
         "Heimerdinger": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Heimerdinger",
             "key": "74",
             "name": "Heimerdinger",
@@ -1503,23 +1503,23 @@
                 "hp": 350,
                 "hpperlevel": 75,
                 "mp": 240,
-                "mpperlevel": 65,
-                "movespeed": 325,
-                "armor": 7,
+                "mpperlevel": 40,
+                "movespeed": 335,
+                "armor": 10,
                 "armorperlevel": 3,
                 "spellblock": 30,
                 "spellblockperlevel": 0,
                 "attackrange": 550,
-                "hpregen": 4.5,
-                "hpregenperlevel": 0.55,
-                "mpregen": 7,
-                "mpregenperlevel": 0.65,
+                "hpregen": 0,
+                "hpregenperlevel": 0.6,
+                "mpregen": 6,
+                "mpregenperlevel": 0.6,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 49.24,
-                "attackdamageperlevel": 3,
+                "attackdamage": 53,
+                "attackdamageperlevel": 2.7,
                 "attackspeedoffset": 0,
-                "attackspeedperlevel": 1.21
+                "attackspeedperlevel": 1.36
             }
         },
         "Irelia": {
@@ -1572,7 +1572,7 @@
             }
         },
         "Janna": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Janna",
             "key": "40",
             "name": "Janna",
@@ -1686,8 +1686,7 @@
                 "full": "Jax.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 192,
-                "y": 0,
+                "x": 192,                "y": 0,
                 "w": 48,
                 "h": 48
             },
@@ -1768,12 +1767,12 @@
             }
         },
         "Jinx": {
-            "version": "3.12.37",
+            "version": "3.13.6",
             "id": "Jinx",
             "key": "222",
             "name": "Jinx",
             "title": "the Loose Cannon",
-            "blurb": "Jinx lives to wreak havoc without a thought for consequence, leaving a trail of mayhem and panic in her wake. A manic and impulsive criminal, she despises nothing more than boredom, and gleefully unleashes her own volatile brand of pandemonium to the ...",
+            "blurb": "Jinx lives to wreak havoc without a thught for the consequences, leaving a trail of mayhem and panic in her wake. A manic and impulsive criminal, she despises nothing more than boredom, and gleefully brings her own volatile brand of pandemonium to ...",
             "info": {
                 "attack": 9,
                 "defense": 2,
@@ -1856,7 +1855,7 @@
                 "hpregen": 4.7,
                 "hpregenperlevel": 0.55,
                 "mpregen": 6.8,
-                "mpregenperlevel": 0.65,
+                "mpreenperlevel": 0.65,
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 50,
@@ -1915,7 +1914,7 @@
             }
         },
         "Kassadin": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Kassadin",
             "key": "38",
             "name": "Kassadin",
@@ -1949,7 +1948,7 @@
                 "armor": 14,
                 "armorperlevel": 3.2,
                 "spellblock": 30,
-                "spellblockperlevel": 1.25,
+                "spellblockperlevel": 0,
                 "attackrange": 125,
                 "hpregen": 6.95,
                 "hpregenperlevel": 0.5,
@@ -2018,7 +2017,7 @@
             "key": "10",
             "name": "Kayle",
             "title": "The Judicator",
-            "blurb": "In a world far away where an ancient war still rages, Kayle was a great hero - the strongest of an immortal race committed to destroying evil wherever it could be found.  For ten thousand years, Kayle fought tirelessly for her people, wielding her ...",
+            "blurb": "In a world far away where an ancient war still rages, Kayle was a great hero - the strongest of an immortal race committed to destroying evil wherver it could be found.  For ten thousand years, Kayle fought tirelessly for her people, wielding her ...",
             "info": {
                 "attack": 6,
                 "defense": 6,
@@ -2062,7 +2061,7 @@
             }
         },
         "Kennen": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Kennen",
             "key": "85",
             "name": "Kennen",
@@ -2104,14 +2103,14 @@
                 "mpregenperlevel": 0,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 47,
+               "attackdamage": 47,
                 "attackdamageperlevel": 3.3,
                 "attackspeedoffset": -0.0947,
                 "attackspeedperlevel": 3.4
             }
         },
         "Khazix": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Khazix",
             "key": "121",
             "name": "Kha'Zix",
@@ -2145,7 +2144,7 @@
                 "armor": 15,
                 "armorperlevel": 3,
                 "spellblock": 30,
-                "spellblockperlevel": 1.25,
+                "spelllockperlevel": 1.25,
                 "attackrange": 125,
                 "hpregen": 6.25,
                 "hpregenperlevel": 0.75,
@@ -2185,7 +2184,7 @@
                 "Marksman"
             ],
             "partype": "Mana",
-            "stats": {
+            "stas": {
                 "hp": 440,
                 "hpperlevel": 84,
                 "mp": 255,
@@ -2223,7 +2222,7 @@
             },
             "image": {
                 "full": "Leblanc.png",
-                "sprite": "champion1.png",
+                "sprite": "champon1.png",
                 "group": "champion",
                 "x": 192,
                 "y": 48,
@@ -2258,12 +2257,12 @@
             }
         },
         "LeeSin": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "LeeSin",
             "key": "64",
             "name": "Lee Sin",
             "title": "the Blind Monk",
-            "blurb": "As a young teen, Lee Sin was intent on becoming a summoner. His will and dedication were unmatched by any of his peers, and his skill drew the attention of Reginald Ashram, the League's High Councilor at the time. While studying at the Arcanum Majoris,...",
+            "blurb": "As a young teen, Lee Sin was intent on becoming a summoner. His will and dedication were unmatched by any of his peers, and his skill drew the attention of Reginald Ashram, the League's High Councilor at the time. While studying at the Arcanum Maoris,...",
             "info": {
                 "attack": 8,
                 "defense": 5,
@@ -2307,11 +2306,11 @@
             }
         },
         "Leona": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Leona",
             "key": "89",
             "name": "Leona",
-            "title": "the Radiant Dawn",
+            "title": "the Radian Dawn"
             "blurb": "On the upper slopes of Mount Targon, the warriors of Rakkor live and breathe only for war.  However, Targon's peak is reserved for a special group of Rakkoran who answer to a ''higher'' calling.  Members of this group, called the Solari, retire their ...",
             "info": {
                 "attack": 4,
@@ -2351,7 +2350,7 @@
                 "critperlevel": 0,
                 "attackdamage": 55,
                 "attackdamageperlevel": 3,
-                "attackspeedoffset": 0,
+                "attackpeedoffset": 0,
                 "attackspeedperlevel": 2.9
             }
         },
@@ -2405,7 +2404,7 @@
             }
         },
         "Lucian": {
-            "version": "3.12.37",
+            "version": "3.13.6",
             "id": "Lucian",
             "key": "236",
             "name": "Lucian",
@@ -2454,7 +2453,7 @@
             }
         },
         "Lulu": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Lulu",
             "key": "117",
             "name": "Lulu",
@@ -2473,7 +2472,7 @@
                 "x": 432,
                 "y": 48,
                 "w": 48,
-                "h": 48
+               "h": 48
             },
             "tags": [
                 "Support"
@@ -2513,7 +2512,7 @@
                 "attack": 2,
                 "defense": 4,
                 "magic": 9,
-                "difficulty": 6
+               "difficulty": 6
             },
             "image": {
                 "full": "Lux.png",
@@ -2557,7 +2556,7 @@
             "key": "54",
             "name": "Malphite",
             "title": "Shard of the Monolith",
-            "blurb": "There is a world of perfect harmony, where all are part of the whole. The Monolith is the essence of all creation, and its denizens are but singular pieces of it. It is beautiful in its symmetry, and in its almost complete lack of uncertainty. The ...",
+            "blurb": "There is a world of perfect harmony, where all are part of the whole. The Monolith is the essence of all ceation, and its denizens are but singular pieces of it. It is beautiful in its symmetry, and in its almost complete lack of uncertainty. The ...",
             "info": {
                 "attack": 5,
                 "defense": 9,
@@ -2641,7 +2640,7 @@
                 "hpregenperlevel": 0.55,
                 "mpregen": 7,
                 "mpregenperlevel": 0.6,
-                "crit": 0,
+               "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 51.66,
                 "attackdamageperlevel": 3,
@@ -2682,8 +2681,7 @@
                 "mpperlevel": 46,
                 "movespeed": 335,
                 "armor": 18,
-                "armorperlevel": 4,
-                "spellblock": 30,
+                "armorperlevel": 4,                "spellblock": 30,
                 "spellblockperlevel": 0,
                 "attackrange": 125,
                 "hpregen": 7.25,
@@ -2699,7 +2697,7 @@
             }
         },
         "MasterYi": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "MasterYi",
             "key": "11",
             "name": "Master Yi",
@@ -2722,7 +2720,7 @@
             },
             "tags": [
                 "Assassin"
-            ],
+           ],
             "partype": "Mana",
             "stats": {
                 "hp": 444,
@@ -2748,7 +2746,7 @@
             }
         },
         "MissFortune": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "MissFortune",
             "key": "21",
             "name": "Miss Fortune",
@@ -2761,7 +2759,7 @@
                 "difficulty": 3
             },
             "image": {
-                "full": "MissFortune.png",
+               "full": "MissFortune.png",
                 "sprite": "champion1.png",
                 "group": "champion",
                 "x": 240,
@@ -2847,7 +2845,7 @@
         },
         "Mordekaiser": {
             "version": "3.12.34",
-            "id": "Mordekaiser",
+           "id": "Mordekaiser",
             "key": "82",
             "name": "Mordekaiser",
             "title": "the Master of Metal",
@@ -2887,7 +2885,7 @@
                 "mpregen": 0,
                 "mpregenperlevel": 0,
                 "crit": 0,
-                "critperlevel": 0,
+               "critperlevel": 0,
                 "attackdamage": 51.7,
                 "attackdamageperlevel": 3.5,
                 "attackspeedoffset": -0.1,
@@ -2895,7 +2893,7 @@
             }
         },
         "Morgana": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Morgana",
             "key": "25",
             "name": "Morgana",
@@ -2928,9 +2926,9 @@
                 "movespeed": 335,
                 "armor": 15,
                 "armorperlevel": 3.8,
-                "spellblock": 30,
+                "spellbock": 30,
                 "spellblockperlevel": 0,
-                "attackrange": 425,
+                "attackrange": 450,
                 "hpregen": 4.7,
                 "hpregenperlevel": 0.6,
                 "mpregen": 6.8,
@@ -2939,12 +2937,12 @@
                 "critperlevel": 0,
                 "attackdamage": 51.58,
                 "attackdamageperlevel": 3.5,
-                "attackspeedoffset": 0.08,
+                "attackspeedoffset": 0,
                 "attackspeedperlevel": 1.53
             }
         },
         "Nami": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Nami",
             "key": "267",
             "name": "Nami",
@@ -3047,7 +3045,7 @@
             "key": "111",
             "name": "Nautilus",
             "title": "the Titan of the Depths",
-            "blurb": "Once, Nautilus was a sailor commissioned by the Institute of War to explore the uncharted reaches of the Guardian's Sea. This expedition took him deep into unknown waters where he and his crew found a vast section of black oozing liquid that none of ...",
+            "blurb": "Once, Nautilus was a sailor commissioned by the Institute of War to explore the uncharted reaches of the Guardian's Sea. This expedition took him deep into unknown waters where he and his crew found a vst secton of black oozing liquid that none of ...",
             "info": {
                 "attack": 4,
                 "defense": 6,
@@ -3094,7 +3092,7 @@
             "version": "3.12.34",
             "id": "Nidalee",
             "key": "76",
-            "name": "Nidalee",
+            "name": "Nidaee",
             "title": "the Bestial Huntress",
             "blurb": "There are few dwellers, let alone champions, residing in the blasted and dangerous lands that lie south of the Great Barrier. Much of that world still bears the scars of past Runes Wars, especially the mysterious Kumungu Jungle. There are ...",
             "info": {
@@ -3134,7 +3132,7 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 49,
-                "attackdamageperlevel": 3.5,
+                "attacdamageperleel": 3.5,
                 "attackspeedoffset": -0.0672,
                 "attackspeedperlevel": 3.22
             }
@@ -3175,7 +3173,7 @@
                 "armorperlevel": 3.5,
                 "spellblock": 30,
                 "spellblockperlevel": 1.25,
-                "attackrange": 125,
+                "attackrnge": 125,
                 "hpregen": 7,
                 "hpregenperlevel": 0.75,
                 "mpregen": 6,
@@ -3217,7 +3215,7 @@
             "stats": {
                 "hp": 437,
                 "hpperlevel": 96,
-                "mp": 213,
+               "mp": 213,
                 "mpperlevel": 42,
                 "movespeed": 350,
                 "armor": 16.5,
@@ -3238,7 +3236,7 @@
             }
         },
         "Olaf": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Olaf",
             "key": "2",
             "name": "Olaf",
@@ -3341,7 +3339,7 @@
             "key": "80",
             "name": "Pantheon",
             "title": "the Artisan of War",
-            "blurb": "Far above the clouds on Mount Targon resides a stalwart tribe of people known as the Rakkor who still revere combat and war as ultimate artforms. They remember the Rune Wars of Runeterra and know that the League of Legends can only repress the rising ...",
+            "blurb": "Far above the clouds on Mount Targon resies a stalwart tribe of people known as the Rakkor who still revere combat and war as ultimate artforms. They remember the Rune Wars of Runeterra and know that the League of Legends can only repress the rising ...",
             "info": {
                 "attack": 9,
                 "defense": 4,
@@ -3381,7 +3379,7 @@
                 "attackdamage": 50.7,
                 "attackdamageperlevel": 2.9,
                 "attackspeedoffset": -0.08,
-                "attackspeedperlevel": 2.95
+                "attackspeeperlevel": 2.95
             }
         },
         "Poppy": {
@@ -3423,7 +3421,7 @@
                 "attackrange": 125,
                 "hpregen": 7.45,
                 "hpregenperlevel": 0.55,
-                "mpregen": 6.4,
+               "mpregen": 6.4,
                 "mpregenperlevel": 0.45,
                 "crit": 0,
                 "critperlevel": 0,
@@ -3503,7 +3501,7 @@
                 "y": 48,
                 "w": 48,
                 "h": 48
-            },
+           },
             "tags": [
                 "Tank"
             ],
@@ -3586,7 +3584,7 @@
             "key": "107",
             "name": "Rengar",
             "title": "the Pridestalker",
-            "blurb": "On every wall of his den, the trophy hunter Rengar mounts the heads, horns, claws, and fangs of the most lethal creatures in Valoran. Though his collection is extensive, he remains unsatisfied, tirelessly seeking greater game. He takes time with every ...",
+            "blurb": "On every wall of his den, the trophy hunter Rengar mounts the heads, horns, claws, and fangs of the mos lethal creatures in Valoran. Though his collection is extensive, he remains unsatisfied, tirelessly seeking greater game. He takes time with every ...",
             "info": {
                 "attack": 7,
                 "defense": 4,
@@ -3630,7 +3628,7 @@
             }
         },
         "Riven": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Riven",
             "key": "92",
             "name": "Riven",
@@ -3712,7 +3710,7 @@
                 "movespeed": 345,
                 "armor": 16,
                 "armorperlevel": 3.5,
-                "spellblock": 30,
+                "pellblock": 30,
                 "spellblockperlevel": 1.25,
                 "attackrange": 125,
                 "hpregen": 7,
@@ -3728,7 +3726,7 @@
             }
         },
         "Ryze": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Ryze",
             "key": "13",
             "name": "Ryze",
@@ -3791,7 +3789,7 @@
             },
             "image": {
                 "full": "Sejuani.png",
-                "sprite": "champion2.png",
+               "sprite": "champion2.png",
                 "group": "champion",
                 "x": 288,
                 "y": 48,
@@ -3826,12 +3824,12 @@
             }
         },
         "Shaco": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Shaco",
             "key": "35",
             "name": "Shaco",
             "title": "the Demon Jester",
-            "blurb": "Most would say that death isn't funny. It isn't, unless you're Shaco - then it's hysterical. He is Valoran's first fully functioning homicidal comic; he jests until someone dies, and then he laughs. The figure that has come to be known as the Demon ...",
+            "blurb": "Most would say that death isn't funny. It isn't, unless you're Shaco - then it's hysterical. He is Valoran's first fully functioning homicidal comic; he jests until someone dies, and then he laughs. The figure thathas come to be known as the Demon ...",
             "info": {
                 "attack": 8,
                 "defense": 4,
@@ -3875,11 +3873,11 @@
             }
         },
         "Shen": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Shen",
             "key": "98",
             "name": "Shen",
-            "title": "Eye of Twilight",
+          "title": "Eye of Twilight",
             "blurb": "There exists an ancient order originating in the Ionian Isles dedicated to the preservation of balance.  Order, chaos, light, darkness -- all things must exist in perfect harmony for such is the way of the universe.  This order is known as the Kinkou ...",
             "info": {
                 "attack": 3,
@@ -3918,13 +3916,13 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 54.5,
-                "attackdamageperlevel": 3.375,
+                "attackdamageperlevel":3.375,
                 "attackspeedoffset": -0.04,
                 "attackspeedperlevel": 3.4
             }
         },
         "Shyvana": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Shyvana",
             "key": "102",
             "name": "Shyvana",
@@ -3960,7 +3958,7 @@
                 "spellblock": 30,
                 "spellblockperlevel": 1.25,
                 "attackrange": 125,
-                "hpregen": 7.25,
+               "hpregen": 7.25,
                 "hpregenperlevel": 0.8,
                 "mpregen": 0,
                 "mpregenperlevel": 0,
@@ -4001,7 +3999,7 @@
             "stats": {
                 "hp": 405,
                 "hpperlevel": 82,
-                "mp": 215,
+               "mp": 215,
                 "mpperlevel": 45,
                 "movespeed": 345,
                 "armor": 18,
@@ -4071,17 +4069,17 @@
             }
         },
         "Sivir": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Sivir",
             "key": "15",
             "name": "Sivir",
             "title": "the Battle Mistress",
-            "blurb": "The beautiful and deadly champion known as Sivir has been a favorite of League summoners for close to a decade.  A soldier-for-hire outside of the Fields of Justice, she is the embodiment of a highly successful mercenary on modern day Runeterra.  ...",
+            "blurb": "When the people of Valoran speak of the ''Battle Mistress,'' there is only one woman to whom they refer. Combining unflinching bravery with prowess in combat and endless ambition, Sivir's reputation as a fortune hunter is only rivaled by her amassed ...",
             "info": {
                 "attack": 9,
                 "defense": 3,
-                "magic": 2,
-                "difficulty": 5
+                "magic": 1,
+                "difficulty": 3
             },
             "image": {
                 "full": "Sivir.png",
@@ -4114,9 +4112,9 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 49,
-                "attackdamageperlevel": 2.9,
+                "attackdamageperlevel": 3,
                 "attackspeedoffset": -0.05,
-                "attackspeedperlevel": 3.28
+                "attackspeedperlevel": 1.6
             }
         },
         "Skarner": {
@@ -4165,11 +4163,11 @@
                 "attackdamage": 54.1,
                 "attackdamageperlevel": 4.2,
                 "attackspeedoffset": 0,
-                "attackspeedperlevel": 2.1
+                "attackspedperlevel": 2.1
             }
         },
         "Sona": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Sona",
             "key": "37",
             "name": "Sona",
@@ -4218,7 +4216,7 @@
             }
         },
         "Soraka": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Soraka",
             "key": "16",
             "name": "Soraka",
@@ -4249,7 +4247,7 @@
                 "mp": 240,
                 "mpperlevel": 60,
                 "movespeed": 335,
-                "armor": 7.4,
+               "armor": 7.4,
                 "armorperlevel": 3.8,
                 "spellblock": 30,
                 "spellblockperlevel": 0,
@@ -4288,7 +4286,7 @@
                 "w": 48,
                 "h": 48
             },
-            "tags": [
+            tags": [
                 "Mage"
             ],
             "partype": "Mana",
@@ -4316,7 +4314,7 @@
             }
         },
         "Syndra": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Syndra",
             "key": "134",
             "name": "Syndra",
@@ -4328,7 +4326,7 @@
                 "magic": 9,
                 "difficulty": 10
             },
-            "image": {
+           "image": {
                 "full": "Syndra.png",
                 "sprite": "champion2.png",
                 "group": "champion",
@@ -4365,12 +4363,12 @@
             }
         },
         "Talon": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Talon",
             "key": "91",
             "name": "Talon",
             "title": "the Blade's Shadow",
-            "blurb": "Talon's earliest memories are the darkness of Noxus' underground passages and the reassuring steel of a blade. He remembers no family, warmth, or kindness. Instead, the clink of stolen gold and the security of a wall at his back are all the kinship he ...",
+            "blurb": "Talon's earliest memories are the darkness of Noxus' underground passages and the reassuring steel of a blade. He remembers no family, warmth, or kindess. Istead, the clink of stolen gold and the security of a wall at his back are all the kinship he ...",
             "info": {
                 "attack": 9,
                 "defense": 3,
@@ -4414,9 +4412,8 @@
             }
         },
         "Taric": {
-            "version": "3.12.34",
-            "id": "Taric",
-            "key": "44",
+            "version": "3.13.6",
+            "id": "Taric",            "key": "44",
             "name": "Taric",
             "title": "the Gem Knight",
             "blurb": "There is a form of magic unknown to many Runeterrans and discredited by the few who are even aware of its existence. It is the magic of the earth, drawing power from the resonance of crystals and gems. Taric, the Gem Knight, is Runeterra's sole ...",
@@ -4456,7 +4453,7 @@
                 "mpregenperlevel": 0.4,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 52,
+               "attackdamage": 52,
                 "attackdamageperlevel": 3.5,
                 "attackspeedoffset": 0,
                 "attackspeedperlevel": 2.02
@@ -4497,7 +4494,7 @@
                 "armor": 14,
                 "armorperlevel": 3.75,
                 "spellblock": 30,
-                "spellblockperlevel": 0,
+                "spellblockperevel": 0,
                 "attackrange": 500,
                 "hpregen": 4.65,
                 "hpregenperlevel": 0.65,
@@ -4512,7 +4509,7 @@
             }
         },
         "Thresh": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Thresh",
             "key": "412",
             "name": "Thresh",
@@ -4538,7 +4535,7 @@
             ],
             "partype": "Mana",
             "stats": {
-                "hp": 411,
+               "hp": 411,
                 "hpperlevel": 89,
                 "mp": 200,
                 "mpperlevel": 44,
@@ -4557,7 +4554,7 @@
                 "attackdamage": 46,
                 "attackdamageperlevel": 2.2,
                 "attackspeedoffset": 0,
-                "attackspeedperlevel": 1
+                "attackspeedperlevel": 3.5
             }
         },
         "Tristana": {
@@ -4575,7 +4572,7 @@
             },
             "image": {
                 "full": "Tristana.png",
-                "sprite": "champion3.png",
+                "sprite": "champion3.png,
                 "group": "champion",
                 "x": 96,
                 "y": 0,
@@ -4610,12 +4607,12 @@
             }
         },
         "Trundle": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Trundle",
             "key": "48",
             "name": "Trundle",
             "title": "the Troll King",
-            "blurb": "Trundle is a hulking and devious troll with a mischievous streak. There is nothing he can't beat into submission and bend to his will, not even the ice itself. With his massive, frozen club, he chills his enemies to the core and runs them through with ...",
+            "blurb": "Trundle is a hulking and devious troll with a mischievous streak. There is nothing he can't beat into submission and bend to his will, not even the ice itself. With his massive, frozen club, he chills his enemies to the core and runs them through wih ...",
             "info": {
                 "attack": 7,
                 "defense": 6,
@@ -4659,11 +4656,11 @@
             }
         },
         "Tryndamere": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Tryndamere",
             "key": "23",
             "name": "Tryndamere",
-            "title": "the Barbarian King",
+            "title":"the Barbarian King",
             "blurb": "Fueled by his unbridled fury and rage, Tryndamere cuts his way through the tundra, mastering the art of battle by challenging the Freljord's greatest warriors. The wrathful barbarian seeks revenge on the one who decimated his clan and strikes down all ...",
             "info": {
                 "attack": 10,
@@ -4702,8 +4699,7 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 56,
-                "attackdamageperlevel": 3.2,
-                "attackspeedoffset": -0.0672,
+                "attackdaageperlevel": 3.2,                "attackspeedoffset": -0.0672,
                 "attackspeedperlevel": 2.9
             }
         },
@@ -4784,7 +4780,7 @@
             "partype": "Mana",
             "stats": {
                 "hp": 389,
-                "hpperlevel": 81,
+                "hpperevel: 81,
                 "mp": 220,
                 "mpperlevel": 40,
                 "movespeed": 330,
@@ -4806,7 +4802,7 @@
             }
         },
         "Udyr": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Udyr",
             "key": "77",
             "name": "Udyr",
@@ -4862,7 +4858,7 @@
             "title": "the Headsman's Pride",
             "blurb": "There are warriors who become great for their strength, cunning, or skill with arms.  Others simply refuse to die.  Urgot, once a great soldier of Noxus, may constitute a case in support of the latter.  Prone to diving headlong into enemy battle lines,...",
             "info": {
-                "attack": 8,
+                "attck": 8,
                 "defense": 5,
                 "magic": 3,
                 "difficulty": 8
@@ -4904,12 +4900,12 @@
             }
         },
         "Varus": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Varus",
             "key": "110",
             "name": "Varus",
             "title": "the Arrow of Retribution",
-            "blurb": "For his incomparable skill with the bow and his unquestioned sense of honor, Varus was chosen to be the warden of a sacred Ionian temple. The temple was built to contain an ancient pit of corruption so vile that Ionian Elders feared it could envelop ...",
+            "blurb": "For his incomparable skll with the bow and his unquestioned sense of honor, Varus was chosen to be the warden of a sacred Ionian temple. The temple was built to contain an ancient pit of corruption so vile that Ionian Elders feared it could envelop ...",
             "info": {
                 "attack": 7,
                 "defense": 3,
@@ -4949,7 +4945,7 @@
                 "attackdamage": 46,
                 "attackdamageperlevel": 3,
                 "attackspeedoffset": -0.05,
-                "attackspeedperlevel": 3
+               "attackspeedperlevel": 3
             }
         },
         "Vayne": {
@@ -4991,7 +4987,7 @@
                 "attackrange": 550,
                 "hpregen": 4.5,
                 "hpregenperlevel": 0.55,
-                "mpregen": 6.3,
+               "mpregen": 6.3,
                 "mpregenperlevel": 0.4,
                 "crit": 0,
                 "critperlevel": 0,
@@ -5051,7 +5047,7 @@
             }
         },
         "Vi": {
-            "version": "3.12.37",
+            "version": "3.13.6",
             "id": "Vi",
             "key": "254",
             "name": "Vi",
@@ -5100,7 +5096,7 @@
             }
         },
         "Viktor": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Viktor",
             "key": "112",
             "name": "Viktor",
@@ -5110,7 +5106,7 @@
                 "attack": 2,
                 "defense": 5,
                 "magic": 9,
-                "difficulty": 9
+                difficulty": 9
             },
             "image": {
                 "full": "Viktor.png",
@@ -5154,7 +5150,7 @@
             "key": "8",
             "name": "Vladimir",
             "title": "the Crimson Reaper",
-            "blurb": "There is a temple hidden in the mountains between Noxus and the Tempest Flats, where the secrets of an ancient and terrifying sorcery are kept.  The area surrounding the temple is littered with the exsanguinated corpses of those who have mistakenly ...",
+            "blurb": "There is a temple hidden in the mountains between Noxus and the Tempest Flats, where the secrets of an acient and terrifying sorceryare kept.  The area surrounding the temple is littered with the exsanguinated corpses of those who have mistakenly ...",
             "info": {
                 "attack": 2,
                 "defense": 6,
@@ -5280,7 +5276,7 @@
                 "movespeed": 345,
                 "armor": 16,
                 "armorperlevel": 3.5,
-                "spellblock": 30,
+                "spellblok": 30,
                 "spellblockperlevel": 1.25,
                 "attackrange": 125,
                 "hpregen": 7.05,
@@ -5320,7 +5316,7 @@
             "tags": [
                 "Mage"
             ],
-            "partype": "Mana",
+            "partype":"Mana",
             "stats": {
                 "hp": 380,
                 "hpperlevel": 80,
@@ -5359,7 +5355,7 @@
             },
             "image": {
                 "full": "XinZhao.png",
-                "sprite": "champion3.png",
+               "sprite": "champion3.png",
                 "group": "champion",
                 "x": 384,
                 "y": 48,
@@ -5399,7 +5395,7 @@
             "key": "83",
             "name": "Yorick",
             "title": "the Gravedigger",
-            "blurb": "The work of gravediggers is essential amongst the living, but invaluable in the Shadow Isles. There are many shades of death there, and each is embraced rather than feared or reviled. One can only ascend from one state to the next with the magical aid ...",
+            "blurb": "The work of gravediggers is essential amongst the living, but invaluable in the Shadow Isles. There are many shades of death there, and each is embraced rather than feared or reviled. One can only ascnd fro one state to the next with the magical aid ...",
             "info": {
                 "attack": 6,
                 "defense": 6,
@@ -5447,7 +5443,7 @@
             "id": "Zac",
             "key": "154",
             "name": "Zac",
-            "title": "the Secret Weapon",
+           "title": "the Secret Weapon",
             "blurb": "Zac is the product of a Zaun experiment to manufacture a hexchem-engineered supersoldier - the Zaun Amorphous Combatant. Combining brute strength with limitless flexibility, he is a versatile juggernaut: a creative fighter who bounces over obstacles ...",
             "info": {
                 "attack": 3,
@@ -5486,13 +5482,13 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 54,
-                "attackdamageperlevel": 3.375,
+                "attackdamageperlevel" 3.375,
                 "attackspeedoffset": -0.02,
                 "attackspeedperlevel": 1.6
             }
         },
         "Zed": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Zed",
             "key": "238",
             "name": "Zed",
@@ -5541,7 +5537,7 @@
             }
         },
         "Ziggs": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Ziggs",
             "key": "115",
             "name": "Ziggs",
@@ -5639,7 +5635,7 @@
             }
         },
         "Zyra": {
-            "version": "3.12.34",
+            "version": "3.13.6",
             "id": "Zyra",
             "key": "143",
             "name": "Zyra",
@@ -5688,4 +5684,3 @@
             }
         }
     }
-}

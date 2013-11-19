@@ -61,7 +61,7 @@ Morgana,25,Morgana
 Nami,267,Nami
 Nasus,75,Nasus
 Nautilus,111,Nautilus
-Nidalee,76,Nidalee
+Nidalee,76,Nidaee
 Nocturne,56,Nocturne
 Nunu,20,Nunu
 Olaf,2,Olaf

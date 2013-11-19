@@ -7,7 +7,7 @@
 class match
 {
 public:
-    match();
+	match();
 	match(int cID, int i[6], int k, int d, int a, int dd, int g, int mk, int ks, int mid, bool rank, bool res, std::string dt, std::string t, int bc, int cs, bool blue);
 	match(int cID, int i[6], int k, int d, int a, int dd, int g, int mk, int ks, int mid, bool rank, bool res, std::string dt, std::string t, int cs, bool blue);
 	void setPrices(std::map<int, int>* p) {prices = p; goldSpent();};
