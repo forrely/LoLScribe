@@ -264,70 +264,14 @@
             <enum>QLayout::SetMinimumSize</enum>
            </property>
            <item>
-            <widget class="QCheckBox" name="checkBox">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
+            <widget class="QLabel" name="label_14">
              <property name="text">
-              <string>Support</string>
-             </property>
-             <property name="checked">
-              <bool>true</bool>
+              <string>Filter:</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QCheckBox" name="checkBox_2">
-             <property name="text">
-              <string>Mage</string>
-             </property>
-             <property name="checked">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="checkBox_6">
-             <property name="text">
-              <string>Assassin</string>
-             </property>
-             <property name="checked">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="checkBox_3">
-             <property name="text">
-              <string>Bruiser</string>
-             </property>
-             <property name="checked">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="checkBox_4">
-             <property name="text">
-              <string>Tank</string>
-             </property>
-             <property name="checked">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="checkBox_5">
-             <property name="text">
-              <string>Marksman</string>
-             </property>
-             <property name="checked">
-              <bool>true</bool>
-             </property>
-            </widget>
+            <widget class="QComboBox" name="tagFilterComboBox"/>
            </item>
            <item>
             <spacer name="horizontalSpacer_2">
@@ -347,6 +291,9 @@
         </item>
         <item>
          <widget class="QTableWidget" name="championsTableWidget">
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
           <property name="iconSize">
            <size>
             <width>10</width>
@@ -363,19 +310,11 @@
            <bool>false</bool>
           </attribute>
           <attribute name="verticalHeaderCascadingSectionResizes">
-           <bool>false</bool>
+           <bool>true</bool>
           </attribute>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tab_5">
-       <attribute name="title">
-        <string>Items</string>
-       </attribute>
-       <layout class="QGridLayout" name="gridLayout_3">
-        <item row="0" column="0">
-         <widget class="QTableWidget" name="tableWidget_Items">
+          <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+           <bool>true</bool>
+          </attribute>
           <row>
            <property name="text">
             <string>New Row</string>

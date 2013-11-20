@@ -25,10 +25,11 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    void setDisplayData(player* p, QVector<champion*> *c, QVector<match*> *m);
+    void setDisplayData(player p, QVector<champion> c, QVector<match> m);
     void displayData();
 
     void setChampData(std::vector<champion> c);
+    void setChampTags(QMap<QString, QVector<QString>> tags);
 
 private slots:
 
@@ -42,8 +43,12 @@ private slots:
 
     void trayIconCloseAction_triggered();
 
+    void on_tagFilterComboBox_currentIndexChanged(const QString &arg1);
+
 private:
     void displayMatchDetails(int index);
+    void setupChampionDetails();
+    void displayChampionDetails();
 
 public:
 
@@ -51,6 +56,10 @@ public:
     player mp;
     QVector<champion> mcl;
     QVector<match> mml;
+    QMap<QString, QVector<QString>> myChampTags;
+    QVector<QString> activeTags;
+
+
     player *myPlayer;
     QVector<champion*> *myChampionList;
     QVector<match*> *myMatchList;

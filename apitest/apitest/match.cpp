@@ -1,5 +1,30 @@
 #include "match.h"
 
+match::match()
+{
+    champID = 0;
+    items[0] = 0;
+    items[1] = 0;
+    items[2] = 0;
+    items[3] = 0;
+    items[4] = 0;
+    items[5] = 0;
+    kills = 0;
+    deaths = 0;
+    assists = 0;
+    damageDealt = 0;
+    gold = 0;
+    multiKill = 0;
+    killSpree = 0;
+    id = 0;
+    ranked = false;
+    result = false;
+    time = "";
+    creepScore = 0;
+    buildCost = 0;
+    blueSide = false;
+}
+
 match::match(int cID, int i[6], int k, int d, int a, int dd, int g, int mk, int ks, int mid, bool rank, bool res, std::string dt, std::string t, int cs, bool blue)
 {
 	champID = cID;

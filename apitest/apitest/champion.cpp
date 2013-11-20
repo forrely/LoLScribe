@@ -1,5 +1,10 @@
 #include "champion.h"
 
+champion::champion()
+{
+    champion(0,"");
+}
+
 champion::champion(int idt, std::string n)
 {
 	kills = 0;

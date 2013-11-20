@@ -10,6 +10,7 @@
 #include <QMessageBox>
 #include <QTextStream>
 #include <QVector>
+#include <QMap>
 
 #include <stdlib.h>
 #include <fstream>
@@ -792,23 +793,29 @@ int main(int argc, char *argv[])
     w.mcl.append(champion("testChamp1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,tempChamps));
     w.mcl.append(champion("testChamp2", 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,tempChamps));
     w.mcl.append(champion("testChamp3", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+    w.mcl.append(champion("testChamp4", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+    w.mcl.append(champion("testChamp5", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+    w.mcl.append(champion("testChamp6", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+    w.mcl.append(champion("testChamp9", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+    w.mcl.append(champion("testChamp10", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+    w.mcl.append(champion("testChamp11", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+    w.mcl.append(champion("testChamp12", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
 
     w.mml = QVector<match>();
     int testintarray[4] = {0,1,2,3};
     w.mml.append(match(1001,testintarray, 1,2,3,4,5,6,7,8,true,true,"what", "who", 9,10,true));
     w.mml.append(match(1002,testintarray, 2,3,4,5,6,7,8,9,false,false,"what2", "who2", 10,11,false));
 
+
+    QMap<QString, QVector<QString>> champTags;
+    //load tags from file and or api here <-
     //testing values
-    //player *tempPlayer = new player("blah", 0,0,0,0,0,0,0,0,0,0,0,0,0,0);
-    //QVector<champion*> *tempChampList = new QVector<champion*>();
-    //tempChampList->append(new champion("testchamp1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15));
-    //tempChampList->append(new champion("testchamp2", 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16));
-    //QVector<match*> *tempMatchList = new QVector<match*>();
+    champTags["testChamp1"] = QVector<QString>({"Mage", "Tank"});
+    champTags["testChamp2"] = QVector<QString>({"Support"});
+    champTags["testChamp3"] = QVector<QString>({"Assassin", "Tank"});
 
-    //w.setDisplayData();
-    //w.setDisplayData(tempPlayer, tempChampList, tempMatchList);
+    w.setChampTags(champTags);
 
-    //w.setChampData(curChampList);
 
     //std::cout << "attempting system command" << std::endl;
     //char* jar = "java -jar test.jar 3.13.13_11_13_11_26 forrely sk2p0peru forrely";
