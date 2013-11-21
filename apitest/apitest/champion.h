@@ -1,3 +1,7 @@
+#ifndef CHAMPION_H
+#define CHAMPION_H
+
+
 #include <iostream>
 #include <string>
 #include <map>
@@ -9,7 +13,7 @@ public:
 	champion();
 	champion(std::string n, int k, int d, int a, int w, int l, int rw, int rl, int bw, int bl, int pw, int pl, int cs, int nc, int em, int idt, std::map<int, std::pair<int, int> > items);
 	champion(int idt, std::string n);
-	float KDA() {return (kills + assists) / (float)deaths;};
+    float KDA() {return ( deaths == 0 ? kills+assists : (kills+assists)/(float)deaths );};
 	float winRate(int mode);
 	float iWinRate(int ID);
 	float averages(int mode);
@@ -39,3 +43,5 @@ private:
 	std::string name;
 	std::string intToString(int x) {return static_cast<std::ostringstream*>( &(std::ostringstream() << x) )->str();};
 };
+
+#endif

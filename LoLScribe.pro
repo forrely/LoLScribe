@@ -25,14 +25,16 @@ SOURCES += main.cpp\
     apitest/apitest/player.cpp \
     apitest/apitest/match.cpp \
     apitest/apitest/champion.cpp \
-    QCustomPlot/qcustomplot.cpp
+    QCustomPlot/qcustomplot.cpp \
+    apitest/apitest/datamanip.cpp
 
 HEADERS  += mainwindow.h \
     dialog.h \
     apitest/apitest/player.h \
     apitest/apitest/match.h \
     apitest/apitest/champion.h \
-    QCustomPlot/qcustomplot.h
+    QCustomPlot/qcustomplot.h \
+    apitest/apitest/datamanip.h
 
 FORMS    += mainwindow.ui \
     dialog.ui

@@ -102,7 +102,7 @@ void match::write(std::ofstream out)
 	out << id << "\n";
 
 	out << champID << " " << creepScore << " " << kills << " " << deaths << " " << assists << " " << damageDealt << " ";
-	out << gold << " " << multiKill << " " << killSpree << " " << buildCost << " " << ranked << " " << result;
+    out << gold << " " << multiKill << " " << killSpree << " " << buildCost << " " << ranked << " " << result << " " << blueSide;
 	
 	for (int i = 0; i < 6; i++)
 	{
@@ -111,7 +111,7 @@ void match::write(std::ofstream out)
 
 	out << "\n";
 
-	out << date << "," << time << "\n\n";
+    out << date << "\n\n";
 }
 
 std::string match::write()

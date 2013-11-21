@@ -19,6 +19,8 @@
 #include <map>
 #include <vector>
 
+#include "apitest/apitest/datamanip.h"
+
 //#include "apitest/apitest/match.h"
 //#include "apitest/apitest/player.h"
 //#include "apitest/apitest/champion.h"
@@ -749,62 +751,91 @@ void parseMatches()
 
 int main(int argc, char *argv[])
 {
-    int mode = 0;
-    std::ifstream inFile;
+//    int mode = 0;
+//    std::ifstream inFile;
 
-    inFile.open("champs.txt");
+//    inFile.open("champs.txt");
 
-    int c = inFile.peek();
-    std::string temp = "", temp2 = "", trash = "";
+//    int c = inFile.peek();
+//    std::string temp = "", temp2 = "", trash = "";
 
-    while (c != std::ifstream::traits_type::eof())
-    {
-        std::getline(inFile, temp, ',');
-        std::getline(inFile, temp2, ',');
-        std::getline(inFile, trash);
+//    while (c != std::ifstream::traits_type::eof())
+//    {
+//        std::getline(inFile, temp, ',');
+//        std::getline(inFile, temp2, ',');
+//        std::getline(inFile, trash);
 
-        int i = stringToInt(temp2);
+//        int i = stringToInt(temp2);
 
-        champIDs[i] = temp;
+//        champIDs[i] = temp;
 
-        c = inFile.peek();
-    }
+//        c = inFile.peek();
+//    }
 
-    inFile.close();
+//    inFile.close();
 
-   // pullAPI();
-    //parseChamps();
-    parseMatches();
+//   // pullAPI();
+//    //parseChamps();
+//    //parseMatches();
 
 
-    if (mode == 5)
-    {
-        //CreateDirectory("./Players", NULL);
-        //CreateDirectory("./Players/Mermigas", NULL);
-        return 0;
-    }
+//    if (mode == 5)
+//    {
+//        //CreateDirectory("./Players", NULL);
+//        //CreateDirectory("./Players/Mermigas", NULL);
+//        return 0;
+//    }
 
     QApplication a(argc, argv);
     MainWindow w;
-    std::map<int, std::pair<int, int> > tempChamps;
 
-    w.mp = player("test", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,tempChamps,tempChamps);
-    w.mcl = QVector<champion>();
-    w.mcl.append(champion("testChamp1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,tempChamps));
-    w.mcl.append(champion("testChamp2", 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,tempChamps));
-    w.mcl.append(champion("testChamp3", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
-    w.mcl.append(champion("testChamp4", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
-    w.mcl.append(champion("testChamp5", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
-    w.mcl.append(champion("testChamp6", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
-    w.mcl.append(champion("testChamp9", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
-    w.mcl.append(champion("testChamp10", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
-    w.mcl.append(champion("testChamp11", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
-    w.mcl.append(champion("testChamp12", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+    datamanip myDataManip;
+    myDataManip.driver();
+    myDataManip.APICall("forrely", MODE_MATCH);
+    myDataManip.parseMatches("forrely");
+    myDataManip.loadPlayer("forrely");
 
-    w.mml = QVector<match>();
-    int testintarray[4] = {0,1,2,3};
-    w.mml.append(match(1001,testintarray, 1,2,3,4,5,6,7,8,true,true,"what", "who", 9,10,true));
-    w.mml.append(match(1002,testintarray, 2,3,4,5,6,7,8,9,false,false,"what2", "who2", 10,11,false));
+    QVector<player> tempPlayers;
+    tempPlayers.push_back(myDataManip.activePlayer);
+    w.mpl = tempPlayers;
+
+    QVector<champion> tempchamplist;
+    foreach(champion c, myDataManip.activeChamps)
+    {
+       // std::cout<< c.getName()<<"\n";
+        tempchamplist.push_back(c);
+    }
+    w.mcl = tempchamplist;
+
+    QVector<match> tempmatchlist;
+
+    foreach(match m, myDataManip.matchHistory)
+    {
+       // std::cout<< c.getName()<<"\n";
+        tempmatchlist.push_back(m);
+    }
+    w.mml = tempmatchlist;
+
+
+    //std::map<int, std::pair<int, int> > tempChamps;
+
+    //w.mp = player("test", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,tempChamps,tempChamps);
+//    w.mcl = QVector<champion>();
+//    w.mcl.append(champion("testChamp1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,tempChamps));
+//    w.mcl.append(champion("testChamp2", 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,tempChamps));
+//    w.mcl.append(champion("testChamp3", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+//    w.mcl.append(champion("testChamp4", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+//    w.mcl.append(champion("testChamp5", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+//    w.mcl.append(champion("testChamp6", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+//    w.mcl.append(champion("testChamp9", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+//    w.mcl.append(champion("testChamp10", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+//    w.mcl.append(champion("testChamp11", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+//    w.mcl.append(champion("testChamp12", 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,tempChamps));
+
+    //w.mml = QVector<match>();
+    //int testintarray[4] = {0,1,2,3};
+    //w.mml.append(match(1001,testintarray, 1,2,3,4,5,6,7,8,true,true,"what", "who", 9,10,true));
+    //w.mml.append(match(1002,testintarray, 2,3,4,5,6,7,8,9,false,false,"what2", "who2", 10,11,false));
 
 
     QMap<QString, QVector<QString>> champTags;

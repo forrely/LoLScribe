@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#pragma once
+
 #include <QMainWindow>
 #include "dialog.h"
 #include "QCustomPlot/qcustomplot.h"
@@ -45,15 +47,20 @@ private slots:
 
     void on_tagFilterComboBox_currentIndexChanged(const QString &arg1);
 
+    void on_graphWindowButton_clicked();
+
 private:
     void displayMatchDetails(int index);
     void setupChampionDetails();
+    void updateChampionDetails();
     void displayChampionDetails();
+    void displayPlayerDetails(int index);
 
 public:
 
     std::vector<champion> mclv;
     player mp;
+    QVector<player> mpl;
     QVector<champion> mcl;
     QVector<match> mml;
     QMap<QString, QVector<QString>> myChampTags;
@@ -67,7 +74,7 @@ public:
 private:
     QString workingName;
 
-    Dialog *myNewDialog;
+    //Dialog *myNewDialog;
     Ui::MainWindow *ui;
 };
 

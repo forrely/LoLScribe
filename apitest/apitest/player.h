@@ -1,3 +1,7 @@
+#ifndef PLAYER_H
+#define PLAYER_H
+
+
 #include <string>
 #include <iostream>
 #include <map>
@@ -8,7 +12,7 @@ class player
 public:
 	player();
 	player(std::string n, int k, int d, int a, int w, int l, int rw, int rl, int bw, int bl, int pw, int pl, int cs, int nc, int em, std::map<int, std::pair<int, int> > cPlays, std::map<int, std::pair<int, int> > itemUsage);
-	float KDA() {return (kills + assists) / (float)deaths;};
+    float KDA() {return ( deaths == 0 ? kills+assists : (kills+assists)/(float)deaths );};
 	float winRate(int mode);
 	float cWinRate(int ID);
 	float iWinRate(int ID);
@@ -42,3 +46,5 @@ private:
 	std::map<int, std::pair<int, int> >itemsUsed;
 	std::string intToString(int x) {return static_cast<std::ostringstream*>( &(std::ostringstream() << x) )->str();};
 };
+
+#endif

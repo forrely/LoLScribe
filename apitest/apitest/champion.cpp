@@ -51,19 +51,19 @@ float champion::winRate(int mode)
 	switch (mode)
 	{
 	case 0:
-		return (float)wins / (wins + losses);
+        return (wins+losses == 0 ? 0 : (float)wins / (wins + losses));
 
 	case 1:
-		return (float)rankedWins / (rankedWins + rankedLosses);
+        return (rankedWins+rankedLosses == 0 ? 0 : (float)rankedWins / (rankedWins + rankedLosses));
 
 	case 2:
-		return (float)blueWins / (blueWins + blueLosses);
+        return (blueWins+blueLosses == 0 ? 0 : (float)blueWins / (blueWins + blueLosses));
 
 	case 3:
-		return (float)purpleWins / (purpleWins + purpleLosses);
+        return (purpleWins+purpleLosses == 0 ? 0 : (float)purpleWins / (purpleWins + purpleLosses));
 
 	default:
-		return (float)wins / (wins + losses);
+        return (wins+losses == 0 ? 0 : (float)wins / (wins + losses));
 	}
 }
 
@@ -72,22 +72,22 @@ float champion::averages(int mode)
 	switch (mode)
 	{
 	case 0:
-		return (float)creepScore / (wins + losses);
+        return (wins+losses == 0 ? 0 : (float)creepScore / (wins + losses));
 
 	case 1:
-		return (float)neutralCreeps / (wins + losses);
+        return (wins+losses == 0 ? 0 : (float)neutralCreeps / (wins + losses));
 
 	case 2:
-		return (float)enemyMinions / (wins + losses);
+        return (wins+losses == 0 ? 0 : (float)enemyMinions / (wins + losses));
 
 	case 3:
-		return (float)kills / (wins + losses);
+        return (wins+losses == 0 ? 0 : (float)kills / (wins + losses));
 
 	case 4:
-		return (float)deaths / (wins + losses);
+        return (wins+losses == 0 ? 0 : (float)deaths / (wins + losses));
 
 	case 5:
-		return (float)assists / (wins + losses);
+        return (wins+losses == 0 ? 0 : (float)assists / (wins + losses));
 
 	default:
 		return -1;

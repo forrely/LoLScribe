@@ -1,3 +1,9 @@
+#ifndef DATAMANIP_H
+#define DATAMANIP_H
+
+
+#pragma once
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -6,6 +12,8 @@
 #include <sstream>
 #include <Windows.h>
 #include <map>
+#include <QDir>
+#include <QString>
 
 #include "champion.h"
 #include "match.h"
@@ -41,3 +49,5 @@ public:
 private:
 	bool firstRun;
 };
+
+#endif
