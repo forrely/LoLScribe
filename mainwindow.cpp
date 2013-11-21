@@ -24,22 +24,94 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     //setup tray icon
-    QSystemTrayIcon* trayIcon = new QSystemTrayIcon();
-    trayIcon->setIcon(QIcon("Resources/draven icon.png"));
-    trayIcon->show();
+//    QSystemTrayIcon* trayIcon = new QSystemTrayIcon();
+//    trayIcon->setIcon(QIcon("Resources/draven icon.png"));
+//    trayIcon->show();
 
-    QAction* closeAction = new QAction("Close", this);
-    QMenu* trayIconMenu = new QMenu(this);
-    trayIconMenu->addAction(closeAction);
-    trayIcon->setContextMenu(trayIconMenu);
+//    QAction* closeAction = new QAction("Close", this);
+//    QMenu* trayIconMenu = new QMenu(this);
+//    trayIconMenu->addAction(closeAction);
+//    trayIcon->setContextMenu(trayIconMenu);
 
-    QObject::connect(closeAction, SIGNAL(triggered()), this, SLOT(trayIconCloseAction_triggered()));
+//    QObject::connect(closeAction, SIGNAL(triggered()), this, SLOT(trayIconCloseAction_triggered()));
+
+    createActions();
+        createTrayIcon();
+        trayIcon->setIcon(QIcon(QString::fromUtf8("myappico.ico")));
+        trayIcon->show();
+        connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason )),
+            this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
+
 
     ui->graphWindowButton->hide();
+    ui->playerComboBox->hide();
 
 
 
     //ui->label->setText(QString::fromStdString(myPlayer->name));
+}
+
+void MainWindow::createTrayIcon()
+{
+    trayIconMenu = new QMenu(this);
+    trayIconMenu->addAction(minimizeAction);
+    trayIconMenu->addAction(restoreAction);
+    trayIconMenu->addSeparator();
+    trayIconMenu->addAction(quitAction);
+
+    trayIcon = new QSystemTrayIcon(this);
+    trayIcon->setContextMenu(trayIconMenu);
+    trayIcon->setToolTip(tr("LolScribe"));
+//    connect(
+//               trayIcon,
+//             SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
+//               this,
+//               SLOT(trayIconClicked(QSystemTrayIcon::ActivationReason))
+//              );
+
+}
+
+void MainWindow::trayIconClicked(QSystemTrayIcon::ActivationReason)
+{
+}
+
+void MainWindow::showHideWindow()
+{
+}
+
+void MainWindow::createActions()
+{
+    minimizeAction = new QAction(tr("Mi&nimize"), this);
+    connect(minimizeAction, SIGNAL(triggered()), this, SLOT(hide()));
+
+    restoreAction = new QAction(tr("&Restore"), this);
+    connect(restoreAction, SIGNAL(triggered()), this, SLOT(showNormal()));
+
+    quitAction = new QAction(tr("&Quit"), this);
+    connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
+}
+
+void MainWindow::showMessage()
+{
+    QSystemTrayIcon::MessageIcon icon = QSystemTrayIcon::MessageIcon();
+    trayIcon->showMessage(tr("LOLSCRIBE"), tr("Some msg"), icon, 100);
+}
+
+void MainWindow::iconActivated(QSystemTrayIcon::ActivationReason reason)
+{
+    switch (reason)
+    {
+        case QSystemTrayIcon::Trigger:
+        show();
+        break;
+        case QSystemTrayIcon::DoubleClick:
+        show();
+        break;
+        case QSystemTrayIcon::MiddleClick:
+        showMessage();
+        break;
+        default:;
+    }
 }
 
 MainWindow::~MainWindow()
@@ -86,33 +158,6 @@ void MainWindow::setChampData(std::vector<champion> c)
  */
 void MainWindow::displayData()
 {
-    std::cout<<"mp name in displayData(): "<<mpl[0].getName()<<std::endl;
-//    QVector<double> x(101), y(101); // initialize with entries 0..100
-//    for (int i=0; i<101; ++i)
-//    {
-//      x[i] = i/50.0 - 1; // x goes from -1 to 1
-//      y[i] = x[i]*x[i];  // let's plot a quadratic function
-//    }
-//    // create graph and assign data to it:
-//    ui->widget->addGraph();
-//    ui->widget->graph(0)->setData(x, y);
-//    // give the axes some labels:
-//    ui->widget->xAxis->setLabel("x");
-//    ui->widget->yAxis->setLabel("y");
-//    // set axes ranges, so we see all data:
-//    ui->widget->xAxis->setRange(-1, 1);
-//    ui->widget->yAxis->setRange(0, 1);
-
-
-    workingName = "TestSummoner";
-    //Settings tab data display
-    ui->nameEdit->setText(workingName);
-    //std::cout << ui->settingsNameLabel->text().toAscii.data();
-    //qDebug() << ui->settingsNameLabel->text();
-
-
-
-
     //**********************
     //Champion data tab display
     //**********************
@@ -126,9 +171,11 @@ void MainWindow::displayData()
     //*************************
     //Display match history tab
     //*************************
+    std::cout<<"match 1"<<mml[0].getID()<<std::endl;
 
     //display match list
     ui->matchListWidget->clear();
+
     for(int i=0; i<mml.count(); i++)
     {
         ui->matchListWidget->addItem(new QListWidgetItem( "match " + QString::number(mml[i].getID()) ));
@@ -138,33 +185,54 @@ void MainWindow::displayData()
     //display match details
     displayMatchDetails(ui->matchListWidget->currentRow());
 
-    // *****************************
-        //Display player data
-        //**********************************
-//        ui->playerListWidget->clear();
-//        for(int i=0;i<count();i++)
-//        {
-//            ui->playerListWidget->addItem(new QListWidgetItem("player" + QString::fromStdString(mp[i].getName())));
-//            ui->label1->clear();
-//            ui->label1->setText(QString::fromStdString(mp[0].getName()));
-//        }
-        //ui->playerListWidget->setCurrentRow(0);
+    //display player tab
+    displayPlayerDetails(0);
+}
 
-        displayPlayerDetails(0);
+bool champPlaysSort(const QPair<QString, int> c1, const QPair<QString, int> c2)
+{
+    return (c1.second > c2.second);
+}
+
+QString MainWindow::champIconFileName(int i)
+{
+    return "./Resources/champions/" + QString::fromStdString(champIDs[i]) + "_Square_0.png";
+}
+QString MainWindow::champIconFileName(QString s)
+{
+    return "./Resources/champions/" + s + "_Square_0.png";
 }
 
 void MainWindow::displayPlayerDetails(int index)
 {
-    //std::ofstream myfile;
-    //myfile.open ("C:\\Users\\dara\\Documents\\GitHub\\LoLScribe\\settingfile.txt");
-    //myfile<<"sameer";
-    //ui->listWidget_favoriteChampions->clear();
-    //ui->listWidget_favoriteChampions->addItems(mp.getFavchamplist());
-    std::cout<<"displayed player name: "<<mpl[index].getName()<<std::endl;
-     std::cout<<"displayed player kills: "<<mpl[index].getKills()<<std::endl;
-      //std::cout<<"displayed player name: "<<mpl[index].getName()<<std::endl;
+    //clear favorite champions list and populate it with icons and text
+     ui->favoriteChampsList->clear();
+     int numFavChamps = 5;
+     QVector<QPair<QString, int>> champPlays;
+
+     //load champ plays into a vector of pairs
+     for(std::map<int, std::string>::iterator i = champIDs.begin();
+         i != champIDs.end(); i++)
+     {
+         champPlays.push_back(
+                     QPair<QString, int>(QString::fromStdString(i->second), mpl[index].cPlays(i->first)) );
+     }
+     //sort champions by game amounts and display
+     qSort(champPlays.begin(), champPlays.end(), champPlaysSort);
+     for(int i=0; i<numFavChamps; i++)
+     {
+         if(champPlays[i].second>0)
+         {
+             ui->favoriteChampsList->addItem(
+                         new QListWidgetItem(QIcon(champIconFileName(champPlays[i].first)), champPlays[i].first));
+             std::cout<<champIconFileName(champPlays[i].first).toStdString()<<std::endl;
+         }
+         else
+             i = numFavChamps;
+     }
 
 
+     //display player stats
     QVector<QPair<QString,QString>> playerStats;
     playerStats.push_back(QPair<QString, QString>("Kills", QString::number(mpl[index].getKills())));
     playerStats.push_back(QPair<QString, QString>("Deaths",QString::number(mpl[index].getDeaths())));
@@ -401,6 +469,8 @@ QString boolToString(bool b)
 
 void MainWindow::displayMatchDetails(int index)
 {
+
+
     QVector<QPair<QString, QString>> matchStats;
     matchStats.push_back(QPair<QString, QString>( "Match ID", QString::number(mml[index].getID()) ));
     matchStats.push_back(QPair<QString, QString>( "Champ ID", QString::number(mml[index].getChampID()) ));
@@ -425,6 +495,59 @@ void MainWindow::displayMatchDetails(int index)
     if(mml[index].getResult())
         winString = "Win";
     matchStats.push_back(QPair<QString, QString>(isRankedString, sideString + " " + winString));
+
+    QString s = "./Resources/champions/";
+        s.append(QString::fromStdString(champIDs[mml[index].getChampID()]));
+        s.append("_Square_0.png");
+        ui->ChampIcon->setPixmap(QPixmap(s));
+
+        if (mml[index].getItem(0) != 0)
+        {
+            QString i = "./Resources/items/";
+            i.append(QString::number(mml[index].getItem(0)));
+            i.append(".png");
+            ui->item1->setPixmap(QPixmap(i));
+        }
+
+        if (mml[index].getItem(1) != 0)
+        {
+            QString i = "./Resources/items/";
+            i.append(QString::number(mml[index].getItem(1)));
+            i.append(".png");
+            ui->item2->setPixmap(QPixmap(i));
+        }
+
+        if (mml[index].getItem(2) != 0)
+        {
+            QString i = "./Resources/items/";
+            i.append(QString::number(mml[index].getItem(2)));
+            i.append(".png");
+            ui->item3->setPixmap(QPixmap(i));
+        }
+
+        if (mml[index].getItem(3) != 0)
+        {
+            QString i = "./Resources/items/";
+            i.append(QString::number(mml[index].getItem(3)));
+            i.append(".png");
+            ui->item4->setPixmap(QPixmap(i));
+        }
+
+        if (mml[index].getItem(4) != 0)
+        {
+            QString i = "./Resources/items/";
+            i.append(QString::number(mml[index].getItem(4)));
+            i.append(".png");
+            ui->item5->setPixmap(QPixmap(i));
+        }
+
+        if (mml[index].getItem(5) != 0)
+        {
+            QString i = "./Resources/items/";
+            i.append(QString::number(mml[index].getItem(5)));
+            i.append(".png");
+            ui->item6->setPixmap(QPixmap(i));
+        }
 
 
     int numRows = 5;
@@ -463,6 +586,103 @@ void MainWindow::displayMatchDetails(int index)
 
 }
 
+void MainWindow::displayCurrentSummonerData()
+{
+    loadSettings();
+    myDataManip = new datamanip();
+
+    myDataManip->driver();
+
+    myDataManip->parseMatches(workingName.toStdString());
+    myDataManip->loadPlayer(workingName.toStdString());
+
+    QVector<player> tempPlayers;
+    tempPlayers.push_back(myDataManip->activePlayer);
+    mpl = tempPlayers;
+
+    QVector<champion> tempchamplist;
+    foreach(champion c, myDataManip->activeChamps)
+    {
+       // std::cout<< c.getName()<<"\n";
+        tempchamplist.push_back(c);
+    }
+    mcl = tempchamplist;
+
+    QVector<match> tempmatchlist;
+
+    foreach(match m, myDataManip->matchHistory)
+    {
+       // std::cout<< c.getName()<<"\n";
+        tempmatchlist.push_back(m);
+    }
+    mml = tempmatchlist;
+
+    displayData();
+}
+
+void MainWindow::loadSettings()
+{
+    std::string summonerName = "none";
+       std::string summonerServer = "none";
+       std::string authorizationKeys = "none";
+       std::string applicationpath="none";
+       std::ifstream readfile;
+       std::string line;
+       readfile.open ("settingfile.txt");
+       if (readfile.is_open())
+         {
+       while(std::getline(readfile,line))
+       {
+
+           std::cout<<line<<std::endl;
+        if (line == "Summoner Name")
+           {
+            std::cout<<"looking for summoner name"<<std::endl;
+
+            std::getline(readfile,summonerName);
+
+
+               QString summoner_name=QString::fromStdString(summonerName);
+               QFont f = ui->nameEdit->font();
+               f.setBold(false);
+               ui->nameEdit->setText(summoner_name);
+           }
+        else if(line=="Summoner Server")
+            {
+            std::getline(readfile,summonerServer);
+            QString server=QString::fromStdString(summonerServer);
+            ui->server_edit->setText(server);
+
+            }
+        else if(line=="Mashup Authorization Keys")
+           {
+            std::getline(readfile,authorizationKeys);
+            QString keys=QString::fromStdString(authorizationKeys);
+            ui->authorizationkeys_edit->setText(keys);
+
+           }
+        else if(line=="LOL Application Path")
+        {
+            std::getline(readfile,applicationpath);
+            QString applicationpath_Q=QString::fromStdString(applicationpath);
+
+            ui->application_path->setText(applicationpath_Q);
+        }
+       }
+   }
+       readfile.close();
+
+           workingName = QString::fromStdString(summonerName);
+           workingserver=QString::fromStdString(summonerServer);
+           authorization=QString::fromStdString(authorizationKeys);
+           application=QString::fromStdString(applicationpath);
+}
+
+void MainWindow::saveSettings()
+{
+
+}
+
 
 //**************
 //Slots
@@ -471,17 +691,54 @@ void MainWindow::displayMatchDetails(int index)
 //confirm a name change in the settings tab
 void MainWindow::on_nameSetButton_clicked()
 {
-    workingName = ui->nameEdit->toPlainText();
 
+    workingName = ui->nameEdit->toPlainText();
+    workingserver=ui->server_edit->toPlainText();
+    authorization=ui->authorizationkeys_edit->toPlainText();
+    application=ui->application_path->toPlainText();
     QFont f = ui->nameEdit->font();
     f.setBold(false);
     ui->nameEdit->setFont(f);
+    ui->server_edit->setFont(f);
+    ui->authorizationkeys_edit->setFont(f);
+    ui->application_path->setFont(f);
+
+    // reading and writing from setting file
+    std::string q;
+    //std::string str = q.toStdString();
+
+    std::ofstream myfile;
+    myfile.open ("settingfile.txt");
+
+
+    QString name_edit=ui->nameEdit->toPlainText();
+    std::string nameedit = name_edit.toStdString();
+    QString server_edit=ui->server_edit->toPlainText();
+    std::string serveredit=server_edit.toStdString();
+    QString authorization_edit=ui->authorizationkeys_edit->toPlainText();
+    std::string authorizationedit=authorization_edit.toStdString();
+    QString applicationpath_edit=ui->application_path->toPlainText();
+    std::string applicationpath=applicationpath_edit.toStdString();
+    myfile<<"Summoner Name"<<"\n";
+    myfile<<nameedit<<"\n";
+    myfile<<"Summoner Server"<<"\n";
+    myfile<<serveredit<<"\n";
+    myfile<<"Mashup Authorization Keys"<<"\n";
+    myfile<<authorizationedit<<"\n";
+    myfile<<"LOL Application Path"<<"\n";
+    myfile<<applicationpath<<"\n";
+    myfile.close();
+
+    displayCurrentSummonerData();
 }
 
 //cancel a name change in the settings tab
 void MainWindow::on_nameCancleButton_clicked()
 {
     ui->nameEdit->setText(workingName);
+    ui->server_edit->setText(workingserver);
+        ui->authorizationkeys_edit->setText(authorization);
+        ui->application_path->setText(application);
 }
 
 //bold and unbold the name change field in the settings tab to indicate a change was made
@@ -495,10 +752,37 @@ void MainWindow::on_nameEdit_textChanged()
 
 }
 
+void MainWindow::on_server_edit_textChanged()
+{
+    QFont f = ui->server_edit->font();
+
+    f.setBold( ui->server_edit->toPlainText() != workingserver);
+
+    ui->server_edit->setFont(f);
+}
+void MainWindow::on_authorizationkeys_edit_textChanged()
+{
+    QFont f = ui->authorizationkeys_edit->font();
+
+    f.setBold( ui->authorizationkeys_edit->toPlainText() != authorization);
+
+    ui->authorizationkeys_edit->setFont(f);
+}
+void MainWindow::on_application_path_textChanged()
+{
+    QFont f = ui->application_path->font();
+
+    f.setBold( ui->application_path->toPlainText() != application );
+
+    ui->application_path->setFont(f);
+
+}
+
 //display the match stats for the currently selected row in matchListWidget
 void MainWindow::on_matchListWidget_currentRowChanged(int currentRow)
 {
-    displayMatchDetails(currentRow);
+    if(currentRow >= 0 && mml.count()> currentRow)
+        displayMatchDetails(currentRow);
     //QString s = "match id: "+ QString::number(mml[currentRow].getID()) +"\n" +
     //"champ id: " + QString::number(mml[currentRow].getChampID());
 

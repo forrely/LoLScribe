@@ -218,6 +218,11 @@ void player::modifyStats(int k, int d, int a, int cs, int nc, int em, bool win, 
 	}
 }
 
+int player::cPlays(int ID)
+{
+    return champPlays[ID].first + champPlays[ID].second;
+}
+
 float player::cWinRate(int ID)
 {
 	std::map<int, std::pair<int, int> >::iterator itr = champPlays.find(ID);

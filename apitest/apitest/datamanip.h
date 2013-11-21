@@ -28,6 +28,7 @@ class datamanip
 public:
 	std::string tempOut;
 	std::map<int, std::string> champIDs;
+    std::map<std::string, std::vector<std::string>> champTags;
 	std::map<int, int> prices;
 	player activePlayer;
 	std::vector<champion> activeChamps;

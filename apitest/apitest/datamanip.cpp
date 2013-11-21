@@ -110,6 +110,7 @@ void datamanip::pullAPI(std::string target, std::string fileName)
 	out<<tempOut;
 	out.close();
 	curl_global_cleanup();
+    tempOut.clear();
 }
 
 void datamanip::APICall(std::string playerName, int mode)
@@ -121,7 +122,7 @@ void datamanip::APICall(std::string playerName, int mode)
 	if (mode == MODE_CHAMPION)
 	{
 		target += "datadragon/champion";
-		pullAPI(target, "champsraw.txt");
+        pullAPI(target, "champsraw.txt");
 		parseChamps();
 	}
 	else if (mode == MODE_ITEM)
@@ -223,14 +224,19 @@ void datamanip::parseChamps()
 {
 	std::ifstream inFile;
 	std::ofstream outFile;
+    std::ofstream tagsOutFile;
 		
 	inFile.open("champsraw.txt");
 	outFile.open("champs.txt");
+    tagsOutFile.open("champtags.txt");
 
 	int c = inFile.peek();
 	int d = 0;
 	std::string temp = "NULL";
+    std::string tempName = "";
 	std::string seek = "\"id\":";
+    //std::string tempTag = "";
+    //std::map<std::string, std::vector<std::string>> tempChampTags;
 
 	while (c != std::ifstream::traits_type::eof())
 	{
@@ -270,6 +276,7 @@ void datamanip::parseChamps()
 					outFile << temp[i];
 				}
 
+
                 //std::cout << " ";
 				outFile << ",";
 
@@ -289,13 +296,33 @@ void datamanip::parseChamps()
                     //std::cout << temp[i];
 					outFile << temp[i];
 				}
+                tempName = temp.substr(2,temp.size()-3);
 
                 //std::cout << "\n";
 				outFile << "\n";
 
-				seek = "\"id\":";
+                seek = "\"tags\":";
+                //seek = "\"id\":";
 			}
 		}
+        else if (seek == "\"tags\":")
+        {
+            inFile >> temp;
+
+            if (temp == seek)
+            {
+                std::getline(inFile, temp);
+                inFile>>temp;
+
+                tagsOutFile << tempName <<"\n"
+                            << temp.substr(1,temp.size()-2) << "\n\n";
+                std::cout<<"Tag: " << tempName
+                                 << " " <<temp.substr(1,temp.size()-2) << "\n";
+                champTags[tempName].push_back(temp.substr(1,temp.size()-2));
+
+                seek = "\"id\":";
+            }
+        }
 
 		c = inFile.peek();
 	}
@@ -378,6 +405,7 @@ void datamanip::parseMatches(std::string playerName)
 
     inFile.open("champs.txt");
 	c = inFile.peek();
+
 
 	std::map<int, std::pair<int, int> > tempChamps;
 	std::pair<int, int> placeholder(0, 0);
