@@ -27,9 +27,10 @@ class datamanip
 {
 public:
 	std::string tempOut;
-	std::map<int, std::string> champIDs;
+    std::map<int, std::string> champNames;
     std::map<std::string, std::vector<std::string>> champTags;
 	std::map<int, int> prices;
+    std::map<int, std::string> itemNames;
 	player activePlayer;
 	std::vector<champion> activeChamps;
 	std::vector<match> matchHistory;
@@ -40,8 +41,9 @@ public:
 	void APICall(std::string playerName, int mode);
 	void parseItems();
 	void parseChamps();
-	void priceList();
-	int priceBuild(int items[6]);
+    void loadItems();
+    void loadChampNames();
+    int priceBuild(int items[7]);
 	void parseMatches(std::string playerName);
 	int operate();
 	void loadPlayer(std::string playerName);

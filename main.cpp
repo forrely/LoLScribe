@@ -28,8 +28,9 @@
 std::vector<champion> curChampList;
 
 std::string tempOut;
-std::map<int, std::string> champIDs;
+std::map<int, std::string> champNames;
 QMap<QString, QVector<QString>> champTags;
+QMap<int, QString> itemNames;
 
 std::string exec(char* cmd) {
     FILE* pipe = popen(cmd, "r");
@@ -65,65 +66,37 @@ bool readChampTags()
 
     file.close();
 
-    return (champTags.count() >= champIDs.size());
+    return (champTags.count() >= champNames.size());
 
 }
 
 
+
+
 int main(int argc, char *argv[])
 {
-    //QMap<QString, QVector<QString>>
     QApplication a(argc, argv);
     MainWindow w;
 
     datamanip myDataManip;
-//    //myDataManip.APICall("forrely", MODE_CHAMPION);
-//    //myDataManip.APICall("forrely", MODE_ITEM);
-    myDataManip.driver();
-//    //myDataManip.APICall("forrely", MODE_MATCH);
+    myDataManip.APICall("forrely", MODE_CHAMPION);
     myDataManip.parseChamps();
-//    myDataManip.parseMatches("forrely");
-//    myDataManip.loadPlayer("forrely");
+    myDataManip.loadChampNames();
 
-    champIDs = myDataManip.champIDs;
+    myDataManip.APICall("forrely", MODE_ITEM);
+    myDataManip.parseItems();
+    myDataManip.loadItems();
 
+    //myDataManip.APICall("forrely", MODE_MATCH);
+    //myDataManip.parseMatches("forrely");
+    //myDataManip.loadPlayer("forrely");
 
-//    QVector<player> tempPlayers;
-//    tempPlayers.push_back(myDataManip.activePlayer);
-//    w.mpl = tempPlayers;
+    champNames = myDataManip.champNames;
+    w.champNames = champNames;
 
-    w.champIDs = champIDs;
-
-//    //give mainwindow our data manip
-//    w.myDataManip = &myDataManip;
-
-
-//    QVector<champion> tempchamplist;
-//    foreach(champion c, myDataManip.activeChamps)
-//    {
-//       // std::cout<< c.getName()<<"\n";
-//        tempchamplist.push_back(c);
-//    }
-//    w.mcl = tempchamplist;
-
-//    QVector<match> tempmatchlist;
-
-//    foreach(match m, myDataManip.matchHistory)
-//    {
-//       // std::cout<< c.getName()<<"\n";
-//        tempmatchlist.push_back(m);
-//    }
-//    w.mml = tempmatchlist;
-
-
-    //loading tags from data manip class
-    //QMap<QString, QVector<QString>> champTags;
-
+    //attempt to read champtags from file. if unable to, get champ tags from datamanip class
     if(!readChampTags())
     {
-
-        //std::cout<<"first gotten tag: "<<myDataManip.champTags["Annie"][0]<<std::endl;
-
         for(std::map<std::string, std::vector<std::string> >::iterator i = myDataManip.champTags.begin();
             i != myDataManip.champTags.end(); i++)
         {
@@ -131,18 +104,16 @@ int main(int argc, char *argv[])
                 champTags[QString::fromStdString(i->first)].push_back( QString::fromStdString(i->second[j]) );
         }
 
-        foreach(QVector<QString> v, champTags)
-            std::cout<< v[0].toStdString() <<std::endl;
+        //foreach(QVector<QString> v, champTags)
+          //  std::cout<< v[0].toStdString() <<std::endl;
     }
 
+    for(std::map<int, std::string>::iterator i = myDataManip.itemNames.begin();
+        i != myDataManip.itemNames.end(); i++)
+        itemNames[i->first] = QString::fromStdString(i->second);
 
+    w.itemNames = itemNames;
     w.setChampTags(champTags);
-
-
-    //std::cout << "attempting system command" << std::endl;
-    //char* jar = "java -jar test.jar 3.13.13_11_13_11_26 forrely sk2p0peru forrely";
-    //std::cout << exec(jar) << std::endl;
-
     w.displayCurrentSummonerData();
     w.show();
 

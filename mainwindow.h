@@ -66,6 +66,8 @@ private slots:
 
     void on_graphWindowButton_clicked();
 
+    void downloadCurrentPlayerMatches();
+
 private:
     void displayMatchDetails(int index);
     void setupChampionDetails();
@@ -76,6 +78,7 @@ private:
     QSystemTrayIcon *trayIcon;
     QMenu *trayIconMenu;
 
+    QAction *downloadMatchesAction;
     QAction *minimizeAction;
     QAction *maximizeAction;
     QAction *restoreAction;
@@ -93,7 +96,8 @@ public:
     QVector<champion> mcl;
     QVector<match> mml;
     QMap<QString, QVector<QString>> myChampTags;
-    std::map<int, std::string> champIDs;
+    std::map<int, std::string> champNames;
+    QMap<int, QString> itemNames;
     QVector<QString> activeTags;
 
     datamanip *myDataManip;

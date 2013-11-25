@@ -136,7 +136,7 @@ void datamanip::APICall(std::string playerName, int mode)
 		target += "player/na/";
 		target += playerName;
 		target += "/recent_games";
-		pullAPI(target, "matchesraw.txt");
+        pullAPI(target, "./Players/" + playerName + "/matchesraw.txt");
 	}
 	else
 	{
@@ -173,8 +173,8 @@ void datamanip::parseItems()
 
 				if (a > 1000 && a < 9999)
 				{
-					std::cout << "Found ID: " << a << " ";
-					outFile << a << ",";
+                    //std::cout << "Found ID: " << a << " ";
+                    //outFile << a << ",";
 					seek = "\"name\":";
 				}
 			}
@@ -247,7 +247,7 @@ void datamanip::parseChamps()
 			if (temp == seek)
 			{
 				inFile >> temp;
-				std::cout << "Found Champion: ";
+                //std::cout << "Found Champion: ";
 				d++;
 
 				for (size_t i = 1; i < temp.size() - 2; i++)
@@ -316,8 +316,8 @@ void datamanip::parseChamps()
 
                 tagsOutFile << tempName <<"\n"
                             << temp.substr(1,temp.size()-2) << "\n\n";
-                std::cout<<"Tag: " << tempName
-                                 << " " <<temp.substr(1,temp.size()-2) << "\n";
+                //std::cout<<"Tag: " << tempName
+                  //               << " " <<temp.substr(1,temp.size()-2) << "\n";
                 champTags[tempName].push_back(temp.substr(1,temp.size()-2));
 
                 seek = "\"id\":";
@@ -330,25 +330,26 @@ void datamanip::parseChamps()
 	std::cout << "Found " << d << " champions out of 116\n";
 }
 
-void datamanip::priceList()
+void datamanip::loadItems()
 {
 	std::ifstream inFile;
-	std::ofstream outFile, of2, of3;
+    //std::ofstream outFile, of2, of3;
 
 	inFile.open("items.txt");
 
-	std::string temp = "", temp2 = "";
+    std::string temp = "", temp2 = "", temp3 = "";
 
 	int c = inFile.peek();
 	while (c != std::ifstream::traits_type::eof())
 	{
 		std::getline(inFile, temp, ',');
 		std::getline(inFile, temp2, ',');
-		std::getline(inFile, temp2);
+        std::getline(inFile, temp3);
 
 		int i = stringToInt(temp);
 
-		prices[i] = stringToInt(temp2);
+        itemNames[i] = temp2;
+        prices[i] = stringToInt(temp3);
 
 		c = inFile.peek();
 	}
@@ -356,11 +357,11 @@ void datamanip::priceList()
 	inFile.close();
 }
 
-int datamanip::priceBuild(int items[6])
+int datamanip::priceBuild(int items[7])
 {
 	int total = 0;
 	std::map<int, int>::iterator itr;
-	for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 7; i++)
 	{
 		if (items[i] == 2003 || items[i] == 2004 || items[i] == 2009 || items[i] == 2037 || items[i] == 2039 || items[i] == 2042 || items[i] == 2043 || items[i] == 2044 || items[i] == 2050 || items[i] == 0)
 		{
@@ -518,7 +519,7 @@ void datamanip::parseMatches(std::string playerName)
 		inFile.close();
 	}
 		
-	inFile.open("matchesraw.txt");
+    inFile.open("./Players/" + playerName+ "/matchesraw.txt");
 	std::cout << "Reading data\n";
 	path = "./Players/" + playerName + "/matches.txt";
 	outFile.open(path, std::ios_base::app);
@@ -530,7 +531,7 @@ void datamanip::parseMatches(std::string playerName)
 	std::string seek = "\"ranked\":";
 
 	int cID = 0, k = 0, d = 0, a = 0, cs = 0, dd = 0, g = 0, ks = 0, mk = 0, mid = 0;
-	int nc = 0, em = 0, newMatches = 0, items[6] = {0, 0, 0, 0, 0, 0}, bc = 0;
+    int nc = 0, em = 0, newMatches = 0, items[7] = {0, 0, 0, 0, 0, 0, 0}, bc = 0;
 	bool rank = true, res = true, blue = true;
 	std::string dt = "", t = "";
 	std::map<int, std::string>::iterator cidItr;
@@ -640,6 +641,10 @@ void datamanip::parseMatches(std::string playerName)
 				{
 					items[5] = stringToInt(t2);
 				}
+                else if (temp == "\"ITEM6\"")
+                {
+                    items[6] = stringToInt(t2);
+                }
 				else if (temp == "\"NUM_DEATHS\"")
 				{
 					d = stringToInt(t2);
@@ -761,10 +766,10 @@ void datamanip::parseMatches(std::string playerName)
 
 				if (!active)
                 {
-					cidItr = champIDs.find(cID);
-                    //foreach(std::pair<int, std::string> s, champIDs)
+                    cidItr = champNames.find(cID);
+                    //foreach(std::pair<int, std::string> s, champNames)
                       //  std::cout << s.second <<"\n";
-                    //cidItr = champIDs.begin();
+                    //cidItr = champNames.begin();
                    //std::cout << cidItr->second << "\n";
 
                     //std::cout << "iterator data: "<<cidItr->second <<"\n";
@@ -877,7 +882,7 @@ void datamanip::parseMatches(std::string playerName)
 
 	for (size_t i = 0; i < champData.size(); i++)
 	{
-		cidItr = champIDs.find(champData[i].getID());
+        cidItr = champNames.find(champData[i].getID());
 
 		std::string fileName = "./Players/" + playerName + "/" + cidItr->second + ".txt";
 
@@ -1065,7 +1070,7 @@ void datamanip::loadPlayer(std::string playerName)
 
 	std::map<int, std::string>::iterator cIDItr;
 
-	for (cIDItr = champIDs.begin(); cIDItr != champIDs.end(); cIDItr++)
+    for (cIDItr = champNames.begin(); cIDItr != champNames.end(); cIDItr++)
 	{
 		path = "./Players/" + playerName + "/" + cIDItr->second + ".txt";
 
@@ -1173,7 +1178,7 @@ void datamanip::loadPlayer(std::string playerName)
 			 bool tW = stringToInt(temp);
 			 inFile >> temp;
 			 bool tB = stringToInt(temp);
-			 int tI[6];
+             int tI[7];
 			 inFile >> temp;
 			 tI[0] = stringToInt(temp);
 			 inFile >> temp;
@@ -1184,8 +1189,10 @@ void datamanip::loadPlayer(std::string playerName)
 			 tI[3] = stringToInt(temp);
 			 inFile >> temp;
 			 tI[4] = stringToInt(temp);
-             std::getline(inFile, temp);
+             inFile >> temp;
 			 tI[5] = stringToInt(temp);
+             std::getline(inFile, temp);
+             tI[6] = stringToInt(temp);
 			 std::getline(inFile, temp);
 			 std::string tDate = temp;
 
@@ -1201,6 +1208,34 @@ void datamanip::loadPlayer(std::string playerName)
 	}
 }
 
+void datamanip::loadChampNames()
+{
+    std::ifstream inFile;
+
+    inFile.open("champs.txt");
+
+    int c = inFile.peek();
+    std::string temp = "", temp2 = "", trash = "";
+
+
+    std::cout<<"champNames values"<<"\n";
+    while (c != std::ifstream::traits_type::eof())
+    {
+        std::getline(inFile, temp, ',');
+        std::getline(inFile, temp2, ',');
+        std::getline(inFile, trash);
+
+        int i = stringToInt(temp2);
+
+        champNames[i] = temp;
+        std::cout<<champNames[i]<<"\n";
+
+        c = inFile.peek();
+    }
+
+    inFile.close();
+}
+
 void datamanip::driver()
 {
 	std::ifstream inFile;
@@ -1211,7 +1246,7 @@ void datamanip::driver()
 	std::string temp = "", temp2 = "", trash = "";
 
 
-    std::cout<<"champIDs values"<<"\n";
+    std::cout<<"champNames values"<<"\n";
 	while (c != std::ifstream::traits_type::eof())
 	{
 		std::getline(inFile, temp, ',');
@@ -1220,15 +1255,15 @@ void datamanip::driver()
 
 		int i = stringToInt(temp2);
 
-		champIDs[i] = temp;
-        std::cout<<champIDs[i]<<"\n";
+        champNames[i] = temp;
+        std::cout<<champNames[i]<<"\n";
 
 		c = inFile.peek();
 	}
 
 	inFile.close();
 
-	priceList();
+    loadItems();
 
 //	while (true)
 //	{

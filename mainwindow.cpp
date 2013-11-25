@@ -1,9 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+//custom tablewidgetitem class to allow sorting by numeric value
 class MyTableWidgetItem : public QTableWidgetItem {
-
-
     public:
     MyTableWidgetItem(QString s) : QTableWidgetItem(s)
     {
@@ -43,6 +42,7 @@ MainWindow::MainWindow(QWidget *parent) :
             this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
 
 
+        myDataManip = new datamanip();
     ui->graphWindowButton->hide();
     ui->playerComboBox->hide();
 
@@ -54,6 +54,7 @@ MainWindow::MainWindow(QWidget *parent) :
 void MainWindow::createTrayIcon()
 {
     trayIconMenu = new QMenu(this);
+    trayIconMenu->addAction(downloadMatchesAction);
     trayIconMenu->addAction(minimizeAction);
     trayIconMenu->addAction(restoreAction);
     trayIconMenu->addSeparator();
@@ -81,11 +82,14 @@ void MainWindow::showHideWindow()
 
 void MainWindow::createActions()
 {
-    minimizeAction = new QAction(tr("Mi&nimize"), this);
+    minimizeAction = new QAction(tr("&Minimize"), this);
     connect(minimizeAction, SIGNAL(triggered()), this, SLOT(hide()));
 
     restoreAction = new QAction(tr("&Restore"), this);
     connect(restoreAction, SIGNAL(triggered()), this, SLOT(showNormal()));
+
+    downloadMatchesAction = new QAction(tr("&Download Matches"), this);
+    connect(downloadMatchesAction, SIGNAL(triggered()), this, SLOT(downloadCurrentPlayerMatches()));
 
     quitAction = new QAction(tr("&Quit"), this);
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
@@ -158,21 +162,12 @@ void MainWindow::setChampData(std::vector<champion> c)
  */
 void MainWindow::displayData()
 {
-    //**********************
     //Champion data tab display
-    //**********************
-
-
     setupChampionDetails();
     displayChampionDetails();
 
 
-
-    //*************************
     //Display match history tab
-    //*************************
-    std::cout<<"match 1"<<mml[0].getID()<<std::endl;
-
     //display match list
     ui->matchListWidget->clear();
 
@@ -189,6 +184,7 @@ void MainWindow::displayData()
     displayPlayerDetails(0);
 }
 
+
 bool champPlaysSort(const QPair<QString, int> c1, const QPair<QString, int> c2)
 {
     return (c1.second > c2.second);
@@ -196,7 +192,7 @@ bool champPlaysSort(const QPair<QString, int> c1, const QPair<QString, int> c2)
 
 QString MainWindow::champIconFileName(int i)
 {
-    return "./Resources/champions/" + QString::fromStdString(champIDs[i]) + "_Square_0.png";
+    return "./Resources/champions/" + QString::fromStdString(champNames[i]) + "_Square_0.png";
 }
 QString MainWindow::champIconFileName(QString s)
 {
@@ -211,8 +207,8 @@ void MainWindow::displayPlayerDetails(int index)
      QVector<QPair<QString, int>> champPlays;
 
      //load champ plays into a vector of pairs
-     for(std::map<int, std::string>::iterator i = champIDs.begin();
-         i != champIDs.end(); i++)
+     for(std::map<int, std::string>::iterator i = champNames.begin();
+         i != champNames.end(); i++)
      {
          champPlays.push_back(
                      QPair<QString, int>(QString::fromStdString(i->second), mpl[index].cPlays(i->first)) );
@@ -248,19 +244,20 @@ void MainWindow::displayPlayerDetails(int index)
     playerStats.push_back(QPair<QString, QString>("PurpleLosses",QString::number(mpl[index].getPurpleLosses())));
     playerStats.push_back(QPair<QString, QString>("RankedWins",QString::number(mpl[index].getRankedWins())));
     playerStats.push_back(QPair<QString, QString>("RankedLosses",QString::number(mpl[index].getRankedLosses())));
-
-    playerStats.push_back(QPair<QString, QString>("Avg Kills",QString::number(mpl[index].averages(3))));
-    playerStats.push_back(QPair<QString, QString>("Avg Deaths",QString::number(mpl[index].averages(4))));
-    playerStats.push_back(QPair<QString, QString>("Avg Assists",QString::number(mpl[index].averages(5))));
-    playerStats.push_back(QPair<QString, QString>("KDA",QString::number(mpl[index].KDA())));
-    playerStats.push_back(QPair<QString, QString>("Avg CS",QString::number(mpl[index].averages(0))));
-    playerStats.push_back(QPair<QString, QString>("Avg N CS",QString::number(mpl[index].averages(1))));
-    playerStats.push_back(QPair<QString, QString>("Avg E CS",QString::number(mpl[index].averages(2))));
-    playerStats.push_back(QPair<QString, QString>("Normal Winrate",QString::number(mpl[index].winRate(0))));
-    playerStats.push_back(QPair<QString, QString>("BvP Winrate",QString::number(mpl[index].winRate(2))));
-    playerStats.push_back(QPair<QString, QString>("Ranked Winrate",QString::number(mpl[index].winRate(1))));
+    playerStats.push_back(QPair<QString, QString>("Avg Kills",QString::number(std::ceil(mpl[index].averages(3)))));
+    playerStats.push_back(QPair<QString, QString>("Avg Deaths",QString::number(std::ceil(mpl[index].averages(4)))));
+    playerStats.push_back(QPair<QString, QString>("Avg Assists",QString::number(std::ceil(mpl[index].averages(5)))));
+    playerStats.push_back(QPair<QString, QString>("KDA",QString::number(std::ceil( mpl[index].KDA() * 100)/ 100)));
+    playerStats.push_back(QPair<QString, QString>("Avg CS",QString::number(std::ceil(mpl[index].averages(0)* 100)/ 100)));
+    playerStats.push_back(QPair<QString, QString>("Avg N CS",QString::number(std::ceil(mpl[index].averages(1)* 100)/ 100)));
+    playerStats.push_back(QPair<QString, QString>("Avg E CS",QString::number(std::ceil(mpl[index].averages(2)* 100)/ 100)));
+    playerStats.push_back(QPair<QString, QString>("Normal Winrate",QString::number(std::ceil(mpl[index].winRate(0)* 100)/ 100)));
+    playerStats.push_back(QPair<QString, QString>("BvP Winrate",QString::number(std::ceil(mpl[index].winRate(2)* 100)/ 100)));
+    playerStats.push_back(QPair<QString, QString>("Ranked Winrate",QString::number(std::ceil(mpl[index].winRate(1)* 100)/ 100)));
      ui->playerNameLabel->setText(QString::fromStdString(mpl[index].getName()));  //displaying player name in label
-    int numRows = 7;
+
+     //number of rows to display player stats in
+     int numRows = 7;
 
     //if there aren't the correct number of widgets in grid yet
     if(ui->playerDetailsGrid->count() != playerStats.count())
@@ -278,12 +275,12 @@ void MainWindow::displayPlayerDetails(int index)
        QLabel * l;
        for(int i=0, j=0; i<playerStats.size(); i++)
        {
-           if(i%7 == 0)
+           if(i%numRows == 0)
                j++;
            l = new QLabel(playerStats[i].first + ": " + playerStats[i].second);
            l->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
            l->setTextInteractionFlags(Qt::TextSelectableByMouse);
-           ui->playerDetailsGrid->addWidget(l, i%7, j);
+           ui->playerDetailsGrid->addWidget(l, i%numRows, j);
        }
        ui->playerDetailsGrid->setRowStretch(numRows, 1);
     }
@@ -470,84 +467,102 @@ QString boolToString(bool b)
 void MainWindow::displayMatchDetails(int index)
 {
 
-
     QVector<QPair<QString, QString>> matchStats;
-    matchStats.push_back(QPair<QString, QString>( "Match ID", QString::number(mml[index].getID()) ));
-    matchStats.push_back(QPair<QString, QString>( "Champ ID", QString::number(mml[index].getChampID()) ));
-    matchStats.push_back(QPair<QString, QString>( "Kills", QString::number(mml[index].getKills()) ));
-    matchStats.push_back(QPair<QString, QString>( "Deaths", QString::number(mml[index].getDeaths()) ));
-    matchStats.push_back(QPair<QString, QString>( "Assists", QString::number(mml[index].getAssists()) ));
-    matchStats.push_back(QPair<QString, QString>( "KDA", QString::number(mml[index].KDA()) ));
-    matchStats.push_back(QPair<QString, QString>( "CS", QString::number(mml[index].getCreepScore()) ));
-    matchStats.push_back(QPair<QString, QString>( "Damage Dealt", QString::number(mml[index].getDamage()) ));
-    matchStats.push_back(QPair<QString, QString>( "Multi Kill", QString::number(mml[index].getMultiKill()) ));
-    matchStats.push_back(QPair<QString, QString>( "Kill Spree", QString::number(mml[index].getKillSpree()) ));
-    matchStats.push_back(QPair<QString, QString>( "Build Cost", QString::number(mml[index].getBuildCost()) ));
-    matchStats.push_back(QPair<QString, QString>( "Total Gold", QString::number(mml[index].getGold()) ));
+    if(mml.size() != 0)
+    {
 
-    QString isRankedString = "Normal";
-    if(mml[index].isRanked())
-        isRankedString = "Ranked";
-    QString sideString = "Purple";
-    if(mml[index].isBlueSide())
-        sideString = "Blue";
-    QString winString = "Loss";
-    if(mml[index].getResult())
-        winString = "Win";
-    matchStats.push_back(QPair<QString, QString>(isRankedString, sideString + " " + winString));
+        matchStats.push_back(QPair<QString, QString>( "Match ID", QString::number(mml[index].getID()) ));
+        matchStats.push_back(QPair<QString, QString>( "Champ ID", QString::number(mml[index].getChampID()) ));
+        matchStats.push_back(QPair<QString, QString>( "Kills", QString::number(mml[index].getKills()) ));
+        matchStats.push_back(QPair<QString, QString>( "Deaths", QString::number(mml[index].getDeaths()) ));
+        matchStats.push_back(QPair<QString, QString>( "Assists", QString::number(mml[index].getAssists()) ));
+        matchStats.push_back(QPair<QString, QString>( "KDA", QString::number(mml[index].KDA()) ));
+        matchStats.push_back(QPair<QString, QString>( "CS", QString::number(mml[index].getCreepScore()) ));
+        matchStats.push_back(QPair<QString, QString>( "Damage Dealt", QString::number(mml[index].getDamage()) ));
+        matchStats.push_back(QPair<QString, QString>( "Multi Kill", QString::number(mml[index].getMultiKill()) ));
+        matchStats.push_back(QPair<QString, QString>( "Kill Spree", QString::number(mml[index].getKillSpree()) ));
+        matchStats.push_back(QPair<QString, QString>( "Build Cost", QString::number(mml[index].getBuildCost()) ));
+        matchStats.push_back(QPair<QString, QString>( "Total Gold", QString::number(mml[index].getGold()) ));
 
-    QString s = "./Resources/champions/";
-        s.append(QString::fromStdString(champIDs[mml[index].getChampID()]));
-        s.append("_Square_0.png");
-        ui->ChampIcon->setPixmap(QPixmap(s));
+        QString isRankedString = "Normal";
+        if(mml[index].isRanked())
+            isRankedString = "Ranked";
+        QString sideString = "Purple";
+        if(mml[index].isBlueSide())
+            sideString = "Blue";
+        QString winString = "Loss";
+        if(mml[index].getResult())
+            winString = "Win";
+        matchStats.push_back(QPair<QString, QString>(isRankedString, sideString + " " + winString));
 
-        if (mml[index].getItem(0) != 0)
-        {
-            QString i = "./Resources/items/";
-            i.append(QString::number(mml[index].getItem(0)));
-            i.append(".png");
-            ui->item1->setPixmap(QPixmap(i));
-        }
+        QString s = "./Resources/champions/";
+            s.append(QString::fromStdString(champNames[mml[index].getChampID()]));
+            s.append("_Square_0.png");
+            ui->ChampIcon->setPixmap(QPixmap(s));
 
-        if (mml[index].getItem(1) != 0)
-        {
-            QString i = "./Resources/items/";
-            i.append(QString::number(mml[index].getItem(1)));
-            i.append(".png");
-            ui->item2->setPixmap(QPixmap(i));
-        }
+            if (mml[index].getItem(0) != 0)
+            {
+                QString i = "./Resources/items/";
+                i.append(QString::number(mml[index].getItem(0)));
+                i.append(".png");
+                ui->item1->setPixmap(QPixmap(i));
+                ui->item1->setToolTip(itemNames[mml[index].getItem(0)]);
+            }
 
-        if (mml[index].getItem(2) != 0)
-        {
-            QString i = "./Resources/items/";
-            i.append(QString::number(mml[index].getItem(2)));
-            i.append(".png");
-            ui->item3->setPixmap(QPixmap(i));
-        }
+            if (mml[index].getItem(1) != 0)
+            {
+                QString i = "./Resources/items/";
+                i.append(QString::number(mml[index].getItem(1)));
+                i.append(".png");
+                ui->item2->setPixmap(QPixmap(i));
+                ui->item2->setToolTip(itemNames[mml[index].getItem(1)]);
+            }
 
-        if (mml[index].getItem(3) != 0)
-        {
-            QString i = "./Resources/items/";
-            i.append(QString::number(mml[index].getItem(3)));
-            i.append(".png");
-            ui->item4->setPixmap(QPixmap(i));
-        }
+            if (mml[index].getItem(2) != 0)
+            {
+                QString i = "./Resources/items/";
+                i.append(QString::number(mml[index].getItem(2)));
+                i.append(".png");
+                ui->item3->setPixmap(QPixmap(i));
+                ui->item3->setToolTip(itemNames[mml[index].getItem(2)]);
+            }
 
-        if (mml[index].getItem(4) != 0)
-        {
-            QString i = "./Resources/items/";
-            i.append(QString::number(mml[index].getItem(4)));
-            i.append(".png");
-            ui->item5->setPixmap(QPixmap(i));
-        }
+            if (mml[index].getItem(3) != 0)
+            {
+                QString i = "./Resources/items/";
+                i.append(QString::number(mml[index].getItem(3)));
+                i.append(".png");
+                ui->item4->setPixmap(QPixmap(i));
+                ui->item4->setToolTip(itemNames[mml[index].getItem(3)]);
+            }
 
-        if (mml[index].getItem(5) != 0)
-        {
-            QString i = "./Resources/items/";
-            i.append(QString::number(mml[index].getItem(5)));
-            i.append(".png");
-            ui->item6->setPixmap(QPixmap(i));
-        }
+            if (mml[index].getItem(4) != 0)
+            {
+                QString i = "./Resources/items/";
+                i.append(QString::number(mml[index].getItem(4)));
+                i.append(".png");
+                ui->item5->setPixmap(QPixmap(i));
+                ui->item5->setToolTip(itemNames[mml[index].getItem(4)]);
+            }
+
+            if (mml[index].getItem(5) != 0)
+            {
+                QString i = "./Resources/items/";
+                i.append(QString::number(mml[index].getItem(5)));
+                i.append(".png");
+                ui->item6->setPixmap(QPixmap(i));
+                ui->item6->setToolTip(itemNames[mml[index].getItem(5)]);
+            }
+            if (mml[index].getItem(6) != 0)
+            {
+                QString i = "./Resources/items/";
+                i.append(QString::number(mml[index].getItem(6)));
+                i.append(".png");
+                ui->item7->setPixmap(QPixmap(i));
+                //ui->item7->setText(QString::number( mml[index].getItem(6)));
+                ui->item7->setToolTip(itemNames[mml[index].getItem(6)]);
+            }
+    }
 
 
     int numRows = 5;
@@ -568,7 +583,7 @@ void MainWindow::displayMatchDetails(int index)
        QLabel * l;
        for(int i=0, j=0; i<matchStats.size(); i++)
        {
-           if(i%5 == 0)
+           if(i%numRows == 0)
                j++;
            l = new QLabel(matchStats[i].first + ": " + matchStats[i].second);
            l->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -592,7 +607,7 @@ void MainWindow::displayCurrentSummonerData()
     myDataManip = new datamanip();
 
     myDataManip->driver();
-
+    myDataManip->APICall(workingName.toStdString(), MODE_MATCH);
     myDataManip->parseMatches(workingName.toStdString());
     myDataManip->loadPlayer(workingName.toStdString());
 
@@ -628,7 +643,7 @@ void MainWindow::loadSettings()
        std::string applicationpath="none";
        std::ifstream readfile;
        std::string line;
-       readfile.open ("settingfile.txt");
+       readfile.open ("user_settings.txt");
        if (readfile.is_open())
          {
        while(std::getline(readfile,line))
@@ -688,6 +703,14 @@ void MainWindow::saveSettings()
 //Slots
 //**************
 
+void MainWindow::downloadCurrentPlayerMatches()
+{
+
+    std::cout<<"downloading current player matches "<<std::endl;
+    myDataManip->APICall(workingName.toStdString(), MODE_MATCH);
+    displayCurrentSummonerData();
+}
+
 //confirm a name change in the settings tab
 void MainWindow::on_nameSetButton_clicked()
 {
@@ -708,7 +731,7 @@ void MainWindow::on_nameSetButton_clicked()
     //std::string str = q.toStdString();
 
     std::ofstream myfile;
-    myfile.open ("settingfile.txt");
+    myfile.open ("user_settings.txt");
 
 
     QString name_edit=ui->nameEdit->toPlainText();

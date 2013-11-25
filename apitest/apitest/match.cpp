@@ -9,6 +9,7 @@ match::match()
     items[3] = 0;
     items[4] = 0;
     items[5] = 0;
+    items[6] = 0;
     kills = 0;
     deaths = 0;
     assists = 0;
@@ -25,7 +26,7 @@ match::match()
     blueSide = false;
 }
 
-match::match(int cID, int i[6], int k, int d, int a, int dd, int g, int mk, int ks, int mid, bool rank, bool res, std::string dt, std::string t, int cs, bool blue)
+match::match(int cID, int i[7], int k, int d, int a, int dd, int g, int mk, int ks, int mid, bool rank, bool res, std::string dt, std::string t, int cs, bool blue)
 {
 	champID = cID;
 	items[0] = i[0];
@@ -34,6 +35,7 @@ match::match(int cID, int i[6], int k, int d, int a, int dd, int g, int mk, int 
 	items[3] = i[3];
 	items[4] = i[4];
 	items[5] = i[5];
+    items[6] = i[6];
 	kills = k;
 	deaths = d;
 	assists = a;
@@ -55,7 +57,7 @@ match::match(int cID, int i[6], int k, int d, int a, int dd, int g, int mk, int 
 	blueSide = blue;
 }
 
-match::match(int cID, int i[6], int k, int d, int a, int dd, int g, int mk, int ks, int mid, bool rank, bool res, std::string dt, std::string t, int bc, int cs, bool blue)
+match::match(int cID, int i[7], int k, int d, int a, int dd, int g, int mk, int ks, int mid, bool rank, bool res, std::string dt, std::string t, int bc, int cs, bool blue)
 {
 	champID = cID;
 	items[0] = i[0];
@@ -64,6 +66,7 @@ match::match(int cID, int i[6], int k, int d, int a, int dd, int g, int mk, int 
 	items[3] = i[3];
 	items[4] = i[4];
 	items[5] = i[5];
+    items[6] = i[6];
 	kills = k;
 	deaths = d;
 	assists = a;
@@ -85,7 +88,7 @@ void match::goldSpent()
 {
 	std::map<int, int>::iterator itr;
 
-	for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 7; i++)
 	{
 		if (items[i] == 2043 || items[i] == 2044 || items[i] == 2042 || items[i] == 2050 || items[i] == 2009 || items[i] ==	2003 || items[i] == 2004 || items[i] == 2037 || items[i] == 2039 || items[i] == 2041 || items[i] == 0)
 		{
@@ -104,7 +107,7 @@ void match::write(std::ofstream out)
 	out << champID << " " << creepScore << " " << kills << " " << deaths << " " << assists << " " << damageDealt << " ";
     out << gold << " " << multiKill << " " << killSpree << " " << buildCost << " " << ranked << " " << result << " " << blueSide;
 	
-	for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 7; i++)
 	{
 		out << " " << items[i];
 	}
@@ -133,7 +136,7 @@ std::string match::write()
 	temp += intToString(ranked) + " ";
 	temp += intToString(result) + " " + intToString(blueSide);
 	
-	for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 7; i++)
 	{
 		temp += " " + intToString(items[i]);
 	}
@@ -149,7 +152,7 @@ void match::printStats()
 {
 	std::cout << "Champion ID: " << champID << "\n";
 	
-	for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 7; i++)
 	{
 		 std::cout << "Item " << i + 1 << ": " << items[i] << "\n";
 	}

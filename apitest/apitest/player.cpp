@@ -131,7 +131,7 @@ std::string player::write()
 	return temp;
 }
 
-void player::modifyStats(int k, int d, int a, int cs, int nc, int em, bool win, bool ranked, bool blue, int id, int i[6])
+void player::modifyStats(int k, int d, int a, int cs, int nc, int em, bool win, bool ranked, bool blue, int id, int i[7])
 {
 	kills += k;
 	deaths += d;
@@ -147,7 +147,7 @@ void player::modifyStats(int k, int d, int a, int cs, int nc, int em, bool win, 
 		wins++;
 		itr->second.first++;
 
-		for (int j = 0; j < 6; j++)
+        for (int j = 0; j < 7; j++)
 		{
 			if (i[j] != 0)
 			{
@@ -184,7 +184,7 @@ void player::modifyStats(int k, int d, int a, int cs, int nc, int em, bool win, 
 		losses++;
 		itr->second.second++;
 
-		for (int j = 0; j < 6; j++)
+        for (int j = 0; j < 7; j++)
 		{
 			if (i[j] != 0)
 			{
