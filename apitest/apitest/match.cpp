@@ -29,13 +29,17 @@ match::match()
 match::match(int cID, int i[7], int k, int d, int a, int dd, int g, int mk, int ks, int mid, bool rank, bool res, std::string dt, std::string t, int cs, bool blue)
 {
 	champID = cID;
-	items[0] = i[0];
-	items[1] = i[1];
-	items[2] = i[2];
-	items[3] = i[3];
-	items[4] = i[4];
-	items[5] = i[5];
-    items[6] = i[6];
+    for(int j=0;j<7;j++)
+    {
+        items[j] = (i[j] == NULL ? 0 : i[j]);
+    }
+//	items[0] = i[0];
+//	items[1] = i[1];
+//	items[2] = i[2];
+//	items[3] = i[3];
+//	items[4] = i[4];
+//	items[5] = i[5];
+//    items[6] = i[6];
 	kills = k;
 	deaths = d;
 	assists = a;
@@ -60,13 +64,17 @@ match::match(int cID, int i[7], int k, int d, int a, int dd, int g, int mk, int 
 match::match(int cID, int i[7], int k, int d, int a, int dd, int g, int mk, int ks, int mid, bool rank, bool res, std::string dt, std::string t, int bc, int cs, bool blue)
 {
 	champID = cID;
-	items[0] = i[0];
-	items[1] = i[1];
-	items[2] = i[2];
-	items[3] = i[3];
-	items[4] = i[4];
-	items[5] = i[5];
-    items[6] = i[6];
+    for(int j=0;j<7;j++)
+    {
+        items[j] = (i[j] == NULL ? 0 : i[j]);
+    }
+//	items[0] = i[0];
+//	items[1] = i[1];
+//	items[2] = i[2];
+//	items[3] = i[3];
+//	items[4] = i[4];
+//	items[5] = i[5];
+//    items[6] = i[6];
 	kills = k;
 	deaths = d;
 	assists = a;

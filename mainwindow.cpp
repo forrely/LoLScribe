@@ -190,13 +190,17 @@ bool champPlaysSort(const QPair<QString, int> c1, const QPair<QString, int> c2)
     return (c1.second > c2.second);
 }
 
-QString MainWindow::champIconFileName(int i)
+QString MainWindow::champIconPath(int i)
 {
-    return "./Resources/champions/" + QString::fromStdString(champNames[i]) + "_Square_0.png";
+    return champIconPath(QString::fromStdString(champNames[i]));
 }
-QString MainWindow::champIconFileName(QString s)
+QString MainWindow::champIconPath(QString s)
 {
-    return "./Resources/champions/" + s + "_Square_0.png";
+    QFile f("./Resources/champions/" + s + "_Square_0.png");
+    if(f.exists())
+        return "./Resources/champions/" + s + "_Square_0.png";
+    else
+        return "./Resources/champions/-1_Square_0.png";
 }
 
 void MainWindow::displayPlayerDetails(int index)
@@ -220,13 +224,11 @@ void MainWindow::displayPlayerDetails(int index)
          if(champPlays[i].second>0)
          {
              ui->favoriteChampsList->addItem(
-                         new QListWidgetItem(QIcon(champIconFileName(champPlays[i].first)), champPlays[i].first));
-             std::cout<<champIconFileName(champPlays[i].first).toStdString()<<std::endl;
+                         new QListWidgetItem(QIcon(champIconPath(champPlays[i].first)), champPlays[i].first));
          }
          else
              i = numFavChamps;
      }
-
 
      //display player stats
     QVector<QPair<QString,QString>> playerStats;
@@ -252,7 +254,8 @@ void MainWindow::displayPlayerDetails(int index)
     playerStats.push_back(QPair<QString, QString>("Avg N CS",QString::number(std::ceil(mpl[index].averages(1)* 100)/ 100)));
     playerStats.push_back(QPair<QString, QString>("Avg E CS",QString::number(std::ceil(mpl[index].averages(2)* 100)/ 100)));
     playerStats.push_back(QPair<QString, QString>("Normal Winrate",QString::number(std::ceil(mpl[index].winRate(0)* 100)/ 100)));
-    playerStats.push_back(QPair<QString, QString>("BvP Winrate",QString::number(std::ceil(mpl[index].winRate(2)* 100)/ 100)));
+    playerStats.push_back(QPair<QString, QString>("Blue Winrate",QString::number(std::ceil(mpl[index].winRate(2)* 100)/ 100)));
+    playerStats.push_back(QPair<QString, QString>("Purple Winrate",QString::number(std::ceil(mpl[index].winRate(3)* 100)/ 100)));
     playerStats.push_back(QPair<QString, QString>("Ranked Winrate",QString::number(std::ceil(mpl[index].winRate(1)* 100)/ 100)));
      ui->playerNameLabel->setText(QString::fromStdString(mpl[index].getName()));  //displaying player name in label
 
@@ -296,9 +299,12 @@ void MainWindow::displayPlayerDetails(int index)
 
 }
 
+//sets up champion details tab with champion tag list and table headers
 void MainWindow::setupChampionDetails()
 {
+
     //tag filter dropdown box
+    ui->tagFilterComboBox->clear();
     ui->tagFilterComboBox->addItem("All");
     QVector<QString> tags;
     QMap<QString, QVector<QString>>::iterator i;
@@ -326,7 +332,8 @@ void MainWindow::setupChampionDetails()
                     "B Losses" <<
                     "P Wins" <<
                     "P Losses" <<
-                    "BvP ratio" <<
+                    "B Winrate" <<
+                    "P Winrate" <<
                     "Total CS" <<
                     "Neutral CS" <<
                     "Minions" <<
@@ -337,29 +344,43 @@ void MainWindow::setupChampionDetails()
     ui->championsTableWidget->setHorizontalHeaderLabels(horizHeaders);
     ui->championsTableWidget->setRowCount(mcl.count());
 
-    QStringList vertHeaders;
-    vertHeaders << "test1" << "test2";
-    ui->championsTableWidget->setVerticalHeaderLabels(vertHeaders);
+    //QStringList vertHeaders;
+    //vertHeaders << "test1" << "test2";
+    //ui->championsTableWidget->setVerticalHeaderLabels(vertHeaders);
 }
 
 
+//redisplays champion stats table based on current filter
+//*not currently used/working
 void MainWindow::updateChampionDetails()
 {
+    //turn sorting off before adjusting table to avoid errors
+    ui->championsTableWidget->setSortingEnabled(false);
+
     for (int i=0; i<ui->championsTableWidget->rowCount(); i++)
     {
         if(ui->tagFilterComboBox->currentText() == "All"
-                || ( myChampTags.contains(QString::fromStdString(mcl[i].getName()))
-                    && myChampTags[QString::fromStdString(mcl[i].getName())].contains(ui->tagFilterComboBox->currentText()) ))
+                || ( myChampTags.contains(ui->championsTableWidget->itemAt(0,i)->text())
+                    && myChampTags[ui->championsTableWidget->itemAt(0,i)->text()].contains(ui->tagFilterComboBox->currentText()) ))
             ui->championsTableWidget->showRow(i);
+        else
+            ui->championsTableWidget->hideRow(i);
     }
+
+    //re enable sorting
+    ui->championsTableWidget->setSortingEnabled(true);
 
 }
 
+//displays current data to champion stats table based on current champion tag filter
 void MainWindow::displayChampionDetails()
 {
-    //display champion stats. Display calls must be in same order as headers
+    ui->championsTableWidget->setSortingEnabled(false);
+
+    //display champion stats. Display calls *must* be in same order as headers
     //use MyTableWidgetItem for number variables to ensure proper sorting and use QTableWidgetItem for strings
-    ui->championsTableWidget->clearContents();
+    ui->championsTableWidget->clearContents();    
+    ui->championsTableWidget->setIconSize(QSize(20,20));
     int nextOpenIndex = 0;
     int j = 0;
     QTableWidgetItem *newItem = new QTableWidgetItem();
@@ -371,7 +392,10 @@ void MainWindow::displayChampionDetails()
         {
             j = 0;
             newItem = new QTableWidgetItem();
-            ui->championsTableWidget->setItem(nextOpenIndex, j, new QTableWidgetItem( QString::fromStdString( mcl[i].getName() ) ));
+            ui->championsTableWidget->setItem(nextOpenIndex, j, new QTableWidgetItem(
+                                                  QIcon(champIconPath(QString::fromStdString(mcl[i].getName()))),
+                                                  QString::fromStdString( mcl[i].getName() ) ));
+            //ui->championsTableWidget->itemAt(nextOpenIndex, j)->setIcon( QIcon(champIconPath(QString::fromStdString(mcl[i].getName()))) );
             j++;
             newItem = new QTableWidgetItem();
             newItem->setData(0,mcl[i].getKills());
@@ -422,6 +446,10 @@ void MainWindow::displayChampionDetails()
             ui->championsTableWidget->setItem(nextOpenIndex, j, newItem);
             j++;
             newItem = new QTableWidgetItem();
+            newItem->setData(0,std::ceil(mcl[i].winRate(3) * 100)/ 100);
+            ui->championsTableWidget->setItem(nextOpenIndex, j, newItem);
+            j++;
+            newItem = new QTableWidgetItem();
             newItem->setData(0,mcl[i].getCreepScore());
             ui->championsTableWidget->setItem(nextOpenIndex, j, newItem);
             j++;
@@ -454,6 +482,7 @@ void MainWindow::displayChampionDetails()
 
     ui->championsTableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     //ui->championsTableWidget->setVerticalHeaderLabels(vertHeaders);
+    ui->championsTableWidget->setSortingEnabled(true);
 }
 
 QString boolToString(bool b)
@@ -464,8 +493,31 @@ QString boolToString(bool b)
         return "False";
 }
 
+
+//returns the item icon path for the given item id if the image exists
+//  else, returns the path for an error icon
+QString getItemIconPath(int id)
+{
+    QFile f("./Resources/items/" + QString::number(id) + ".png");
+    if(f.exists())
+        return "./Resources/items/" + QString::number(id) + ".png";
+    else
+        return "./Resources/items/-1.png";
+}
+
+
+//displays match stats for the given match index (usually gotten from matchList widget)
 void MainWindow::displayMatchDetails(int index)
 {
+
+    QVector<QLabel*> matchItemLabels;
+    matchItemLabels.push_back(ui->item1);
+    matchItemLabels.push_back(ui->item2);
+    matchItemLabels.push_back(ui->item3);
+    matchItemLabels.push_back(ui->item4);
+    matchItemLabels.push_back(ui->item5);
+    matchItemLabels.push_back(ui->item6);
+    matchItemLabels.push_back(ui->item7);
 
     QVector<QPair<QString, QString>> matchStats;
     if(mml.size() != 0)
@@ -500,68 +552,20 @@ void MainWindow::displayMatchDetails(int index)
             s.append("_Square_0.png");
             ui->ChampIcon->setPixmap(QPixmap(s));
 
-            if (mml[index].getItem(0) != 0)
-            {
-                QString i = "./Resources/items/";
-                i.append(QString::number(mml[index].getItem(0)));
-                i.append(".png");
-                ui->item1->setPixmap(QPixmap(i));
-                ui->item1->setToolTip(itemNames[mml[index].getItem(0)]);
-            }
+        //display item icons
+        for(int i=0; i<matchItemLabels.size(); i++)
+        {
+            matchItemLabels[i]->setPixmap( QPixmap(getItemIconPath(mml[index].getItem(i))) );
+            matchItemLabels[i]->setToolTip( itemNames[mml[index].getItem(i)] );
+            //std::cout<<itemNames[mml[index].getItem(i)].toStdString()<<std::endl;
+        }
+    }
+    else
+    {
+        ui->ChampIcon->clear();
 
-            if (mml[index].getItem(1) != 0)
-            {
-                QString i = "./Resources/items/";
-                i.append(QString::number(mml[index].getItem(1)));
-                i.append(".png");
-                ui->item2->setPixmap(QPixmap(i));
-                ui->item2->setToolTip(itemNames[mml[index].getItem(1)]);
-            }
-
-            if (mml[index].getItem(2) != 0)
-            {
-                QString i = "./Resources/items/";
-                i.append(QString::number(mml[index].getItem(2)));
-                i.append(".png");
-                ui->item3->setPixmap(QPixmap(i));
-                ui->item3->setToolTip(itemNames[mml[index].getItem(2)]);
-            }
-
-            if (mml[index].getItem(3) != 0)
-            {
-                QString i = "./Resources/items/";
-                i.append(QString::number(mml[index].getItem(3)));
-                i.append(".png");
-                ui->item4->setPixmap(QPixmap(i));
-                ui->item4->setToolTip(itemNames[mml[index].getItem(3)]);
-            }
-
-            if (mml[index].getItem(4) != 0)
-            {
-                QString i = "./Resources/items/";
-                i.append(QString::number(mml[index].getItem(4)));
-                i.append(".png");
-                ui->item5->setPixmap(QPixmap(i));
-                ui->item5->setToolTip(itemNames[mml[index].getItem(4)]);
-            }
-
-            if (mml[index].getItem(5) != 0)
-            {
-                QString i = "./Resources/items/";
-                i.append(QString::number(mml[index].getItem(5)));
-                i.append(".png");
-                ui->item6->setPixmap(QPixmap(i));
-                ui->item6->setToolTip(itemNames[mml[index].getItem(5)]);
-            }
-            if (mml[index].getItem(6) != 0)
-            {
-                QString i = "./Resources/items/";
-                i.append(QString::number(mml[index].getItem(6)));
-                i.append(".png");
-                ui->item7->setPixmap(QPixmap(i));
-                //ui->item7->setText(QString::number( mml[index].getItem(6)));
-                ui->item7->setToolTip(itemNames[mml[index].getItem(6)]);
-            }
+        for(int i=0; i<matchItemLabels.size(); i++)
+            matchItemLabels[i]->clear();
     }
 
 
@@ -601,13 +605,18 @@ void MainWindow::displayMatchDetails(int index)
 
 }
 
+
+//loads the current summoner name from settings file,
+//updates champNames list and itemNames list,
+//parses recent matches, and displays stats for the current name
 void MainWindow::displayCurrentSummonerData()
 {
     loadSettings();
     myDataManip = new datamanip();
 
-    myDataManip->driver();
-    myDataManip->APICall(workingName.toStdString(), MODE_MATCH);
+    myDataManip->loadChampNames();
+    myDataManip->loadItems();
+    //myDataManip->APICall(workingName.toStdString(), MODE_MATCH);
     myDataManip->parseMatches(workingName.toStdString());
     myDataManip->loadPlayer(workingName.toStdString());
 
@@ -635,6 +644,7 @@ void MainWindow::displayCurrentSummonerData()
     displayData();
 }
 
+//loads settings from file
 void MainWindow::loadSettings()
 {
     std::string summonerName = "none";
@@ -703,6 +713,7 @@ void MainWindow::saveSettings()
 //Slots
 //**************
 
+//downloads recent match history from api and displays stats
 void MainWindow::downloadCurrentPlayerMatches()
 {
 
@@ -711,7 +722,7 @@ void MainWindow::downloadCurrentPlayerMatches()
     displayCurrentSummonerData();
 }
 
-//confirm a name change in the settings tab
+//confirm changes in the settings tab and save to file
 void MainWindow::on_nameSetButton_clicked()
 {
 
@@ -752,6 +763,7 @@ void MainWindow::on_nameSetButton_clicked()
     myfile<<applicationpath<<"\n";
     myfile.close();
 
+    myDataManip->APICall(workingName.toStdString(), MODE_MATCH);
     displayCurrentSummonerData();
 }
 
@@ -774,7 +786,6 @@ void MainWindow::on_nameEdit_textChanged()
     ui->nameEdit->setFont(f);
 
 }
-
 void MainWindow::on_server_edit_textChanged()
 {
     QFont f = ui->server_edit->font();
@@ -806,16 +817,15 @@ void MainWindow::on_matchListWidget_currentRowChanged(int currentRow)
 {
     if(currentRow >= 0 && mml.count()> currentRow)
         displayMatchDetails(currentRow);
-    //QString s = "match id: "+ QString::number(mml[currentRow].getID()) +"\n" +
-    //"champ id: " + QString::number(mml[currentRow].getChampID());
-
-    //ui->matchStatsLabel->setText(s);
 }
 
+
+//if the current champion filter is changed, reset sorting to avoid tablewidget errors
 void MainWindow::on_tagFilterComboBox_currentIndexChanged(const QString &arg1)
 {
     ui->championsTableWidget->setSortingEnabled(false);
     displayChampionDetails();
+    //updateChampionDetails();
     ui->championsTableWidget->setSortingEnabled(true);
     //ui->championsTableWidget->set
 }

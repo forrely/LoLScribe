@@ -14,6 +14,7 @@
 #include <map>
 #include <QDir>
 #include <QString>
+#include <time.h>
 
 #include "champion.h"
 #include "match.h"
@@ -36,6 +37,7 @@ public:
 	std::vector<match> matchHistory;
 	std::string activeName;
 	static size_t my_fwrite(void *buffer, size_t size, size_t nmemb, std::string *stream);
+    const std::string currentDateTime();
 	int stringToInt(const std::string &str);
 	void pullAPI(std::string target, std::string fileName);
 	void APICall(std::string playerName, int mode);

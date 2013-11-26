@@ -110,7 +110,11 @@ int main(int argc, char *argv[])
 
     for(std::map<int, std::string>::iterator i = myDataManip.itemNames.begin();
         i != myDataManip.itemNames.end(); i++)
+    {
         itemNames[i->first] = QString::fromStdString(i->second);
+        std::cout<< i->first <<": "<< i->second <<std::endl;
+        std::cout<< i->first <<": "<< itemNames[i->first].toStdString() <<std::endl;
+    }
 
     w.itemNames = itemNames;
     w.setChampTags(champTags);

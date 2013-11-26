@@ -1,5 +1,17 @@
 #include "datamanip.h"
 
+
+const std::string datamanip::currentDateTime() {
+    time_t     now = time(0);
+    struct tm  tstruct;
+    char       buf[80];
+    tstruct = *localtime(&now);
+
+    strftime(buf, sizeof(buf), "%Y-%m-%d_%H-%M-%S", &tstruct);
+
+    return buf;
+}
+
 size_t datamanip::my_fwrite(void *buffer, size_t size, size_t nmemb, std::string *s)
 {
 	/*static int first_time = 1;
@@ -41,13 +53,11 @@ void datamanip::pullAPI(std::string target, std::string fileName)
 	CURL *curl;
 	CURLcode res;
 	curl_slist *slist=NULL;
-	firstRun = true;
-	//std::string tempOut = "blah";
+    firstRun = true;
 
 	std::string endpoint = target;
 
-	std::ofstream out;
-	//out = fopen ("scribeout.txt", "w");
+    std::ofstream out;
 	out.open(fileName);
 
 	slist = curl_slist_append(slist, "X-Mashape-Authorization: jFZRnPb3AD7TXVnfoDlkopqghMrDALtI");
@@ -56,48 +66,47 @@ void datamanip::pullAPI(std::string target, std::string fileName)
 	curl = curl_easy_init();
 	if(curl) {
 
-		
-		curl_easy_setopt(curl, CURLOPT_URL, endpoint.c_str());
-	curl_easy_setopt(curl, CURLOPT_VERBOSE, 1);
-	curl_easy_setopt(curl, CURLOPT_HTTPHEADER, slist);
-	curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0);
-	curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, &datamanip::my_fwrite);
-	curl_easy_setopt(curl, CURLOPT_WRITEDATA, &tempOut);
+        curl_easy_setopt(curl, CURLOPT_URL, endpoint.c_str());
+        curl_easy_setopt(curl, CURLOPT_VERBOSE, 1);
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, slist);
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, &datamanip::my_fwrite);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &tempOut);
 
-	#ifdef SKIP_PEER_VERIFICATION
-		/*
-			* If you want to connect to a site who isn't using a certificate that is
-			* signed by one of the certs in the CA bundle you have, you can skip the
-			* verification of the server's certificate. This makes the connection
-			* A LOT LESS SECURE.
-			*
-			* If you have a CA cert for the server stored someplace else than in the
-			* default bundle, then the CURLOPT_CAPATH option might come handy for
-			* you.
-			*/
-		curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
-	#endif
+        #ifdef SKIP_PEER_VERIFICATION
+            /*
+                * If you want to connect to a site who isn't using a certificate that is
+                * signed by one of the certs in the CA bundle you have, you can skip the
+                * verification of the server's certificate. This makes the connection
+                * A LOT LESS SECURE.
+                *
+                * If you have a CA cert for the server stored someplace else than in the
+                * default bundle, then the CURLOPT_CAPATH option might come handy for
+                * you.
+                */
+            curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
+        #endif
 
-	#ifdef SKIP_HOSTNAME_VERIFICATION
-		/*
-			* If the site you're connecting to uses a different host name that what
-			* they have mentioned in their server certificate's commonName (or
-			* subjectAltName) fields, libcurl will refuse to connect. You can skip
-			* this check, but this will make the connection less secure.
-			*/
-		curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
-	#endif
+        #ifdef SKIP_HOSTNAME_VERIFICATION
+            /*
+                * If the site you're connecting to uses a different host name that what
+                * they have mentioned in their server certificate's commonName (or
+                * subjectAltName) fields, libcurl will refuse to connect. You can skip
+                * this check, but this will make the connection less secure.
+                */
+            curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
+        #endif
 
-		/* Perform the request, res will get the return code */
-		res = curl_easy_perform(curl);
-		/* Check for errors */
-		if(res != CURLE_OK)
-			fprintf(stderr, "curl_easy_perform() failed: %s\n",
-					curl_easy_strerror(res));
+            /* Perform the request, res will get the return code */
+            res = curl_easy_perform(curl);
+            /* Check for errors */
+            if(res != CURLE_OK)
+                fprintf(stderr, "curl_easy_perform() failed: %s\n",
+                        curl_easy_strerror(res));
 
-		/* always cleanup */
-		curl_easy_cleanup(curl);
-	}
+            /* always cleanup */
+            curl_easy_cleanup(curl);
+        }
 
 	/*std::ifstream in("temp.txt");
 	while (!in.eof())
@@ -174,7 +183,7 @@ void datamanip::parseItems()
 				if (a > 1000 && a < 9999)
 				{
                     //std::cout << "Found ID: " << a << " ";
-                    //outFile << a << ",";
+                    outFile << a << ",";
 					seek = "\"name\":";
 				}
 			}
@@ -536,11 +545,14 @@ void datamanip::parseMatches(std::string playerName)
 	std::string dt = "", t = "";
 	std::map<int, std::string>::iterator cidItr;
 
+    std::string dataread = "";
+
 	while (c != std::ifstream::traits_type::eof())
 	{
 		inFile >> temp;
+        dataread += " " + temp + " ";
 
-		if (temp == "\"spell2\":")
+        if (temp == "\"spell2\":" && seek == "\"statType\":")
 		{
 			seek = "\"createDate\":";
 		}
@@ -696,10 +708,10 @@ void datamanip::parseMatches(std::string playerName)
 			{
 				std::getline(inFile, temp);
 
-				temp.pop_back();
-				temp.pop_back();
+                //temp.pop_back();
+                //temp.pop_back();
 
-				dt = temp;
+                dt = temp.substr(2, temp.size()-4);
 
 				seek = "\"gameId\":";
 			}
@@ -857,6 +869,8 @@ void datamanip::parseMatches(std::string playerName)
 	path = "./Players/" + playerName + "/playerStats.txt";
 	of3.open(path);
 
+
+
     if(!of3.is_open())
     {
         QDir().mkdir(QString::fromStdString(path));
@@ -897,6 +911,33 @@ void datamanip::parseMatches(std::string playerName)
 	of2.close();
 	of3.close();
 	inFile.close();
+
+    //if there are new match id's in current matchesraw file, create a backup
+    if(newMatches > 0)
+    {
+        std::ofstream matchesrawBackupFile;
+        std::string backupDir = "./Players/" + playerName + "/MatchesRawBackups/";
+        std::string path = backupDir + currentDateTime() + "_matchesraw.txt";
+        matchesrawBackupFile.open(path);
+
+        std::cout<<"backup path\n"<<path<<std::endl;
+
+        if(!matchesrawBackupFile.is_open())
+        {
+            QDir().mkdir(QString::fromStdString(backupDir));
+            matchesrawBackupFile.open(path);
+        }
+
+        std::ifstream srcMatchesraw;
+        srcMatchesraw.open("./Players/" + playerName + "/matchesraw.txt");
+
+
+        matchesrawBackupFile << srcMatchesraw.rdbuf();
+
+        matchesrawBackupFile.close();
+        srcMatchesraw.close();
+    }
+
 }
 
 int datamanip::operate()
@@ -1218,7 +1259,7 @@ void datamanip::loadChampNames()
     std::string temp = "", temp2 = "", trash = "";
 
 
-    std::cout<<"champNames values"<<"\n";
+    //std::cout<<"champNames values"<<"\n";
     while (c != std::ifstream::traits_type::eof())
     {
         std::getline(inFile, temp, ',');
@@ -1228,7 +1269,7 @@ void datamanip::loadChampNames()
         int i = stringToInt(temp2);
 
         champNames[i] = temp;
-        std::cout<<champNames[i]<<"\n";
+        //std::cout<<champNames[i]<<"\n";
 
         c = inFile.peek();
     }

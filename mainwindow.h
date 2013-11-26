@@ -34,8 +34,8 @@ public:
 
     void setChampData(std::vector<champion> c);
     void setChampTags(QMap<QString, QVector<QString>> tags);
-    QString champIconFileName(int i);
-    QString champIconFileName(QString s);
+    QString champIconPath(int i);
+    QString champIconPath(QString s);
     void displayCurrentSummonerData();
     void loadSettings();
     void saveSettings(); //not implemented

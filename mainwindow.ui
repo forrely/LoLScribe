@@ -481,8 +481,8 @@
                   <widget class="QLabel" name="item1">
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
-                     <height>60</height>
+                     <width>64</width>
+                     <height>64</height>
                     </size>
                    </property>
                    <property name="text">
@@ -494,8 +494,8 @@
                   <widget class="QLabel" name="item2">
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
-                     <height>60</height>
+                     <width>64</width>
+                     <height>64</height>
                     </size>
                    </property>
                    <property name="text">
@@ -507,8 +507,8 @@
                   <widget class="QLabel" name="item3">
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
-                     <height>60</height>
+                     <width>64</width>
+                     <height>64</height>
                     </size>
                    </property>
                    <property name="text">
@@ -520,8 +520,8 @@
                   <widget class="QLabel" name="item4">
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
-                     <height>60</height>
+                     <width>64</width>
+                     <height>64</height>
                     </size>
                    </property>
                    <property name="text">
@@ -533,8 +533,8 @@
                   <widget class="QLabel" name="item5">
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
-                     <height>60</height>
+                     <width>64</width>
+                     <height>64</height>
                     </size>
                    </property>
                    <property name="text">
@@ -546,8 +546,8 @@
                   <widget class="QLabel" name="item6">
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
-                     <height>60</height>
+                     <width>64</width>
+                     <height>64</height>
                     </size>
                    </property>
                    <property name="text">
@@ -559,8 +559,8 @@
                   <widget class="QLabel" name="item7">
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
-                     <height>60</height>
+                     <width>64</width>
+                     <height>64</height>
                     </size>
                    </property>
                    <property name="toolTip">
