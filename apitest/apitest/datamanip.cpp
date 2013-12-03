@@ -58,7 +58,15 @@ void datamanip::pullAPI(std::string target, std::string fileName)
 	std::string endpoint = target;
 
     std::ofstream out;
-	out.open(fileName);
+
+    out.open(fileName);
+
+//    if(!out.is_open())
+//    {
+//        std::cout<<"making directory: "<<fileName<<std::endl;
+//        QDir().mkpath(QString::fromStdString(fileName));
+//        out.open(fileName);
+//    }
 
 	slist = curl_slist_append(slist, "X-Mashape-Authorization: jFZRnPb3AD7TXVnfoDlkopqghMrDALtI");
 	curl_global_init(CURL_GLOBAL_DEFAULT);
@@ -126,7 +134,7 @@ void datamanip::APICall(std::string playerName, int mode)
 {
 	std::string target = "https://teemojson.p.mashape.com/";
 
-    QDir().mkdir("./Players/" + QString::fromStdString(playerName));
+    QDir().mkpath("./Players/" + QString::fromStdString(playerName));
 
 	if (mode == MODE_CHAMPION)
 	{
@@ -873,7 +881,7 @@ void datamanip::parseMatches(std::string playerName)
 
     if(!of3.is_open())
     {
-        QDir().mkdir(QString::fromStdString(path));
+        QDir().mkpath(QString::fromStdString(path));
         of3.open(path);
     }
 
@@ -924,7 +932,7 @@ void datamanip::parseMatches(std::string playerName)
 
         if(!matchesrawBackupFile.is_open())
         {
-            QDir().mkdir(QString::fromStdString(backupDir));
+            QDir().mkpath(QString::fromStdString(backupDir));
             matchesrawBackupFile.open(path);
         }
 
@@ -975,7 +983,7 @@ int datamanip::operate()
             //std::string path = "./Players/" + tempName;
             //CreateDirectory(path.c_str(), NULL);
             QString path = "./Players/" + QString::fromStdString(tempName);
-            QDir().mkdir(path);
+            QDir().mkpath(path);
 
         }
 		else
