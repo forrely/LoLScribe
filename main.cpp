@@ -70,15 +70,36 @@ bool readChampTags()
 
 }
 
+std::string readMashapeKey()
+{
+       std::string authorizationKey = "none";
+       std::ifstream readfile;
+       std::string line;
+       readfile.open ("user_settings.txt");
+       if (readfile.is_open())
+       {
+           while(std::getline(readfile,line))
+           {
 
+                std::cout<<line<<std::endl;
+                if(line=="Mashup Authorization Keys")
+                   {
+                    std::getline(readfile,authorizationKey);
+                   }
+           }
+       }
+       readfile.close();
+       return authorizationKey;
+}
 
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
 
-    datamanip myDataManip;
+    std::string mashapeKey = readMashapeKey();
+
+    datamanip myDataManip(mashapeKey);
     myDataManip.APICall("forrely", MODE_CHAMPION);
     myDataManip.parseChamps();
     myDataManip.loadChampNames();
@@ -92,6 +113,9 @@ int main(int argc, char *argv[])
     //myDataManip.loadPlayer("forrely");
 
     champNames = myDataManip.champNames;
+
+    MainWindow w(mashapeKey, &myDataManip);
+
     w.champNames = champNames;
 
     //attempt to read champtags from file. if unable to, get champ tags from datamanip class

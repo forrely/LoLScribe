@@ -26,7 +26,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
+    explicit MainWindow(std::string authKey, datamanip* dManip,  QWidget *parent = 0);
     ~MainWindow();
 
     void setDisplayData(player p, QVector<champion> c, QVector<match> m);

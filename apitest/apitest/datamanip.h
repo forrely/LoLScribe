@@ -36,6 +36,8 @@ public:
 	std::vector<champion> activeChamps;
 	std::vector<match> matchHistory;
 	std::string activeName;
+    std::string myAuthorizationKey;
+    datamanip(std::string mAuth);
 	static size_t my_fwrite(void *buffer, size_t size, size_t nmemb, std::string *stream);
     const std::string currentDateTime();
 	int stringToInt(const std::string &str);

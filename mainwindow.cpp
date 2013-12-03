@@ -15,7 +15,7 @@ class MyTableWidgetItem : public QTableWidgetItem {
         }
 };
 
-MainWindow::MainWindow(QWidget *parent) :
+MainWindow::MainWindow(std::string authKey, datamanip * dManip, QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
@@ -42,9 +42,11 @@ MainWindow::MainWindow(QWidget *parent) :
             this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
 
 
-        myDataManip = new datamanip();
-    ui->graphWindowButton->hide();
-    ui->playerComboBox->hide();
+        authorization = QString::fromStdString(authKey);
+        //myDataManip = new datamanip(authKey);
+        myDataManip = dManip;
+        ui->graphWindowButton->hide();
+        ui->playerComboBox->hide();
 
 
 
@@ -612,7 +614,7 @@ void MainWindow::displayMatchDetails(int index)
 void MainWindow::displayCurrentSummonerData()
 {
     loadSettings();
-    myDataManip = new datamanip();
+    //myDataManip = new datamanip();
 
     myDataManip->loadChampNames();
     myDataManip->loadItems();

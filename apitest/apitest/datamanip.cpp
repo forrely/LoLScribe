@@ -1,7 +1,12 @@
 #include "datamanip.h"
 
+datamanip::datamanip(std::string mAuth)
+{
+    myAuthorizationKey = mAuth;
+}
 
-const std::string datamanip::currentDateTime() {
+const std::string datamanip::currentDateTime()
+{
     time_t     now = time(0);
     struct tm  tstruct;
     char       buf[80];
@@ -61,14 +66,9 @@ void datamanip::pullAPI(std::string target, std::string fileName)
 
     out.open(fileName);
 
-//    if(!out.is_open())
-//    {
-//        std::cout<<"making directory: "<<fileName<<std::endl;
-//        QDir().mkpath(QString::fromStdString(fileName));
-//        out.open(fileName);
-//    }
-
-	slist = curl_slist_append(slist, "X-Mashape-Authorization: jFZRnPb3AD7TXVnfoDlkopqghMrDALtI");
+    //slist = curl_slist_append(slist, "X-Mashape-Authorization: jFZRnPb3AD7TXVnfoDlkopqghMrDALtI");
+    std::string authParam = "X-Mashape-Authorization: " + myAuthorizationKey;
+    slist = curl_slist_append(slist, authParam.c_str());
 	curl_global_init(CURL_GLOBAL_DEFAULT);
 
 	curl = curl_easy_init();
@@ -251,6 +251,7 @@ void datamanip::parseChamps()
 	int d = 0;
 	std::string temp = "NULL";
     std::string tempName = "";
+    std::string tempInternalName = "";
 	std::string seek = "\"id\":";
     //std::string tempTag = "";
     //std::map<std::string, std::vector<std::string>> tempChampTags;
@@ -275,6 +276,7 @@ void datamanip::parseChamps()
 
                 //std::cout << " ";
 				outFile << ",";
+                tempInternalName = temp.substr(1,temp.size()-3);
 
 				seek = "\"key\":";
 			}
@@ -331,11 +333,11 @@ void datamanip::parseChamps()
                 std::getline(inFile, temp);
                 inFile>>temp;
 
-                tagsOutFile << tempName <<"\n"
+                tagsOutFile << tempInternalName <<"\n"
                             << temp.substr(1,temp.size()-2) << "\n\n";
                 //std::cout<<"Tag: " << tempName
                   //               << " " <<temp.substr(1,temp.size()-2) << "\n";
-                champTags[tempName].push_back(temp.substr(1,temp.size()-2));
+                champTags[tempInternalName].push_back(temp.substr(1,temp.size()-2));
 
                 seek = "\"id\":";
             }
@@ -879,11 +881,11 @@ void datamanip::parseMatches(std::string playerName)
 
 
 
-    if(!of3.is_open())
-    {
-        QDir().mkpath(QString::fromStdString(path));
-        of3.open(path);
-    }
+//    if(!of3.is_open())
+//    {
+//        QDir().mkpath(QString::fromStdString(path));
+//        of3.open(path);
+//    }
 
 	of3 << tempPlayer.write();
 
